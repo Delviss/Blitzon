@@ -59,8 +59,9 @@ export default function ApplyForm() {
   return (
     <section id="apply" className="relative overflow-hidden bg-ink-900 py-32 md:py-40">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -left-32 top-1/3 h-[480px] w-[480px] rounded-full bg-flame/15 blur-[140px]" />
-        <div className="absolute -right-32 bottom-0 h-[520px] w-[520px] rounded-full bg-copper/15 blur-[160px]" />
+        <div className="absolute -left-32 top-1/3 h-[480px] w-[480px] rounded-full bg-flame/20 blur-[140px]" />
+        <div className="absolute right-1/4 top-1/4 h-[300px] w-[300px] rounded-full bg-electric/15 blur-[140px]" />
+        <div className="absolute -right-32 bottom-0 h-[520px] w-[520px] rounded-full bg-copper/12 blur-[160px]" />
       </div>
 
       <div className="mx-auto max-w-[1440px] px-page">
@@ -118,7 +119,7 @@ export default function ApplyForm() {
                 className="absolute inset-0 -z-10 opacity-50"
                 style={{
                   background:
-                    "radial-gradient(60% 60% at 0% 0%, rgba(255,90,31,0.18), transparent 70%)"
+                    "radial-gradient(60% 60% at 0% 0%, rgba(3,124,194,0.22), transparent 70%)"
                 }}
               />
 
@@ -149,7 +150,7 @@ export default function ApplyForm() {
                     exit={{ opacity: 0, y: -16 }}
                     className="mt-12 flex flex-col items-start gap-6 text-bone"
                   >
-                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-flame text-ink-900">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-flame via-flame-400 to-copper text-bone shadow-[0_12px_40px_-12px_rgba(3,124,194,0.7)]">
                       ✓
                     </span>
                     <h3 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
@@ -246,8 +247,8 @@ export default function ApplyForm() {
                                 onClick={() => toggleGoal(g)}
                                 className={`rounded-full border px-4 py-2 text-[11px] uppercase tracking-[0.22em] transition ${
                                   data.goals.includes(g)
-                                    ? "border-flame bg-flame text-ink-900"
-                                    : "border-white/10 bg-white/[0.02] text-bone/70 hover:border-white/30"
+                                    ? "border-flame bg-flame text-bone shadow-[0_8px_28px_-10px_rgba(3,124,194,0.7)]"
+                                    : "border-white/10 bg-white/[0.02] text-bone/70 hover:border-flame/40 hover:text-bone"
                                 }`}
                               >
                                 {g}
@@ -271,8 +272,8 @@ export default function ApplyForm() {
                               onClick={() => update("slot", s)}
                               className={`group relative overflow-hidden rounded-xl border px-4 py-5 text-left transition ${
                                 data.slot === s
-                                  ? "border-flame bg-flame text-ink-900"
-                                  : "border-white/10 bg-white/[0.02] text-bone/80 hover:border-white/30"
+                                  ? "border-flame bg-flame text-bone shadow-[0_12px_40px_-14px_rgba(3,124,194,0.7)]"
+                                  : "border-white/10 bg-white/[0.02] text-bone/80 hover:border-flame/40 hover:text-bone"
                               }`}
                             >
                               <span className="block font-mono text-[10px] uppercase tracking-[0.28em] opacity-70">
@@ -296,7 +297,7 @@ export default function ApplyForm() {
                       </button>
                       <button
                         type="submit"
-                        className="group inline-flex items-center gap-2 rounded-full bg-flame px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-900 transition hover:bg-flame-400"
+                        className="group inline-flex items-center gap-2 rounded-full bg-flame px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition hover:bg-flame-400 hover:shadow-[0_22px_70px_-16px_rgba(27,163,245,0.7)]"
                       >
                         {step === steps.length - 1 ? "Bewerbung absenden" : "Weiter"}
                         <span className="transition group-hover:translate-x-1">→</span>

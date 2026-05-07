@@ -83,7 +83,7 @@ export default function WhyBlitzon() {
                   className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                   style={{
                     background:
-                      "radial-gradient(70% 70% at 30% 0%, rgba(255,90,31,0.18), transparent 70%)"
+                      "radial-gradient(70% 70% at 30% 0%, rgba(3,124,194,0.22), transparent 70%)"
                   }}
                 />
               )}

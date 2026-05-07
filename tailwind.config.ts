@@ -6,33 +6,39 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          DEFAULT: "#050505",
-          900: "#050505",
-          800: "#0a0a0a",
-          700: "#111111",
-          600: "#161616",
-          500: "#1c1c1c",
-          400: "#242424",
-          300: "#2e2e2e"
+          DEFAULT: "#050B12",
+          900: "#050B12",
+          800: "#0C1622",
+          700: "#132536",
+          600: "#1A2D43",
+          500: "#1F3650",
+          400: "#26425F",
+          300: "#2E4F72"
         },
         bone: {
-          DEFAULT: "#F5F5F5",
-          50: "#fafafa",
-          100: "#f5f5f5",
-          200: "#e5e5e5",
-          300: "#a3a3a3",
-          400: "#737373"
+          DEFAULT: "#F5F7FA",
+          50: "#FAFBFD",
+          100: "#F5F7FA",
+          200: "#D5DCE6",
+          300: "#A8B3C2",
+          400: "#6E7C91"
         },
         flame: {
-          DEFAULT: "#FF5A1F",
-          400: "#ff7a4a",
-          500: "#FF5A1F",
-          600: "#e64a10",
-          700: "#C65A2E"
+          DEFAULT: "#037CC2",
+          400: "#0496EA",
+          500: "#037CC2",
+          600: "#025E94",
+          700: "#024A75"
         },
         copper: {
-          DEFAULT: "#C65A2E",
-          500: "#C65A2E"
+          DEFAULT: "#5DD6FF",
+          400: "#7CDFFF",
+          500: "#5DD6FF"
+        },
+        electric: {
+          DEFAULT: "#1BA3F5",
+          400: "#1BA3F5",
+          500: "#1BA3F5"
         }
       },
       fontFamily: {
@@ -51,7 +57,7 @@ const config: Config = {
       },
       backgroundImage: {
         "grid-flame":
-          "radial-gradient(circle at 20% 20%, rgba(255,90,31,0.18), transparent 40%), radial-gradient(circle at 80% 0%, rgba(198,90,46,0.14), transparent 50%)",
+          "radial-gradient(circle at 20% 20%, rgba(3,124,194,0.22), transparent 45%), radial-gradient(circle at 80% 0%, rgba(27,163,245,0.16), transparent 55%), radial-gradient(circle at 60% 90%, rgba(93,214,255,0.10), transparent 55%)",
         "noise":
           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.65'/></svg>\")"
       },
@@ -66,8 +72,8 @@ const config: Config = {
           "55%": { opacity: "0.85" }
         },
         pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(255,90,31,0.5)" },
-          "50%": { boxShadow: "0 0 40px 6px rgba(255,90,31,0.18)" }
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(3,124,194,0.55)" },
+          "50%": { boxShadow: "0 0 48px 8px rgba(27,163,245,0.22)" }
         },
         scanline: {
           "0%": { transform: "translateY(-100%)" },

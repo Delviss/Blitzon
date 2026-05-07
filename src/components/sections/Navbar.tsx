@@ -41,7 +41,7 @@ export default function Navbar() {
       >
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-page py-5">
           <a href="#" className="group relative flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-md bg-flame text-ink-900">
+            <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-md bg-gradient-to-br from-flame via-flame-400 to-copper text-bone shadow-[0_8px_24px_-8px_rgba(3,124,194,0.7)]">
               <BoltSvg />
             </span>
             <span className="font-display text-lg font-bold tracking-[0.18em]">BLITZON</span>
@@ -66,7 +66,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href="#apply"
-              className="group hidden h-11 items-center gap-2 rounded-full bg-flame px-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-900 transition-all hover:bg-flame-400 md:inline-flex"
+              className="group hidden h-11 items-center gap-2 rounded-full bg-flame px-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_10px_30px_-12px_rgba(3,124,194,0.7)] transition-all hover:bg-flame-400 hover:shadow-[0_14px_40px_-10px_rgba(27,163,245,0.7)] md:inline-flex"
             >
               Bewerben
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -137,7 +137,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         <a
           href="#apply"
           onClick={onClose}
-          className="flex w-full items-center justify-between rounded-full bg-flame px-6 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-ink-900"
+          className="flex w-full items-center justify-between rounded-full bg-flame px-6 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)]"
         >
           Bewirb dich jetzt
           <span>→</span>

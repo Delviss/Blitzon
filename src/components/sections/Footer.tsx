@@ -55,7 +55,7 @@ export default function Footer() {
 
           <a
             href="#apply"
-            className="group inline-flex items-center gap-3 rounded-full bg-flame px-7 py-5 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900 transition hover:bg-flame-400"
+            className="group inline-flex items-center gap-3 rounded-full bg-flame px-7 py-5 text-xs font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition hover:bg-flame-400 hover:shadow-[0_22px_70px_-16px_rgba(27,163,245,0.7)]"
           >
             Werde Teil der Bewegung
             <span className="transition group-hover:translate-x-1">→</span>
@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="mt-20 grid grid-cols-2 gap-10 md:grid-cols-12 md:gap-6">
           <div className="col-span-2 md:col-span-4">
             <div className="flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-flame text-ink-900">
+              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-flame via-flame-400 to-copper text-bone shadow-[0_8px_24px_-8px_rgba(3,124,194,0.7)]">
                 <Bolt />
               </span>
               <span className="font-display text-base font-bold tracking-[0.2em]">BLITZON</span>
