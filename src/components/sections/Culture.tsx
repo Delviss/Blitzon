@@ -45,14 +45,14 @@ const tiles = [
 
 export default function Culture() {
   return (
-    <section id="team" className="relative overflow-hidden border-t border-white/5 bg-ink-800 py-32 md:py-40">
+    <section id="team" className="relative overflow-hidden border-t border-white/10 bg-ink-800 py-32 md:py-40">
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-flame">
-              · Team &amp; Kultur
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+              · Team und Kultur
             </span>
-            <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest">
+            <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
               <RevealText as="span">Die Crew</RevealText>
               <span className="block">
                 <RevealText as="span" className="flame-text">
@@ -62,10 +62,8 @@ export default function Culture() {
             </h2>
           </div>
           <div className="md:col-span-5">
-            <p className="text-base text-bone/65 md:text-lg">
-              Du joinst keinen Job — du joinst eine Crew. Hohe Energie, harter Kalender, echte
-              Loyalität. Wir feiern jeden Win, lernen aus jedem Loss, und gehen die extra Meile —
-              gemeinsam.
+            <p className="text-base text-bone/85 md:text-lg">
+              Du landest hier nicht in einem Job, sondern in einer Crew. Hohe Energie, voller Kalender, ehrliche Loyalität. Wir feiern jeden Win, lernen aus jedem Loss und gehen die extra Meile gemeinsam.
             </p>
           </div>
         </div>
@@ -78,7 +76,7 @@ export default function Culture() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ delay: i * 0.06, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className={`group relative col-span-1 overflow-hidden rounded-xl border border-white/5 bg-ink-900 ${t.span}`}
+              className={`group relative col-span-1 overflow-hidden rounded-xl border border-white/10 bg-ink-900 ${t.span}`}
             >
               <Image
                 src={asset(t.src)}
@@ -88,11 +86,11 @@ export default function Culture() {
                 className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 scale-110 group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-60" />
-              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-bone/80">
-                <span className="rounded-full bg-ink-900/70 px-3 py-1.5 backdrop-blur">
+              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-bone">
+                <span className="rounded-full bg-ink-900/80 px-3 py-1.5 backdrop-blur">
                   {t.label}
                 </span>
-                <span className="hidden rounded-full border border-white/10 bg-ink-900/60 px-2 py-1 font-mono text-[9px] tracking-[0.32em] text-flame md:inline">
+                <span className="hidden rounded-full border border-ember/40 bg-ink-900/70 px-2 py-1 font-mono text-[9px] tracking-[0.32em] text-ember md:inline">
                   IRL
                 </span>
               </figcaption>

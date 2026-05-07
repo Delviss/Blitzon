@@ -6,39 +6,61 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          DEFAULT: "#050B12",
-          900: "#050B12",
-          800: "#0C1622",
-          700: "#132536",
-          600: "#1A2D43",
-          500: "#1F3650",
-          400: "#26425F",
-          300: "#2E4F72"
+          DEFAULT: "#06101C",
+          900: "#06101C",
+          800: "#0E1B2C",
+          700: "#152840",
+          600: "#1C3354",
+          500: "#243D63",
+          400: "#2C4972",
+          300: "#365681"
         },
         bone: {
-          DEFAULT: "#F5F7FA",
-          50: "#FAFBFD",
-          100: "#F5F7FA",
-          200: "#D5DCE6",
-          300: "#A8B3C2",
-          400: "#6E7C91"
+          DEFAULT: "#F4F1EA",
+          50: "#FBF9F4",
+          100: "#F4F1EA",
+          200: "#DDD6C9",
+          300: "#B6AE9E",
+          400: "#857D6E"
         },
         flame: {
-          DEFAULT: "#037CC2",
-          400: "#0496EA",
-          500: "#037CC2",
-          600: "#025E94",
-          700: "#024A75"
+          DEFAULT: "#1FA9FF",
+          400: "#3DB6FF",
+          500: "#1FA9FF",
+          600: "#0C82CC",
+          700: "#0A6AA6"
         },
         copper: {
-          DEFAULT: "#5DD6FF",
-          400: "#7CDFFF",
-          500: "#5DD6FF"
+          DEFAULT: "#7DE2FF",
+          400: "#A8ECFF",
+          500: "#7DE2FF"
         },
         electric: {
-          DEFAULT: "#1BA3F5",
-          400: "#1BA3F5",
-          500: "#1BA3F5"
+          DEFAULT: "#1FA9FF",
+          400: "#3DB6FF",
+          500: "#1FA9FF"
+        },
+        ember: {
+          DEFAULT: "#FFB547",
+          50: "#FFF2DA",
+          100: "#FFE3B0",
+          200: "#FFD27D",
+          300: "#FFC25B",
+          400: "#FFB547",
+          500: "#F59E0B",
+          600: "#D97706",
+          700: "#B45309"
+        },
+        coral: {
+          DEFAULT: "#FF6F5C",
+          400: "#FF8B7A",
+          500: "#FF6F5C",
+          600: "#E85544"
+        },
+        moss: {
+          DEFAULT: "#5EEAD4",
+          400: "#8BF3E2",
+          500: "#5EEAD4"
         }
       },
       fontFamily: {
@@ -57,7 +79,7 @@ const config: Config = {
       },
       backgroundImage: {
         "grid-flame":
-          "radial-gradient(circle at 20% 20%, rgba(3,124,194,0.22), transparent 45%), radial-gradient(circle at 80% 0%, rgba(27,163,245,0.16), transparent 55%), radial-gradient(circle at 60% 90%, rgba(93,214,255,0.10), transparent 55%)",
+          "radial-gradient(circle at 18% 18%, rgba(255,181,71,0.16), transparent 45%), radial-gradient(circle at 82% 0%, rgba(31,169,255,0.20), transparent 55%), radial-gradient(circle at 60% 92%, rgba(255,111,92,0.10), transparent 55%)",
         "noise":
           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.65'/></svg>\")"
       },
@@ -72,8 +94,8 @@ const config: Config = {
           "55%": { opacity: "0.85" }
         },
         pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(3,124,194,0.55)" },
-          "50%": { boxShadow: "0 0 48px 8px rgba(27,163,245,0.22)" }
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(255,181,71,0.55)" },
+          "50%": { boxShadow: "0 0 48px 8px rgba(255,181,71,0.22)" }
         },
         scanline: {
           "0%": { transform: "translateY(-100%)" },

@@ -27,9 +27,9 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BLITZON — Wo ehrgeizige Menschen gewinnen",
+  title: "BLITZON · Wo Ehrgeiz auf Können trifft",
   description:
-    "BLITZON ist die nächste Generation des Vertriebs. Elite-Training, echtes Einkommen, kompromisslose Karriere. Standorte München & Augsburg.",
+    "BLITZON baut die nächste Generation deutscher Vertriebstalente. Premium Training, ehrliche Provisionen, klare Karrieren. Standorte München und Augsburg.",
   keywords: [
     "Sales Ausbildung München",
     "Vertrieb Karriere Augsburg",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     apple: [{ url: asset("/logo/favicon-64.png") }]
   },
   openGraph: {
-    title: "BLITZON — Wo ehrgeizige Menschen gewinnen",
+    title: "BLITZON · Wo Ehrgeiz auf Können trifft",
     description:
-      "Elite Sales Movement. Premium Training. Hohe Provisionen. München & Augsburg.",
+      "Sales-Bewegung mit Substanz. Premium Training, ehrliche Provisionen. München und Augsburg.",
     type: "website",
     locale: "de_DE",
     images: [{ url: asset("/logo/blitzon-lockup.png"), width: 1024, height: 1024, alt: "BLITZON Consulting" }]
@@ -57,7 +57,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  themeColor: "#050B12"
+  themeColor: "#06101C"
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

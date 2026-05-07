@@ -32,17 +32,17 @@ export default function StickyApply() {
             href="https://wa.me/4915123456789"
             target="_blank"
             rel="noopener noreferrer"
-            className="group hidden h-12 items-center gap-2 rounded-full border border-white/10 bg-ink-700/80 px-4 text-xs uppercase tracking-[0.2em] text-bone backdrop-blur-md transition hover:border-flame/60 hover:text-flame md:flex"
+            className="group hidden h-12 items-center gap-2 rounded-full border border-white/15 bg-ink-700/80 px-4 text-xs uppercase tracking-[0.2em] text-bone backdrop-blur-md transition hover:border-moss/60 hover:text-moss md:flex"
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-moss opacity-70" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-moss" />
             </span>
             WhatsApp
           </a>
           <a
             href="#apply"
-            className="group relative flex h-12 items-center gap-2 overflow-hidden rounded-full bg-flame px-5 text-xs font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_10px_40px_-10px_rgba(3,124,194,0.7)] transition hover:bg-flame-400 hover:shadow-[0_14px_50px_-10px_rgba(27,163,245,0.7)] md:px-6"
+            className="group relative flex h-12 items-center gap-2 overflow-hidden rounded-full bg-ember px-5 text-xs font-semibold uppercase tracking-[0.2em] text-ink-900 shadow-[0_10px_40px_-10px_rgba(255,181,71,0.7)] transition hover:bg-ember-300 hover:shadow-[0_14px_50px_-10px_rgba(255,181,71,0.85)] md:px-6"
           >
             <span className="relative z-10">Bewirb dich</span>
             <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">→</span>
