@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === "production";
-const repo = "blitzon";
+const repo = "Blitzon";
 
 const nextConfig = {
   reactStrictMode: true,
