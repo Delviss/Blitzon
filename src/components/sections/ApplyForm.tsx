@@ -245,8 +245,8 @@ export default function ApplyForm() {
                                 onClick={() => toggleGoal(g)}
                                 className={`rounded-full border px-4 py-2 text-[11px] uppercase tracking-[0.22em] transition ${
                                   data.goals.includes(g)
-                                    ? "border-ember bg-ember text-ink-900 shadow-[0_8px_28px_-10px_rgba(255,181,71,0.7)]"
-                                    : "border-white/15 bg-white/[0.04] text-bone/85 hover:border-ember/50 hover:text-bone"
+                                    ? "border-brand bg-brand text-bone shadow-[0_8px_28px_-10px_rgba(3,124,194,0.7)]"
+                                    : "border-white/15 bg-white/[0.04] text-bone/85 hover:border-brand/50 hover:text-bone"
                                 }`}
                               >
                                 {g}
@@ -270,8 +270,8 @@ export default function ApplyForm() {
                               onClick={() => update("slot", s)}
                               className={`group relative overflow-hidden rounded-xl border px-4 py-5 text-left transition ${
                                 data.slot === s
-                                  ? "border-ember bg-ember text-ink-900 shadow-[0_12px_40px_-14px_rgba(255,181,71,0.7)]"
-                                  : "border-white/15 bg-white/[0.04] text-bone hover:border-ember/50"
+                                  ? "border-brand bg-brand text-bone shadow-[0_12px_40px_-14px_rgba(3,124,194,0.7)]"
+                                  : "border-white/15 bg-white/[0.04] text-bone hover:border-brand/50"
                               }`}
                             >
                               <span className="block font-mono text-[10px] uppercase tracking-[0.28em] opacity-80">
@@ -295,7 +295,7 @@ export default function ApplyForm() {
                       </button>
                       <button
                         type="submit"
-                        className="group inline-flex items-center gap-2 rounded-full bg-ember px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-900 shadow-[0_18px_60px_-18px_rgba(255,181,71,0.7)] transition hover:bg-ember-300 hover:shadow-[0_22px_70px_-16px_rgba(255,181,71,0.8)]"
+                        className="group inline-flex items-center gap-2 rounded-full bg-brand px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition hover:bg-brand-400 hover:shadow-[0_22px_70px_-16px_rgba(3,124,194,0.8)]"
                       >
                         {step === steps.length - 1 ? "Bewerbung absenden" : "Weiter"}
                         <span className="transition group-hover:translate-x-1">→</span>

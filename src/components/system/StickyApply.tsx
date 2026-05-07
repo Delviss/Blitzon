@@ -42,7 +42,7 @@ export default function StickyApply() {
           </a>
           <a
             href="#apply"
-            className="group relative flex h-12 items-center gap-2 overflow-hidden rounded-full bg-ember px-5 text-xs font-semibold uppercase tracking-[0.2em] text-ink-900 shadow-[0_10px_40px_-10px_rgba(255,181,71,0.7)] transition hover:bg-ember-300 hover:shadow-[0_14px_50px_-10px_rgba(255,181,71,0.85)] md:px-6"
+            className="group relative flex h-12 items-center gap-2 overflow-hidden rounded-full bg-brand px-5 text-xs font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_10px_40px_-10px_rgba(3,124,194,0.7)] transition hover:bg-brand-400 hover:shadow-[0_14px_50px_-10px_rgba(3,124,194,0.85)] md:px-6"
           >
             <span className="relative z-10">Bewirb dich</span>
             <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">→</span>
