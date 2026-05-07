@@ -108,8 +108,8 @@ export default function Jobs() {
               onClick={() => setCity(c)}
               className={`rounded-full border px-4 py-2 text-[11px] uppercase tracking-[0.22em] transition ${
                 city === c
-                  ? "border-ember bg-ember text-ink-900 shadow-[0_8px_28px_-10px_rgba(255,181,71,0.7)]"
-                  : "border-white/15 bg-white/[0.04] text-bone/85 hover:border-ember/50 hover:text-bone"
+                  ? "border-brand bg-brand text-bone shadow-[0_8px_28px_-10px_rgba(3,124,194,0.7)]"
+                  : "border-white/15 bg-white/[0.04] text-bone/85 hover:border-brand/50 hover:text-bone"
               }`}
             >
               {c}
@@ -122,8 +122,8 @@ export default function Jobs() {
               onClick={() => setType(t)}
               className={`rounded-full border px-4 py-2 text-[11px] uppercase tracking-[0.22em] transition ${
                 type === t
-                  ? "border-ember bg-ember text-ink-900 shadow-[0_8px_28px_-10px_rgba(255,181,71,0.7)]"
-                  : "border-white/15 bg-white/[0.04] text-bone/85 hover:border-ember/50 hover:text-bone"
+                  ? "border-brand bg-brand text-bone shadow-[0_8px_28px_-10px_rgba(3,124,194,0.7)]"
+                  : "border-white/15 bg-white/[0.04] text-bone/85 hover:border-brand/50 hover:text-bone"
               }`}
             >
               {t}
@@ -219,7 +219,7 @@ export default function Jobs() {
                     </div>
                     <a
                       href="#apply"
-                      className="group inline-flex items-center justify-between rounded-full bg-ember px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-900 shadow-[0_12px_40px_-14px_rgba(255,181,71,0.7)] transition hover:bg-ember-300 hover:shadow-[0_16px_50px_-12px_rgba(255,181,71,0.8)]"
+                      className="group inline-flex items-center justify-between rounded-full bg-brand px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_12px_40px_-14px_rgba(3,124,194,0.7)] transition hover:bg-brand-400 hover:shadow-[0_16px_50px_-12px_rgba(3,124,194,0.8)]"
                     >
                       Schnell bewerben
                       <span className="transition group-hover:translate-x-1">→</span>

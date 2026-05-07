@@ -57,7 +57,7 @@ export default function Footer() {
 
           <a
             href="#apply"
-            className="group inline-flex items-center gap-3 rounded-full bg-ember px-7 py-5 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900 shadow-[0_18px_60px_-18px_rgba(255,181,71,0.7)] transition hover:bg-ember-300 hover:shadow-[0_22px_70px_-16px_rgba(255,181,71,0.8)]"
+            className="group inline-flex items-center gap-3 rounded-full bg-brand px-7 py-5 text-xs font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition hover:bg-brand-400 hover:shadow-[0_22px_70px_-16px_rgba(3,124,194,0.8)]"
           >
             Werde Teil der Bewegung
             <span className="transition group-hover:translate-x-1">→</span>

@@ -110,7 +110,7 @@ export default function CareerPath() {
                       <span
                         className={`flex h-10 w-10 items-center justify-center rounded-full font-mono text-[10px] tracking-[0.2em] transition ${
                           i === active
-                            ? "bg-ember text-ink-900 shadow-[0_8px_28px_-10px_rgba(255,181,71,0.8)]"
+                            ? "bg-brand text-bone shadow-[0_8px_28px_-10px_rgba(3,124,194,0.8)]"
                             : "bg-ink-900 text-bone/65 group-hover:text-bone"
                         }`}
                       >

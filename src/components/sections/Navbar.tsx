@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href="#apply"
-              className="group hidden h-11 items-center gap-2 rounded-full bg-ember px-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-900 shadow-[0_10px_30px_-12px_rgba(255,181,71,0.7)] transition-all hover:bg-ember-300 hover:shadow-[0_14px_40px_-10px_rgba(255,181,71,0.8)] md:inline-flex"
+              className="group hidden h-11 items-center gap-2 rounded-full bg-brand px-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_10px_30px_-12px_rgba(3,124,194,0.7)] transition-all hover:bg-brand-400 hover:shadow-[0_14px_40px_-10px_rgba(3,124,194,0.8)] md:inline-flex"
             >
               Bewerben
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -155,7 +155,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         <a
           href="#apply"
           onClick={onClose}
-          className="flex w-full items-center justify-between rounded-full bg-ember px-6 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-ink-900 shadow-[0_18px_60px_-18px_rgba(255,181,71,0.7)]"
+          className="flex w-full items-center justify-between rounded-full bg-brand px-6 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)]"
         >
           Bewirb dich
           <span>→</span>
