@@ -61,11 +61,15 @@ export default function Hero() {
         />
         <motion.div
           style={{ x: mouse.x * -40, y: mouse.y * -40 }}
-          className="absolute -left-32 top-32 h-[600px] w-[600px] rounded-full bg-flame/30 blur-[140px]"
+          className="absolute -left-32 top-32 h-[600px] w-[600px] rounded-full bg-flame/35 blur-[140px]"
         />
         <motion.div
           style={{ x: mouse.x * 40, y: mouse.y * 40 }}
-          className="absolute -right-32 bottom-0 h-[640px] w-[640px] rounded-full bg-copper/30 blur-[160px]"
+          className="absolute -right-32 bottom-0 h-[640px] w-[640px] rounded-full bg-electric/25 blur-[160px]"
+        />
+        <motion.div
+          style={{ x: mouse.x * -10, y: mouse.y * -10 }}
+          className="absolute left-1/3 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-copper/15 blur-[150px]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink-900/40 via-transparent to-ink-900" />
       </motion.div>
@@ -131,7 +135,7 @@ export default function Hero() {
                 <span>→</span>
               </MagneticButton>
               <MagneticButton href="#video" variant="ghost">
-                <span className="flex h-3 w-3 items-center justify-center rounded-full bg-flame">
+                <span className="flex h-3 w-3 items-center justify-center rounded-full bg-flame text-bone">
                   <PlayIcon />
                 </span>
                 <span>Day in the life</span>

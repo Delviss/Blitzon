@@ -51,7 +51,7 @@ export default function VideoFeature() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/40 to-transparent" />
               <div className="absolute inset-0 grain pointer-events-none" />
               <div className="relative flex flex-col items-center gap-4 text-bone">
-                <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-flame text-ink-900 transition-transform duration-500 group-hover:scale-110 md:h-28 md:w-28">
+                <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-flame via-flame-400 to-copper text-bone shadow-[0_18px_60px_-12px_rgba(3,124,194,0.7)] transition-transform duration-500 group-hover:scale-110 md:h-28 md:w-28">
                   <span className="absolute inset-0 animate-pulseGlow rounded-full" />
                   <PlaySvg />
                 </span>

@@ -109,7 +109,7 @@ export default function CareerPath() {
                       <span
                         className={`flex h-10 w-10 items-center justify-center rounded-full font-mono text-[10px] tracking-[0.2em] transition ${
                           i === active
-                            ? "bg-flame text-ink-900"
+                            ? "bg-flame text-bone shadow-[0_8px_28px_-10px_rgba(3,124,194,0.8)]"
                             : "bg-ink-900 text-bone/50 group-hover:text-bone"
                         }`}
                       >
@@ -141,7 +141,7 @@ export default function CareerPath() {
                 className="absolute inset-0 -z-10 opacity-60"
                 style={{
                   background:
-                    "radial-gradient(60% 60% at 80% 0%, rgba(255,90,31,0.18), transparent 70%)"
+                    "radial-gradient(60% 60% at 80% 0%, rgba(3,124,194,0.22), transparent 70%)"
                 }}
               />
 

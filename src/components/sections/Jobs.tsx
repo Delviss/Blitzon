@@ -108,8 +108,8 @@ export default function Jobs() {
               onClick={() => setCity(c)}
               className={`rounded-full border px-4 py-2 text-[11px] uppercase tracking-[0.22em] transition ${
                 city === c
-                  ? "border-flame bg-flame text-ink-900"
-                  : "border-white/10 bg-white/[0.02] text-bone/70 hover:border-white/30"
+                  ? "border-flame bg-flame text-bone shadow-[0_8px_28px_-10px_rgba(3,124,194,0.7)]"
+                  : "border-white/10 bg-white/[0.02] text-bone/70 hover:border-flame/40 hover:text-bone"
               }`}
             >
               {c}
@@ -122,8 +122,8 @@ export default function Jobs() {
               onClick={() => setType(t)}
               className={`rounded-full border px-4 py-2 text-[11px] uppercase tracking-[0.22em] transition ${
                 type === t
-                  ? "border-flame bg-flame text-ink-900"
-                  : "border-white/10 bg-white/[0.02] text-bone/70 hover:border-white/30"
+                  ? "border-flame bg-flame text-bone shadow-[0_8px_28px_-10px_rgba(3,124,194,0.7)]"
+                  : "border-white/10 bg-white/[0.02] text-bone/70 hover:border-flame/40 hover:text-bone"
               }`}
             >
               {t}
@@ -221,7 +221,7 @@ export default function Jobs() {
                     </div>
                     <a
                       href="#apply"
-                      className="group inline-flex items-center justify-between rounded-full bg-flame px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-900"
+                      className="group inline-flex items-center justify-between rounded-full bg-flame px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_12px_40px_-14px_rgba(3,124,194,0.7)] transition hover:bg-flame-400 hover:shadow-[0_16px_50px_-12px_rgba(27,163,245,0.7)]"
                     >
                       Quick apply
                       <span className="transition group-hover:translate-x-1">→</span>
