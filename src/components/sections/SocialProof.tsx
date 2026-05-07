@@ -11,14 +11,14 @@ const stats = [
 ];
 
 const partners = [
-  "BERLIN",
   "MÜNCHEN",
-  "HAMBURG",
+  "AUGSBURG",
   "FRANKFURT",
+  "STUTTGART",
   "WIEN",
   "ZÜRICH",
+  "HAMBURG",
   "DÜSSELDORF",
-  "STUTTGART",
   "AMSTERDAM"
 ];
 

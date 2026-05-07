@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/system/SmoothScroll";
 import CustomCursor from "@/components/system/CustomCursor";
 import StickyApply from "@/components/system/StickyApply";
+import { asset } from "@/lib/asset";
 
 const sans = Inter({
   subsets: ["latin"],
@@ -28,22 +29,27 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "BLITZON — Wo ehrgeizige Menschen gewinnen",
   description:
-    "BLITZON ist die nächste Generation des Vertriebs. Elite-Training, echtes Einkommen, kompromisslose Karriere. Bewirb dich für das Movement.",
+    "BLITZON ist die nächste Generation des Vertriebs. Elite-Training, echtes Einkommen, kompromisslose Karriere. Standorte München & Augsburg.",
   keywords: [
-    "Sales Ausbildung Deutschland",
-    "Vertrieb Karriere",
-    "Sales Training Germany",
+    "Sales Ausbildung München",
+    "Vertrieb Karriere Augsburg",
+    "Sales Training Bayern",
     "Karriere im Vertrieb",
     "Junge Vertriebstalente",
-    "Sales Recruiting",
-    "Vertrieb Ausbildung"
+    "Sales Recruiting München",
+    "BlitzON Consulting"
   ],
+  icons: {
+    icon: [{ url: asset("/logo/favicon-64.png"), type: "image/png", sizes: "64x64" }],
+    apple: [{ url: asset("/logo/favicon-64.png") }]
+  },
   openGraph: {
     title: "BLITZON — Wo ehrgeizige Menschen gewinnen",
     description:
-      "Elite Sales Movement. Premium Training. Hohe Provisionen. Werde Teil der nächsten Generation Vertriebstalente.",
+      "Elite Sales Movement. Premium Training. Hohe Provisionen. München & Augsburg.",
     type: "website",
-    locale: "de_DE"
+    locale: "de_DE",
+    images: [{ url: asset("/logo/blitzon-lockup.png"), width: 1024, height: 1024, alt: "BLITZON Consulting" }]
   }
 };
 

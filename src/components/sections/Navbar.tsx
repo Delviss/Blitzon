@@ -1,7 +1,9 @@
 "use client";
 
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import { asset } from "@/lib/asset";
 
 const links = [
   { href: "#movement", label: "Movement" },
@@ -40,9 +42,16 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-page py-5">
-          <a href="#" className="group relative flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-md bg-gradient-to-br from-flame via-flame-400 to-copper text-bone shadow-[0_8px_24px_-8px_rgba(3,124,194,0.7)]">
-              <BoltSvg />
+          <a href="#" className="group relative flex items-center gap-2.5">
+            <span className="relative flex h-9 w-9 items-center justify-center">
+              <Image
+                src={asset("/logo/blitzon-mark-transparent.png")}
+                alt="BLITZON"
+                width={36}
+                height={36}
+                priority
+                className="h-9 w-9 object-contain drop-shadow-[0_6px_18px_rgba(27,163,245,0.45)] transition-transform duration-500 group-hover:scale-105"
+              />
             </span>
             <span className="font-display text-lg font-bold tracking-[0.18em]">BLITZON</span>
             <span className="font-mono text-[10px] tracking-[0.3em] text-bone/40">/ DE</span>
@@ -103,7 +112,16 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
       <div className="absolute inset-0 bg-grid-flame opacity-60" />
       <div className="absolute inset-0 grain" />
       <div className="relative flex items-center justify-between px-page py-5">
-        <span className="font-display text-lg font-bold tracking-[0.18em]">BLITZON</span>
+        <span className="flex items-center gap-2.5">
+          <Image
+            src="/logo/blitzon-mark-transparent.png"
+            alt="BLITZON"
+            width={36}
+            height={36}
+            className="h-9 w-9 object-contain drop-shadow-[0_6px_18px_rgba(27,163,245,0.45)]"
+          />
+          <span className="font-display text-lg font-bold tracking-[0.18em]">BLITZON</span>
+        </span>
         <button
           type="button"
           onClick={onClose}
@@ -147,10 +165,3 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
   );
 }
 
-function BoltSvg() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M13 2 3 14h7l-1 8 11-13h-7l0-7z" />
-    </svg>
-  );
-}

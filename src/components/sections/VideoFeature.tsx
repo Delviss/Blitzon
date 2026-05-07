@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
+import { asset } from "@/lib/asset";
 
 export default function VideoFeature() {
   const ref = useRef<HTMLElement | null>(null);
@@ -42,11 +44,13 @@ export default function VideoFeature() {
               className="group absolute inset-0 flex items-center justify-center"
               aria-label="Video abspielen"
             >
-              <img
-                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1600&q=80"
+              <Image
+                src={asset("/media/video-poster.jpg")}
                 alt="A day at BLITZON"
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover"
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/40 to-transparent" />
               <div className="absolute inset-0 grain pointer-events-none" />
@@ -60,7 +64,7 @@ export default function VideoFeature() {
                 </span>
               </div>
               <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 bg-ink-900/60 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.3em] text-bone/60 backdrop-blur md:px-8 md:py-4">
-                <span>· Cohort 04 · Berlin</span>
+                <span>· Cohort 04 · München</span>
                 <span className="hidden md:inline">Shot on RED · No Stock</span>
                 <span className="text-flame">REC ●</span>
               </div>

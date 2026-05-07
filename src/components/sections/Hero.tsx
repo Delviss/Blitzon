@@ -31,7 +31,7 @@ export default function Hero() {
         now.toLocaleTimeString("de-DE", {
           hour: "2-digit",
           minute: "2-digit",
-          timeZone: "Europe/Berlin"
+          timeZone: "Europe/Berlin" // Munich shares the Europe/Berlin tz
         })
       );
     };
@@ -83,7 +83,7 @@ export default function Hero() {
         transition={{ delay: 0.6, duration: 0.8 }}
         className="absolute left-0 right-0 top-24 mx-auto flex max-w-[1440px] items-center justify-between px-page text-[10px] uppercase tracking-[0.32em] text-bone/40"
       >
-        <span className="hidden md:inline">// Berlin · {time} CET</span>
+        <span className="hidden md:inline">// München · {time} CET</span>
         <span className="hidden md:inline">// Class of 2026 · cohort 04</span>
       </motion.div>
 
@@ -155,13 +155,13 @@ export default function Hero() {
         <div className="flex w-max animate-marquee items-center gap-12 whitespace-nowrap py-3 font-mono text-[10px] uppercase tracking-[0.32em] text-bone/50">
           {Array.from({ length: 4 }).map((_, k) => (
             <div key={k} className="flex items-center gap-12">
-              <span>·  Berlin</span>
+              <span>·  München</span>
               <span className="text-flame">⚡ Class 04 / 2026</span>
-              <span>·  Munich</span>
+              <span>·  Augsburg</span>
               <span>·  Hamburg</span>
               <span className="text-flame">⚡ Hiring closers, leaders &amp; future founders</span>
               <span>·  Frankfurt</span>
-              <span>·  Cologne</span>
+              <span>·  Stuttgart</span>
               <span className="text-flame">⚡ Premium Sales Training</span>
             </div>
           ))}

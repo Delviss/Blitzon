@@ -6,7 +6,7 @@ import { useState } from "react";
 const stories = [
   {
     name: "Lina K.",
-    role: "Senior Closer · Berlin",
+    role: "Senior Closer · München",
     age: 24,
     avatar:
       "https://images.unsplash.com/photo-1502323777036-f29e3972d82f?w=400&q=80",
