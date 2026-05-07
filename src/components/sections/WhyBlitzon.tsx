@@ -6,62 +6,94 @@ import RevealText from "@/components/system/RevealText";
 const benefits = [
   {
     no: "01",
-    title: "Schnelles Wachstum",
+    title: "Echtes Tempo",
     body:
-      "Vom ersten Pitch zum Team-Lead in unter 9 Monaten. Wir messen Ergebnisse, nicht Anwesenheit.",
+      "Vom ersten Pitch zur Teamführung in unter neun Monaten. Wir messen, was du lieferst, nicht wie lange du sitzt.",
     tags: ["Beförderung in Monaten", "Leadership-Programm", "Persönlicher Mentor"],
+    accent: "ember" as const,
     span: "md:col-span-7"
   },
   {
     no: "02",
-    title: "Echtes Einkommen",
-    body: "Ungedeckelte Provisionen. Top-Closer skalieren auf 6-stellig bereits im ersten Jahr.",
-    tags: ["Bonus-Pool", "Performance-Stack"],
-    accent: true,
+    title: "Echtes Geld",
+    body: "Provision ohne Deckel. Unsere Top-Closer landen schon im ersten Jahr im sechsstelligen Bereich.",
+    tags: ["Bonus-Pool", "Quartalsprämien"],
+    accent: "coral" as const,
     span: "md:col-span-5"
   },
   {
     no: "03",
-    title: "Elite Training",
-    body: "Sales-Psychologie, Closing-Frameworks, Persönlichkeitsentwicklung – jeden Tag.",
-    tags: ["1-zu-1 Coaching", "Roleplay Lab", "Sales Psychology"],
+    title: "Premium Training",
+    body: "Sales-Psychologie, Closing-Frameworks, Persönlichkeit. Jeden Tag, nicht nur im Onboarding.",
+    tags: ["1-zu-1 Coaching", "Roleplay Lab", "Verkaufspsychologie"],
+    accent: "electric" as const,
     span: "md:col-span-5"
   },
   {
     no: "04",
-    title: "Lifestyle",
-    body: "Retreats in Lissabon, Skiwochen in Tirol, Quarterly-Galas. Hart arbeiten, hart feiern.",
+    title: "Lifestyle, der zählt",
+    body: "Retreats in Lissabon, Skiwochen in Tirol, Quartalsgalas. Hart arbeiten und richtig feiern.",
     tags: ["International Retreats", "Top-Performer-Trips"],
+    accent: "ember" as const,
     span: "md:col-span-7"
   },
   {
     no: "05",
-    title: "Persönliches Wachstum",
-    body: "Kommunikation, Leadership, Disziplin, Selbstvertrauen. Wir trainieren den Menschen, nicht nur den Verkäufer.",
+    title: "Du wächst als Mensch",
+    body: "Kommunikation, Führung, Disziplin, Selbstvertrauen. Wir formen die Person hinter dem Verkäufer.",
     tags: ["Mindset Lab", "Speaker Sessions"],
+    accent: "moss" as const,
     span: "md:col-span-12"
   }
 ];
 
+const accentRing = {
+  ember: "hover:border-ember/60",
+  coral: "hover:border-coral/60",
+  electric: "hover:border-electric-400/60",
+  moss: "hover:border-moss/60"
+} as const;
+
+const accentGlow = {
+  ember: "group-hover:bg-ember/15",
+  coral: "group-hover:bg-coral/15",
+  electric: "group-hover:bg-electric-400/15",
+  moss: "group-hover:bg-moss/15"
+} as const;
+
+const accentNumber = {
+  ember: "text-ember",
+  coral: "text-coral",
+  electric: "text-electric-400",
+  moss: "text-moss"
+} as const;
+
+const accentLine = {
+  ember: "from-ember",
+  coral: "from-coral",
+  electric: "from-electric-400",
+  moss: "from-moss"
+} as const;
+
 export default function WhyBlitzon() {
   return (
     <section id="why" className="relative overflow-hidden bg-ink-900 py-32 md:py-40">
-      <div className="absolute inset-0 -z-10 bg-grid-flame opacity-40" />
+      <div className="absolute inset-0 -z-10 bg-grid-flame opacity-50" />
       <div className="absolute inset-0 grain pointer-events-none" />
 
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-4">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-flame">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
               · Warum BLITZON
             </span>
           </div>
           <div className="md:col-span-8">
-            <h2 className="font-display text-display-md uppercase tracking-tightest">
-              <RevealText as="span">Nicht nur ein Job —</RevealText>
+            <h2 className="font-display text-display-md uppercase tracking-tightest text-bone">
+              <RevealText as="span">Mehr als ein Job.</RevealText>
               <span className="block">
                 <RevealText as="span" className="flame-text">
-                  ein Launchpad.
+                  Eine Startbahn.
                 </RevealText>
               </span>
             </h2>
@@ -76,38 +108,29 @@ export default function WhyBlitzon() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ delay: i * 0.06, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className={`group relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-white/5 bg-ink-800 p-8 transition-all duration-500 hover:border-flame/40 md:min-h-[340px] md:p-10 ${b.span}`}
+              className={`group relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-ink-800 p-8 transition-all duration-500 ${accentRing[b.accent]} md:min-h-[340px] md:p-10 ${b.span}`}
             >
-              {b.accent && (
-                <div
-                  className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
-                  style={{
-                    background:
-                      "radial-gradient(70% 70% at 30% 0%, rgba(3,124,194,0.22), transparent 70%)"
-                  }}
-                />
-              )}
-              <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full bg-flame/0 blur-3xl transition-all duration-700 group-hover:bg-flame/15" />
+              <div className={`absolute -right-12 -top-12 h-48 w-48 rounded-full bg-transparent blur-3xl transition-all duration-700 ${accentGlow[b.accent]}`} />
 
               <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/35">
+                <span className={`font-mono text-[10px] uppercase tracking-[0.32em] ${accentNumber[b.accent]} opacity-90`}>
                   {b.no} / 05
                 </span>
-                <span className="text-bone/30 transition-transform duration-500 group-hover:rotate-45 group-hover:text-flame">
+                <span className={`text-bone/45 transition-transform duration-500 group-hover:rotate-45 group-hover:${accentNumber[b.accent].replace("text-", "text-")}`}>
                   <ArrowSvg />
                 </span>
               </div>
 
               <div className="mt-auto">
-                <h3 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
+                <h3 className="font-display text-3xl font-semibold tracking-tight text-bone md:text-4xl">
                   {b.title}
                 </h3>
-                <p className="mt-3 max-w-md text-sm text-bone/65 md:text-base">{b.body}</p>
+                <p className="mt-3 max-w-md text-sm text-bone/80 md:text-base">{b.body}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {b.tags.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-bone/55"
+                      className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-bone/75"
                     >
                       {t}
                     </span>
@@ -115,7 +138,7 @@ export default function WhyBlitzon() {
                 </div>
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-flame to-transparent transition-transform duration-700 group-hover:scale-x-100" />
+              <div className={`absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r ${accentLine[b.accent]} to-transparent transition-transform duration-700 group-hover:scale-x-100`} />
             </motion.article>
           ))}
         </div>

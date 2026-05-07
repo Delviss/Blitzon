@@ -3,19 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --bg: #050B12;
-  --surface: #0C1622;
-  --surface-elevated: #132536;
-  --brand: #037CC2;
-  --brand-hover: #0496EA;
-  --electric: #1BA3F5;
-  --cyan: #5DD6FF;
-  --bone: #F5F7FA;
-  --bone-muted: #A8B3C2;
-  --bone-subtle: #6E7C91;
+  --bg: #06101C;
+  --surface: #0E1B2C;
+  --surface-elevated: #152840;
+  --brand: #1FA9FF;
+  --brand-hover: #3DB6FF;
+  --electric: #1FA9FF;
+  --cyan: #7DE2FF;
+  --ember: #FFB547;
+  --ember-deep: #F59E0B;
+  --coral: #FF6F5C;
+  --bone: #F4F1EA;
+  --bone-muted: #B6AE9E;
+  --bone-subtle: #857D6E;
   /* Legacy aliases retained for backwards compatibility */
-  --flame: #037CC2;
-  --copper: #5DD6FF;
+  --flame: #1FA9FF;
+  --copper: #7DE2FF;
 }
 
 * {
@@ -40,8 +43,8 @@ body {
 }
 
 ::selection {
-  background: var(--brand);
-  color: #ffffff;
+  background: var(--ember);
+  color: #0E1B2C;
 }
 
 ::-webkit-scrollbar {
@@ -49,10 +52,10 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0C1622;
+  background: #0E1B2C;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#037CC2, #0496EA, #5DD6FF);
+  background: linear-gradient(#FFB547, #FF6F5C, #1FA9FF);
   border-radius: 999px;
 }
 
@@ -75,28 +78,46 @@ body {
     text-wrap: balance;
   }
   .glass {
-    background: rgba(12, 22, 34, 0.55);
+    background: rgba(14, 27, 44, 0.55);
     backdrop-filter: blur(18px) saturate(140%);
     -webkit-backdrop-filter: blur(18px) saturate(140%);
-    border: 1px solid rgba(168, 179, 194, 0.08);
+    border: 1px solid rgba(244, 241, 234, 0.10);
   }
   .hairline {
-    border-color: rgba(168, 179, 194, 0.10);
+    border-color: rgba(244, 241, 234, 0.12);
   }
   .flame-gradient {
-    background: linear-gradient(135deg, #037CC2 0%, #0496EA 45%, #5DD6FF 100%);
+    background: linear-gradient(135deg, #FFB547 0%, #FF8A3D 45%, #FF6F5C 100%);
+  }
+  .ember-gradient {
+    background: linear-gradient(135deg, #FFD27D 0%, #FFB547 45%, #F59E0B 100%);
   }
   .flame-text {
-    background: linear-gradient(120deg, #1BA3F5 0%, #037CC2 35%, #5DD6FF 100%);
+    background: linear-gradient(120deg, #FFE3B0 0%, #FFB547 38%, #FF8A3D 72%, #FF6F5C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 0 0 60px rgba(255, 181, 71, 0.18);
+  }
+  .ember-text {
+    background: linear-gradient(120deg, #FFE3B0 0%, #FFB547 50%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .electric-text {
+    background: linear-gradient(120deg, #7DE2FF 0%, #3DB6FF 50%, #1FA9FF 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
   .brand-glow {
-    box-shadow: 0 0 0 1px rgba(3, 124, 194, 0.35),
-      0 18px 60px -18px rgba(3, 124, 194, 0.55),
-      0 0 60px -12px rgba(27, 163, 245, 0.35);
+    box-shadow: 0 0 0 1px rgba(255, 181, 71, 0.35),
+      0 18px 60px -18px rgba(255, 181, 71, 0.55),
+      0 0 60px -12px rgba(31, 169, 255, 0.35);
   }
   .marker-line::before {
     content: "";
@@ -123,7 +144,7 @@ body {
 .cursor-dot {
   width: 6px;
   height: 6px;
-  background: #F5F7FA;
+  background: #F4F1EA;
   border-radius: 9999px;
   transform: translate(-50%, -50%);
 }
@@ -131,7 +152,7 @@ body {
 .cursor-ring {
   width: 36px;
   height: 36px;
-  border: 1px solid rgba(245, 247, 250, 0.6);
+  border: 1px solid rgba(244, 241, 234, 0.6);
   border-radius: 9999px;
   transform: translate(-50%, -50%);
   transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background 0.25s ease;
@@ -140,8 +161,8 @@ body {
 .cursor-hover .cursor-ring {
   width: 64px;
   height: 64px;
-  border-color: #1BA3F5;
-  background: rgba(27, 163, 245, 0.10);
+  border-color: #FFB547;
+  background: rgba(255, 181, 71, 0.12);
 }
 
 @media (max-width: 900px) {
@@ -155,7 +176,7 @@ body {
   background-image: linear-gradient(
     90deg,
     transparent,
-    rgba(245, 247, 250, 0.6),
+    rgba(244, 241, 234, 0.6),
     transparent
   );
   background-size: 200% 100%;
@@ -173,7 +194,7 @@ body {
 
 input::placeholder,
 textarea::placeholder {
-  color: rgba(245, 247, 250, 0.35);
+  color: rgba(244, 241, 234, 0.40);
 }
 
 input:focus,

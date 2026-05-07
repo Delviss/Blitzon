@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { asset } from "@/lib/asset";
 
 const links = [
-  { href: "#movement", label: "Movement" },
+  { href: "#movement", label: "Bewegung" },
   { href: "#training", label: "Training" },
   { href: "#career", label: "Karriere" },
   { href: "#team", label: "Team" },
@@ -34,11 +34,11 @@ export default function Navbar() {
     <>
       <motion.div
         style={{ scaleX: scrollYProgress, opacity: progressOpacity }}
-        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-flame via-flame-400 to-copper"
+        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-ember via-coral to-electric"
       />
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          scrolled ? "border-b border-white/5 bg-ink-900/70 backdrop-blur-xl" : "bg-transparent"
+          scrolled ? "border-b border-white/10 bg-ink-900/80 backdrop-blur-xl" : "bg-transparent"
         }`}
       >
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-page py-5">
@@ -50,11 +50,11 @@ export default function Navbar() {
                 width={36}
                 height={36}
                 priority
-                className="h-9 w-9 object-contain drop-shadow-[0_6px_18px_rgba(27,163,245,0.45)] transition-transform duration-500 group-hover:scale-105"
+                className="h-9 w-9 object-contain drop-shadow-[0_6px_18px_rgba(255,181,71,0.45)] transition-transform duration-500 group-hover:scale-105"
               />
             </span>
-            <span className="font-display text-lg font-bold tracking-[0.18em]">BLITZON</span>
-            <span className="font-mono text-[10px] tracking-[0.3em] text-bone/40">/ DE</span>
+            <span className="font-display text-lg font-bold tracking-[0.18em] text-bone">BLITZON</span>
+            <span className="font-mono text-[10px] tracking-[0.3em] text-ember/80">/ DE</span>
           </a>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -62,11 +62,11 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className="group relative text-[11px] font-medium uppercase tracking-[0.24em] text-bone/70 transition hover:text-bone"
+                className="group relative text-[11px] font-medium uppercase tracking-[0.24em] text-bone/80 transition hover:text-bone"
               >
                 <span className="relative">
                   {l.label}
-                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-flame transition-all duration-500 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-ember transition-all duration-500 group-hover:w-full" />
                 </span>
               </a>
             ))}
@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href="#apply"
-              className="group hidden h-11 items-center gap-2 rounded-full bg-flame px-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_10px_30px_-12px_rgba(3,124,194,0.7)] transition-all hover:bg-flame-400 hover:shadow-[0_14px_40px_-10px_rgba(27,163,245,0.7)] md:inline-flex"
+              className="group hidden h-11 items-center gap-2 rounded-full bg-ember px-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-900 shadow-[0_10px_30px_-12px_rgba(255,181,71,0.7)] transition-all hover:bg-ember-300 hover:shadow-[0_14px_40px_-10px_rgba(255,181,71,0.8)] md:inline-flex"
             >
               Bewerben
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -84,7 +84,7 @@ export default function Navbar() {
               type="button"
               aria-label="Menü öffnen"
               onClick={() => setOpen(true)}
-              className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-white/10 bg-ink-700/40 transition hover:border-flame md:hidden"
+              className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-white/15 bg-ink-700/40 transition hover:border-ember md:hidden"
             >
               <span className="block h-px w-5 bg-bone" />
               <span className="block h-px w-3 bg-bone" />
@@ -118,15 +118,15 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             alt="BLITZON"
             width={36}
             height={36}
-            className="h-9 w-9 object-contain drop-shadow-[0_6px_18px_rgba(27,163,245,0.45)]"
+            className="h-9 w-9 object-contain drop-shadow-[0_6px_18px_rgba(255,181,71,0.45)]"
           />
-          <span className="font-display text-lg font-bold tracking-[0.18em]">BLITZON</span>
+          <span className="font-display text-lg font-bold tracking-[0.18em] text-bone">BLITZON</span>
         </span>
         <button
           type="button"
           onClick={onClose}
           aria-label="Menü schließen"
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-2xl"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-2xl text-bone"
         >
           ×
         </button>
@@ -140,12 +140,12 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 + i * 0.06, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="group flex items-baseline justify-between border-b border-white/5 py-5"
+            className="group flex items-baseline justify-between border-b border-white/10 py-5"
           >
-            <span className="font-display text-5xl font-semibold tracking-tightest">
+            <span className="font-display text-5xl font-semibold tracking-tightest text-bone">
               {l.label}
             </span>
-            <span className="font-mono text-xs text-bone/40 transition group-hover:text-flame">
+            <span className="font-mono text-xs text-bone/55 transition group-hover:text-ember">
               0{i + 1}
             </span>
           </motion.a>
@@ -155,13 +155,12 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         <a
           href="#apply"
           onClick={onClose}
-          className="flex w-full items-center justify-between rounded-full bg-flame px-6 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)]"
+          className="flex w-full items-center justify-between rounded-full bg-ember px-6 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-ink-900 shadow-[0_18px_60px_-18px_rgba(255,181,71,0.7)]"
         >
-          Bewirb dich jetzt
+          Bewirb dich
           <span>→</span>
         </a>
       </div>
     </motion.div>
   );
 }
-
