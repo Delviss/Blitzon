@@ -15,7 +15,7 @@ type Job = {
 const jobs: Job[] = [
   {
     title: "Sales Trainee",
-    city: "Berlin",
+    city: "München",
     type: "Trainee",
     level: "Starter",
     income: "2.500€ + Provision",
@@ -31,7 +31,7 @@ const jobs: Job[] = [
   },
   {
     title: "Senior Account Closer",
-    city: "Hamburg",
+    city: "Augsburg",
     type: "Vollzeit",
     level: "Senior",
     income: "8.000–14.000€",
@@ -39,7 +39,7 @@ const jobs: Job[] = [
   },
   {
     title: "Sales Werkstudent",
-    city: "Berlin",
+    city: "Augsburg",
     type: "Werkstudent",
     level: "Starter",
     income: "20€ / Std + Bonus",
@@ -63,7 +63,7 @@ const jobs: Job[] = [
   }
 ];
 
-const cities = ["Alle", "Berlin", "München", "Hamburg", "Frankfurt", "Remote"];
+const cities = ["Alle", "München", "Augsburg", "Frankfurt", "Remote"];
 const types: ("Alle" | Job["type"])[] = ["Alle", "Vollzeit", "Trainee", "Werkstudent", "Lead"];
 
 export default function Jobs() {

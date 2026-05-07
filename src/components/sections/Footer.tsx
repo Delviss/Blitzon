@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import { asset } from "@/lib/asset";
 
 const cols = [
   {
@@ -64,15 +66,24 @@ export default function Footer() {
 
         <div className="mt-20 grid grid-cols-2 gap-10 md:grid-cols-12 md:gap-6">
           <div className="col-span-2 md:col-span-4">
-            <div className="flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-flame via-flame-400 to-copper text-bone shadow-[0_8px_24px_-8px_rgba(3,124,194,0.7)]">
-                <Bolt />
+            <div className="flex items-center gap-3">
+              <Image
+                src={asset("/logo/blitzon-mark-transparent.png")}
+                alt="BLITZON Consulting"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain drop-shadow-[0_8px_24px_rgba(27,163,245,0.45)]"
+              />
+              <span className="flex flex-col leading-tight">
+                <span className="font-display text-base font-bold tracking-[0.2em]">BLITZON</span>
+                <span className="font-mono text-[9px] uppercase tracking-[0.32em] text-bone/45">
+                  Consulting · Energy. Sales. Performance.
+                </span>
               </span>
-              <span className="font-display text-base font-bold tracking-[0.2em]">BLITZON</span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-bone/55">
-              BLITZON ist eine moderne Sales-Akademie & Recruiting-Plattform mit Sitz in Berlin. Wir
-              bauen die nächste Generation von Vertriebstalenten.
+              BLITZON ist eine moderne Sales-Akademie & Recruiting-Plattform mit Standorten in
+              München & Augsburg. Wir bauen die nächste Generation von Vertriebstalenten.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-bone/55">
               <span className="rounded-full border border-white/10 px-3 py-1.5">DACH</span>
@@ -106,22 +117,52 @@ export default function Footer() {
               · HQ
             </span>
             <p className="mt-4 text-sm text-bone/75">
-              BLITZON GmbH<br />
-              Friedrichstr. 68<br />
-              10117 Berlin
+              BlitzON Consulting OHG<br />
+              Radlkoferstraße 2<br />
+              81373 München
             </p>
-            <p className="mt-3 text-sm text-bone/55">hello@blitzon.de</p>
+            <p className="mt-3 text-sm text-bone/55">
+              <a href="mailto:hello@blitzon.de" className="transition hover:text-flame">
+                hello@blitzon.de
+              </a>
+            </p>
+            <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.28em] text-bone/40">
+              · Standort 02 · Augsburg
+            </p>
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-white/5 pt-6 md:flex-row md:items-center">
+        <div className="mt-16 grid grid-cols-1 gap-4 border-t border-white/5 pt-6 text-[11px] text-bone/45 md:grid-cols-12">
+          <div className="md:col-span-7">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-bone/40">
+              · Pflichtangaben gem. § 5 TMG
+            </p>
+            <p className="mt-2 leading-relaxed">
+              BlitzON Consulting OHG · Radlkoferstraße 2 · 81373 München ·
+              Persönlich haftende Gesellschafter: Hasan Blitz, Leon-Paul Ishimwe Harelimana ·
+              Registergericht: Amtsgericht München · HRA 121039 ·
+              Verantwortlich i.S.d. § 18 Abs. 2 MStV: Hasan Blitz · hello@blitzon.de
+            </p>
+          </div>
+          <div className="md:col-span-5 md:text-right">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-bone/40">
+              · Standorte
+            </p>
+            <p className="mt-2">
+              München · Radlkoferstraße 2 · 81373 München<br />
+              Augsburg · Office DACH-Süd
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/5 pt-6 md:flex-row md:items-center">
           <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/40">
-            © {year} BLITZON · Movement · Made in Berlin
+            © {year} BlitzON Consulting OHG · Movement · Made in München & Augsburg
           </span>
           <div className="flex flex-wrap gap-6 font-mono text-[10px] uppercase tracking-[0.32em] text-bone/40">
-            <a href="#" className="transition hover:text-bone">Impressum</a>
-            <a href="#" className="transition hover:text-bone">Datenschutz</a>
-            <a href="#" className="transition hover:text-bone">AGB</a>
+            <a href="https://blitzon.de/Impressum.html" className="transition hover:text-bone">Impressum</a>
+            <a href="https://blitzon.de/Datenschutz.html" className="transition hover:text-bone">Datenschutz</a>
+            <a href="https://blitzon.de/AGB.html" className="transition hover:text-bone">AGB</a>
           </div>
         </div>
       </div>
@@ -136,13 +177,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
-
-function Bolt() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M13 2 3 14h7l-1 8 11-13h-7l0-7z" />
-    </svg>
   );
 }

@@ -206,7 +206,7 @@ export default function ApplyForm() {
                           <input
                             value={data.city}
                             onChange={(e) => update("city", e.target.value)}
-                            placeholder="Berlin"
+                            placeholder="München"
                             className="w-full bg-transparent py-3 text-base outline-none placeholder:text-bone/30"
                           />
                         </Field>

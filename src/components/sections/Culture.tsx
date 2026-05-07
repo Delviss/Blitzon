@@ -1,42 +1,44 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import RevealText from "@/components/system/RevealText";
+import { asset } from "@/lib/asset";
 
 const tiles = [
   {
-    src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80",
-    label: "Strategie-Session · Berlin HQ",
+    src: "/media/team-success.jpg",
+    label: "Top-Performer · München HQ",
     span: "md:col-span-5 md:row-span-2"
   },
   {
-    src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900&q=80",
-    label: "Quarterly Gala",
+    src: "/media/awards-2026.jpg",
+    label: "ProvenExpert Awards 2026",
     span: "md:col-span-3"
   },
   {
-    src: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900&q=80",
-    label: "Closer Workshop",
+    src: "/media/closer-call.jpg",
+    label: "Closer im Kundengespräch",
     span: "md:col-span-4"
   },
   {
-    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80",
-    label: "Top-Performer Retreat",
+    src: "/media/lifestyle-bmw.jpg",
+    label: "Top-Performer Lifestyle",
     span: "md:col-span-4"
   },
   {
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80",
-    label: "Daily Standup",
+    src: "/media/team-trainee.jpg",
+    label: "Trainee · Class 04",
     span: "md:col-span-3"
   },
   {
-    src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=900&q=80",
-    label: "Lisbon Offsite",
+    src: "/media/lifestyle-fleet.jpg",
+    label: "Augsburg Offsite",
     span: "md:col-span-5"
   },
   {
-    src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&q=80",
-    label: "Onboarding Cohort 04",
+    src: "/media/kodex-blitzon.jpg",
+    label: "Der BLITZON Kodex",
     span: "md:col-span-7"
   }
 ];
@@ -78,11 +80,12 @@ export default function Culture() {
               transition={{ delay: i * 0.06, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className={`group relative col-span-1 overflow-hidden rounded-xl border border-white/5 bg-ink-900 ${t.span}`}
             >
-              <img
-                src={t.src}
+              <Image
+                src={asset(t.src)}
                 alt={t.label}
-                loading="lazy"
-                className="absolute inset-0 h-full w-full scale-110 object-cover grayscale transition-all duration-700 group-hover:scale-100 group-hover:grayscale-0"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 scale-110 group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-60" />
               <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-bone/80">
