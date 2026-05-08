@@ -4,7 +4,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { asset } from "@/lib/asset";
 
-const cols = [
+type FooterLink = { label: string; href?: string };
+type FooterCol = { title: string; links: FooterLink[] };
+
+const cols: FooterCol[] = [
   {
     title: "Bewegung",
     links: [
@@ -26,10 +29,16 @@ const cols = [
   {
     title: "Connect",
     links: [
-      { label: "Instagram", href: "https://instagram.com" },
-      { label: "TikTok", href: "https://tiktok.com" },
-      { label: "LinkedIn", href: "https://linkedin.com" },
-      { label: "YouTube", href: "https://youtube.com" }
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/blitzonconsulting?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+      },
+      {
+        label: "TikTok",
+        href: "https://www.tiktok.com/@blitzon_consulting?is_from_webapp=1&sender_device=pc"
+      },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/blitzon/" },
+      { label: "YouTube · coming soon" }
     ]
   }
 ];
@@ -97,16 +106,25 @@ export default function Footer() {
                 · {c.title}
               </span>
               <ul className="mt-4 space-y-2">
-                {c.links.map((l) => (
-                  <li key={l.label}>
-                    <a
-                      href={l.href}
-                      className="text-sm text-bone/85 transition hover:text-ember"
-                    >
-                      {l.label}
-                    </a>
-                  </li>
-                ))}
+                {c.links.map((l) => {
+                  const isExternal = l.href?.startsWith("http");
+                  return (
+                    <li key={l.label}>
+                      {l.href ? (
+                        <a
+                          href={l.href}
+                          target={isExternal ? "_blank" : undefined}
+                          rel={isExternal ? "noopener noreferrer" : undefined}
+                          className="text-sm text-bone/85 transition hover:text-ember"
+                        >
+                          {l.label}
+                        </a>
+                      ) : (
+                        <span className="text-sm text-bone/50">{l.label}</span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

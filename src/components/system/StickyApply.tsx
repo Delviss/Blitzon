@@ -29,7 +29,7 @@ export default function StickyApply() {
           className="safe-pb fixed bottom-4 right-4 z-40 flex items-center gap-2 sm:bottom-5 sm:right-5 sm:gap-3 md:bottom-7 md:right-7"
         >
           <a
-            href="https://wa.me/4915123456789"
+            href="https://api.whatsapp.com/send/?phone=491707777270&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
             className="group hidden h-12 items-center gap-2 rounded-full border border-white/15 bg-ink-700/80 px-4 text-xs uppercase tracking-[0.2em] text-bone backdrop-blur-md transition hover:border-moss/60 hover:text-moss md:flex"

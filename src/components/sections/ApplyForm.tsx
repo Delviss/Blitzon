@@ -93,7 +93,7 @@ export default function ApplyForm() {
 
             <div className="mt-8 flex flex-wrap gap-3 md:mt-10">
               <a
-                href="https://wa.me/4915123456789"
+                href="https://api.whatsapp.com/send/?phone=491707777270&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full border border-moss/40 bg-moss/15 px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-moss transition hover:border-moss hover:text-bone"
