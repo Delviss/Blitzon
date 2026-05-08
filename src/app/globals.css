@@ -10,9 +10,9 @@
   --brand-hover: #1F92D0;
   --electric: #1FA9FF;
   --cyan: #7DE2FF;
-  --ember: #FFB547;
-  --ember-deep: #F59E0B;
-  --coral: #FF6F5C;
+  --ember: #1FA9FF;
+  --ember-deep: #037CC2;
+  --coral: #3DB6FF;
   --bone: #F4F1EA;
   --bone-muted: #B6AE9E;
   --bone-subtle: #857D6E;
@@ -55,7 +55,7 @@ body {
   background: #0E1B2C;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#FFB547, #FF6F5C, #1FA9FF);
+  background: linear-gradient(#7DE2FF, #1FA9FF, #037CC2);
   border-radius: 999px;
 }
 
@@ -87,25 +87,22 @@ body {
     border-color: rgba(244, 241, 234, 0.12);
   }
   .flame-gradient {
-    background: linear-gradient(135deg, #FFB547 0%, #FF8A3D 45%, #FF6F5C 100%);
+    background: linear-gradient(135deg, #7DE2FF 0%, #1FA9FF 45%, #037CC2 100%);
   }
   .ember-gradient {
-    background: linear-gradient(135deg, #FFD27D 0%, #FFB547 45%, #F59E0B 100%);
+    background: linear-gradient(135deg, #7DE2FF 0%, #3DB6FF 45%, #1FA9FF 100%);
   }
   .flame-text,
   .flame-text * {
-    background-image: linear-gradient(120deg, #FFE3B0 0%, #FFB547 38%, #FF8A3D 72%, #FF6F5C 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: #1FA9FF;
+    -webkit-text-fill-color: #1FA9FF;
   }
   .flame-text {
-    text-shadow: 0 0 60px rgba(255, 181, 71, 0.18);
+    text-shadow: 0 0 60px rgba(31, 169, 255, 0.22);
   }
   .ember-text,
   .ember-text * {
-    background-image: linear-gradient(120deg, #FFE3B0 0%, #FFB547 50%, #F59E0B 100%);
+    background-image: linear-gradient(120deg, #7DE2FF 0%, #3DB6FF 50%, #1FA9FF 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -120,9 +117,9 @@ body {
     color: transparent;
   }
   .brand-glow {
-    box-shadow: 0 0 0 1px rgba(255, 181, 71, 0.35),
-      0 18px 60px -18px rgba(255, 181, 71, 0.55),
-      0 0 60px -12px rgba(31, 169, 255, 0.35);
+    box-shadow: 0 0 0 1px rgba(31, 169, 255, 0.35),
+      0 18px 60px -18px rgba(31, 169, 255, 0.55),
+      0 0 60px -12px rgba(3, 124, 194, 0.35);
   }
   .marker-line::before {
     content: "";
@@ -166,8 +163,8 @@ body {
 .cursor-hover .cursor-ring {
   width: 64px;
   height: 64px;
-  border-color: #FFB547;
-  background: rgba(255, 181, 71, 0.12);
+  border-color: #1FA9FF;
+  background: rgba(31, 169, 255, 0.12);
 }
 
 @media (max-width: 900px) {

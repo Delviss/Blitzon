@@ -72,7 +72,7 @@ export default function Footer() {
                 alt="BLITZON Consulting"
                 width={40}
                 height={40}
-                className="h-10 w-10 object-contain drop-shadow-[0_8px_24px_rgba(255,181,71,0.45)]"
+                className="h-10 w-10 object-contain drop-shadow-[0_8px_24px_rgba(31,169,255,0.45)]"
               />
               <span className="flex flex-col leading-tight">
                 <span className="font-display text-base font-bold tracking-[0.2em] text-bone">BLITZON</span>

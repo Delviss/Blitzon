@@ -54,26 +54,26 @@ const config: Config = {
           500: "#1FA9FF"
         },
         ember: {
-          DEFAULT: "#FFB547",
-          50: "#FFF2DA",
-          100: "#FFE3B0",
-          200: "#FFD27D",
-          300: "#FFC25B",
-          400: "#FFB547",
-          500: "#F59E0B",
-          600: "#D97706",
-          700: "#B45309"
+          DEFAULT: "#1FA9FF",
+          50: "#E6F4FB",
+          100: "#BFE0F2",
+          200: "#7FC1E5",
+          300: "#3FA1D8",
+          400: "#3DB6FF",
+          500: "#1FA9FF",
+          600: "#037CC2",
+          700: "#024F7B"
         },
         coral: {
-          DEFAULT: "#FF6F5C",
-          400: "#FF8B7A",
-          500: "#FF6F5C",
-          600: "#E85544"
+          DEFAULT: "#3DB6FF",
+          400: "#7DE2FF",
+          500: "#3DB6FF",
+          600: "#1FA9FF"
         },
         moss: {
-          DEFAULT: "#5EEAD4",
-          400: "#8BF3E2",
-          500: "#5EEAD4"
+          DEFAULT: "#7DE2FF",
+          400: "#A8ECFF",
+          500: "#7DE2FF"
         }
       },
       fontFamily: {
@@ -92,7 +92,7 @@ const config: Config = {
       },
       backgroundImage: {
         "grid-flame":
-          "radial-gradient(circle at 18% 18%, rgba(255,181,71,0.16), transparent 45%), radial-gradient(circle at 82% 0%, rgba(31,169,255,0.20), transparent 55%), radial-gradient(circle at 60% 92%, rgba(255,111,92,0.10), transparent 55%)",
+          "radial-gradient(circle at 18% 18%, rgba(31,146,208,0.18), transparent 45%), radial-gradient(circle at 82% 0%, rgba(31,169,255,0.22), transparent 55%), radial-gradient(circle at 60% 92%, rgba(125,226,255,0.10), transparent 55%)",
         "noise":
           "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.65'/></svg>\")"
       },
@@ -107,8 +107,8 @@ const config: Config = {
           "55%": { opacity: "0.85" }
         },
         pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(255,181,71,0.55)" },
-          "50%": { boxShadow: "0 0 48px 8px rgba(255,181,71,0.22)" }
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(31,169,255,0.55)" },
+          "50%": { boxShadow: "0 0 48px 8px rgba(31,169,255,0.22)" }
         },
         scanline: {
           "0%": { transform: "translateY(-100%)" },

@@ -50,7 +50,7 @@ export default function Navbar() {
                 width={36}
                 height={36}
                 priority
-                className="h-9 w-9 object-contain drop-shadow-[0_6px_18px_rgba(255,181,71,0.45)] transition-transform duration-500 group-hover:scale-105"
+                className="h-9 w-9 object-contain drop-shadow-[0_6px_18px_rgba(31,169,255,0.45)] transition-transform duration-500 group-hover:scale-105"
               />
             </span>
             <span className="font-display text-lg font-bold tracking-[0.18em] text-bone">BLITZON</span>
@@ -118,7 +118,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             alt="BLITZON"
             width={36}
             height={36}
-            className="h-9 w-9 object-contain drop-shadow-[0_6px_18px_rgba(255,181,71,0.45)]"
+            className="h-9 w-9 object-contain drop-shadow-[0_6px_18px_rgba(31,169,255,0.45)]"
           />
           <span className="font-display text-lg font-bold tracking-[0.18em] text-bone">BLITZON</span>
         </span>

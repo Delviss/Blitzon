@@ -118,7 +118,7 @@ export default function ApplyForm() {
                 className="absolute inset-0 -z-10 opacity-60"
                 style={{
                   background:
-                    "radial-gradient(60% 60% at 0% 0%, rgba(255,181,71,0.18), transparent 70%)"
+                    "radial-gradient(60% 60% at 0% 0%, rgba(31,169,255,0.18), transparent 70%)"
                 }}
               />
 
@@ -149,7 +149,7 @@ export default function ApplyForm() {
                     exit={{ opacity: 0, y: -16 }}
                     className="mt-12 flex flex-col items-start gap-6 text-bone"
                   >
-                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-ember via-coral to-electric text-ink-900 shadow-[0_12px_40px_-12px_rgba(255,181,71,0.7)]">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-ember via-coral to-electric text-ink-900 shadow-[0_12px_40px_-12px_rgba(31,169,255,0.7)]">
                       ✓
                     </span>
                     <h3 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">

@@ -17,10 +17,10 @@ export default function HomePage() {
     <main className="relative">
       <Navbar />
       <Hero />
+      <VideoFeature />
       <SocialProof />
       <WhyBlitzon />
       <Training />
-      <VideoFeature />
       <CareerPath />
       <Culture />
       <Manifesto />

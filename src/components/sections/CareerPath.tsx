@@ -142,7 +142,7 @@ export default function CareerPath() {
                 className="absolute inset-0 -z-10 opacity-70"
                 style={{
                   background:
-                    "radial-gradient(60% 60% at 80% 0%, rgba(255,181,71,0.18), transparent 70%)"
+                    "radial-gradient(60% 60% at 80% 0%, rgba(31,169,255,0.18), transparent 70%)"
                 }}
               />
 
