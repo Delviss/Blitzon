@@ -64,7 +64,7 @@ export default function Training() {
     <section
       id="training"
       ref={ref}
-      className="relative overflow-hidden border-t border-white/10 bg-ink-800 py-32 md:py-40"
+      className="relative overflow-hidden border-t border-white/10 bg-ink-800 py-20 sm:py-28 md:py-40"
     >
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
@@ -102,15 +102,18 @@ export default function Training() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-15% 0px" }}
                 transition={{ delay: i * 0.06, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="group relative grid grid-cols-12 items-stretch gap-4 rounded-2xl border border-white/10 bg-ink-700/50 p-6 backdrop-blur-sm transition-all duration-500 hover:border-ember/50 hover:bg-ink-700 md:gap-8 md:p-8"
+                className="group relative grid grid-cols-12 items-stretch gap-3 rounded-2xl border border-white/10 bg-ink-700/50 p-5 backdrop-blur-sm transition-all duration-500 hover:border-ember/50 hover:bg-ink-700 sm:gap-4 sm:p-6 md:gap-8 md:p-8"
               >
                 <div className="col-span-12 flex items-center gap-4 md:col-span-1">
-                  <span className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-ink-900 font-mono text-[10px] tracking-[0.2em] text-bone/85 transition group-hover:border-ember group-hover:text-ember">
+                  <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-ink-900 font-mono text-[10px] tracking-[0.2em] text-bone/85 transition group-hover:border-ember group-hover:text-ember">
                     {p.no}
+                  </span>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55 md:hidden">
+                    {p.duration}
                   </span>
                 </div>
                 <div className="col-span-12 flex flex-col gap-2 md:col-span-3">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
+                  <span className="hidden font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55 md:inline">
                     {p.duration}
                   </span>
                   <h3 className="font-display text-2xl font-semibold tracking-tight text-bone md:text-3xl">
@@ -118,7 +121,7 @@ export default function Training() {
                   </h3>
                 </div>
                 <div className="col-span-12 md:col-span-4">
-                  <p className="font-display text-lg text-bone md:text-xl">{p.headline}</p>
+                  <p className="font-display text-base text-bone sm:text-lg md:text-xl">{p.headline}</p>
                 </div>
                 <div className="col-span-12 md:col-span-4">
                   <p className="text-sm text-bone/75 md:text-base">{p.body}</p>

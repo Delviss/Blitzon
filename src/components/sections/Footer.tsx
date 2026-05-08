@@ -42,13 +42,13 @@ export default function Footer() {
     <footer className="relative overflow-hidden border-t border-white/10 bg-ink-900">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-flame opacity-50" />
 
-      <div className="mx-auto max-w-[1440px] px-page pt-24 pb-16">
-        <div className="flex flex-col gap-12 md:flex-row md:items-end md:justify-between">
+      <div className="mx-auto max-w-[1440px] px-page pt-16 pb-12 sm:pt-20 sm:pb-14 md:pt-24 md:pb-16">
+        <div className="flex flex-col gap-8 sm:gap-12 md:flex-row md:items-end md:justify-between">
           <div>
             <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
               · Class 04 · 2026
             </span>
-            <h2 className="mt-3 font-display text-[clamp(3rem,9vw,9rem)] font-bold uppercase leading-[0.85] tracking-tightest text-bone">
+            <h2 className="mt-3 font-display text-[clamp(2.25rem,9vw,9rem)] font-bold uppercase leading-[0.88] tracking-tightest text-bone">
               <span className="block">Lerne.</span>
               <span className="block">Wachse.</span>
               <span className="block flame-text">Verdien.</span>
@@ -57,14 +57,14 @@ export default function Footer() {
 
           <a
             href="#apply"
-            className="group inline-flex items-center gap-3 rounded-full bg-brand px-7 py-5 text-xs font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition hover:bg-brand-400 hover:shadow-[0_22px_70px_-16px_rgba(3,124,194,0.8)]"
+            className="group inline-flex w-full items-center justify-between gap-3 rounded-full bg-brand px-5 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition hover:bg-brand-400 hover:shadow-[0_22px_70px_-16px_rgba(3,124,194,0.8)] sm:w-auto sm:px-7 sm:py-5 sm:text-xs sm:tracking-[0.22em]"
           >
             Werde Teil der Bewegung
             <span className="transition group-hover:translate-x-1">→</span>
           </a>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 gap-10 md:grid-cols-12 md:gap-6">
+        <div className="mt-14 grid grid-cols-2 gap-8 sm:gap-10 md:mt-20 md:grid-cols-12 md:gap-6">
           <div className="col-span-2 md:col-span-4">
             <div className="flex items-center gap-3">
               <Image
