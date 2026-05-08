@@ -5,48 +5,40 @@ import { useState } from "react";
 
 const stories = [
   {
-    name: "Lina K.",
-    role: "Senior Closer · München",
-    age: 24,
-    avatar:
-      "https://images.unsplash.com/photo-1502323777036-f29e3972d82f?w=400&q=80",
+    name: "Hojat Aliyar",
+    role: "Ausbilder",
+    avatar: "/media/team/hojat.jpg",
     quote:
-      "Vor zwei Jahren saß ich noch im Hörsaal. Heute schließe ich Deals im fünfstelligen Bereich. Hier habe ich gelernt zu denken wie eine Unternehmerin, nicht wie eine Studentin.",
-    metric: "+412%",
-    metricLabel: "mehr Einkommen in 8 Monaten"
+      "Vertriebspartner aufzubauen ist mein Handwerk. Aus Disziplin, klaren Prozessen und ehrlichem Feedback wird Leistung — gerade dann, wenn es unbequem wird.",
+    metric: "150+",
+    metricLabel: "Vertriebler entwickelt"
   },
   {
-    name: "Noah R.",
-    role: "Team Lead · München",
-    age: 27,
-    avatar:
-      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80",
+    name: "H. Blitz",
+    role: "Gründer & Geschäftsführer",
+    avatar: "/media/team/blitz.jpg",
     quote:
-      "Im Konzern war ich gut bezahlter Stillstand. Hier wachse ich jeden Monat fachlich und persönlich. Mein 25-jähriges Ich hätte das nicht für möglich gehalten.",
-    metric: "9 Monate",
-    metricLabel: "vom Quereinsteiger zum Lead"
+      "Nach zehn Jahren im Energiemarkt weiß ich: Direktvertrieb funktioniert nur mit System. Keine Quereinsteiger-Show — sondern Qualität, Struktur und echte Marktexpertise.",
+    metric: "10+ Jahre",
+    metricLabel: "Energiemarkt-Expertise"
   },
   {
-    name: "Yara S.",
-    role: "Closer · Hamburg",
-    age: 22,
-    avatar:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&q=80",
+    name: "H. Leon",
+    role: "Gründer & Geschäftsführer",
+    avatar: "/media/team/leon.jpg",
     quote:
-      "Das Niveau der Mentoren ist unfair gut. Im ersten Quartal habe ich mehr gelernt als in zwei Jahren Studium und meine Familie hat es als erstes gemerkt.",
-    metric: "Top 5%",
-    metricLabel: "Performer Cohort 03"
+      "Wir bauen den Vertrieb, der Energielösungen einfach macht. Schneller zum richtigen Tarif, klarer zum nächsten Deal — und mit jedem Schritt skalierbar.",
+    metric: "Co-Founder",
+    metricLabel: "Vision & Strategie"
   },
   {
-    name: "Eli D.",
-    role: "Junior Closer · Frankfurt",
-    age: 20,
-    avatar:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+    name: "M. Mory",
+    role: "Rookie",
+    avatar: "/media/team/mory.jpg",
     quote:
-      "Mit 19 hätte ich nie gedacht, dass ich Enterprise-Pitches halte. Sechs Monate später sitze ich Geschäftsführern auf Augenhöhe gegenüber.",
-    metric: "Erste Karriere",
-    metricLabel: "Direkt nach dem Abi"
+      "Vor ein paar Monaten hätte ich mich an keine Tür getraut. Heute hole ich mit dem Team raus, was vorher in mir verborgen lag.",
+    metric: "Rookie 03",
+    metricLabel: "Cohort des Quartals"
   }
 ];
 
@@ -99,7 +91,7 @@ export default function Testimonials() {
                     </span>
                     <div className="min-w-0">
                       <div className="font-display text-base font-semibold tracking-tight text-bone sm:text-lg">
-                        {story.name} <span className="text-bone/55">· {story.age}</span>
+                        {story.name}
                       </div>
                       <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-bone/65 sm:tracking-[0.32em]">
                         {story.role}
