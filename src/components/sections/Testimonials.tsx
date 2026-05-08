@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { asset } from "@/lib/asset";
 
 const stories = [
   {
@@ -83,7 +84,7 @@ export default function Testimonials() {
                   <div className="flex items-center gap-3 sm:gap-4">
                     <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full ring-1 ring-ember/30 sm:h-14 sm:w-14">
                       <img
-                        src={story.avatar}
+                        src={asset(story.avatar)}
                         alt={story.name}
                         loading="lazy"
                         className="absolute inset-0 h-full w-full object-cover grayscale"
@@ -127,7 +128,7 @@ export default function Testimonials() {
                     <span className="flex items-center gap-3">
                       <span className="relative h-9 w-9 overflow-hidden rounded-full ring-1 ring-white/15">
                         <img
-                          src={s.avatar}
+                          src={asset(s.avatar)}
                           alt={s.name}
                           loading="lazy"
                           className="absolute inset-0 h-full w-full object-cover grayscale"
