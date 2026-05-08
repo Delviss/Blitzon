@@ -16,7 +16,7 @@ export default function Manifesto() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
 
   return (
-    <section ref={ref} className="relative overflow-hidden border-y border-white/10 bg-ink-900 py-32 md:py-48">
+    <section ref={ref} className="relative overflow-hidden border-y border-white/10 bg-ink-900 py-20 sm:py-28 md:py-48">
       <div className="absolute inset-0 -z-10 bg-grid-flame opacity-40" />
       <div className="absolute -left-32 top-1/4 -z-10 h-[420px] w-[420px] rounded-full bg-ember/15 blur-[140px]" />
       <div className="absolute right-0 bottom-1/4 -z-10 h-[420px] w-[420px] rounded-full bg-electric/15 blur-[140px]" />
@@ -31,7 +31,7 @@ export default function Manifesto() {
             return <Line key={l.text} progress={scrollYProgress} start={start} end={end} text={l.text} accent={l.accent} />;
           })}
         </div>
-        <p className="mt-10 max-w-2xl text-base text-bone/75 md:text-lg">
+        <p className="mt-8 max-w-2xl text-sm text-bone/75 sm:text-base md:mt-10 md:text-lg">
           Wenn dich auch nur einer dieser Sätze trifft, bist du hier richtig.
         </p>
       </div>

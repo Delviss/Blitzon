@@ -47,15 +47,15 @@ export default function SocialProof() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ delay: i * 0.08, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="group relative flex flex-col gap-3 bg-ink-800 p-8 transition-colors hover:bg-ink-700 md:p-12"
+            className="group relative flex flex-col gap-2 bg-ink-800 p-5 transition-colors hover:bg-ink-700 sm:gap-3 sm:p-8 md:p-12"
           >
-            <span className={`font-mono text-[10px] uppercase tracking-[0.3em] ${accentMap[s.accent]} opacity-80`}>
+            <span className={`font-mono text-[9px] uppercase tracking-[0.24em] sm:text-[10px] sm:tracking-[0.3em] ${accentMap[s.accent]} opacity-80`}>
               0{i + 1} /
             </span>
-            <span className="font-display text-5xl font-semibold tracking-tightest text-bone md:text-6xl">
+            <span className="font-display text-3xl font-semibold tracking-tightest text-bone sm:text-5xl md:text-6xl">
               <Counter to={s.value} suffix={s.suffix} />
             </span>
-            <span className="text-xs text-bone/75">{s.label}</span>
+            <span className="text-[11px] text-bone/75 sm:text-xs">{s.label}</span>
             <span className={`absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 ${lineMap[s.accent]} transition-transform duration-500 group-hover:scale-x-100`} />
           </motion.div>
         ))}

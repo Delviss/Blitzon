@@ -127,23 +127,23 @@ export default function Hero() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
-        className="absolute left-0 right-0 top-24 z-10 mx-auto flex max-w-[1440px] items-center justify-between px-page text-[10px] uppercase tracking-[0.32em] text-bone/60"
+        className="absolute left-0 right-0 top-20 z-10 mx-auto flex max-w-[1440px] items-center justify-between px-page text-[9px] uppercase tracking-[0.28em] text-bone/60 sm:top-24 sm:text-[10px] sm:tracking-[0.32em]"
       >
-        <span className="hidden md:inline">// München · {time || "12:57"} CET</span>
-        <span className="hidden md:inline">
+        <span className="hidden sm:inline">// München · {time || "12:57"} CET</span>
+        <span className="hidden sm:inline">
           // Class of 2026 · <span className="text-electric">Cohort 04</span>
         </span>
       </motion.div>
 
       <motion.div
         style={{ y: yContent, opacity }}
-        className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col justify-end px-page pb-20 pt-40 md:pb-28 md:pt-32"
+        className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col justify-end px-page pb-16 pt-28 sm:pb-20 sm:pt-32 md:pb-28 md:pt-36"
       >
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="mb-10 inline-flex w-fit items-center gap-3 rounded-full border border-electric/35 bg-electric/[0.08] px-4 py-2 text-[10px] uppercase tracking-[0.32em] text-electric-400 backdrop-blur"
+          className="mb-8 inline-flex w-fit max-w-full flex-wrap items-center gap-2 rounded-full border border-electric/35 bg-electric/[0.08] px-3 py-2 text-[9px] uppercase tracking-[0.28em] text-electric-400 backdrop-blur sm:gap-3 sm:px-4 sm:text-[10px] sm:tracking-[0.32em] md:mb-10"
         >
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-electric opacity-70" />
@@ -174,27 +174,27 @@ export default function Hero() {
           className="mt-10 grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-12 md:items-end"
         >
           <div className="md:col-span-6">
-            <p className="text-balance text-base text-bone/85 md:text-lg">
+            <p className="text-balance text-sm text-bone/85 sm:text-base md:text-lg">
               BLITZON ist kein Vertriebsjob von der Stange. Wir bauen die Generation, die Deutschlands Sales neu schreibt. Jung, ehrlich, hungrig.
             </p>
-            <p className="mt-4 text-base font-medium text-electric md:text-lg">
+            <p className="mt-4 text-sm font-medium text-electric sm:text-base md:text-lg">
               Trainier mit den Besten.
               <span className="block">Verdien wie sie. Leb wie sie.</span>
             </p>
           </div>
 
           <div className="md:col-span-6 flex flex-col items-start gap-5 md:items-end">
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex w-full flex-wrap items-center gap-3 sm:w-auto">
               <a
                 href="#apply"
-                className="group inline-flex items-center gap-3 rounded-full bg-brand px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition-all hover:bg-brand-400 hover:shadow-[0_22px_70px_-16px_rgba(31,169,255,0.85)]"
+                className="group inline-flex flex-1 items-center justify-center gap-3 rounded-full bg-brand px-5 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition-all hover:bg-brand-400 hover:shadow-[0_22px_70px_-16px_rgba(31,169,255,0.85)] sm:flex-none sm:px-7 sm:py-4 sm:tracking-[0.22em]"
               >
                 <span>Jetzt bewerben</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
               <a
                 href="#video"
-                className="group inline-flex items-center gap-3 rounded-full border border-white/25 bg-ink-900/40 px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone backdrop-blur-md transition hover:border-electric/60 hover:bg-ink-900/70"
+                className="group inline-flex flex-1 items-center justify-center gap-3 rounded-full border border-white/25 bg-ink-900/40 px-5 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-bone backdrop-blur-md transition hover:border-electric/60 hover:bg-ink-900/70 sm:flex-none sm:px-6 sm:py-4 sm:tracking-[0.22em]"
               >
                 <span className="flex h-6 w-6 items-center justify-center rounded-full border border-white/40 bg-white/5 text-bone transition group-hover:border-electric group-hover:bg-electric/20 group-hover:text-electric">
                   <PlayIcon />
@@ -210,10 +210,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4, duration: 0.8 }}
-          className="mt-14 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[10px] uppercase tracking-[0.3em] text-bone/65 md:mt-20"
+          className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center text-[9px] uppercase tracking-[0.24em] text-bone/65 sm:mt-14 sm:gap-x-6 sm:text-[10px] sm:tracking-[0.3em] md:mt-20"
         >
           <span>92% Vermittlungsquote</span>
-          <span className="hidden h-3 w-px bg-bone/25 md:block" />
+          <span className="hidden h-3 w-px bg-bone/25 sm:block" />
           <span>4,9 von 5 Sternen im Trainee-Feedback</span>
         </motion.div>
       </motion.div>

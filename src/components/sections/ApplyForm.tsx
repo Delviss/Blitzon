@@ -57,7 +57,7 @@ export default function ApplyForm() {
   };
 
   return (
-    <section id="apply" className="relative overflow-hidden bg-ink-900 py-32 md:py-40">
+    <section id="apply" className="relative overflow-hidden bg-ink-900 py-20 sm:py-28 md:py-40">
       <div className="absolute inset-0 -z-10">
         <div className="absolute -left-32 top-1/3 h-[480px] w-[480px] rounded-full bg-ember/25 blur-[140px]" />
         <div className="absolute right-1/4 top-1/4 h-[300px] w-[300px] rounded-full bg-electric/20 blur-[140px]" />
@@ -65,7 +65,7 @@ export default function ApplyForm() {
       </div>
 
       <div className="mx-auto max-w-[1440px] px-page">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5 md:sticky md:top-32 md:self-start">
             <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
               · Class 04 · 2026
@@ -74,11 +74,11 @@ export default function ApplyForm() {
               Starte
               <span className="block flame-text">deine Reise.</span>
             </h2>
-            <p className="mt-6 max-w-md text-base text-bone/85 md:text-lg">
+            <p className="mt-6 max-w-md text-sm text-bone/85 sm:text-base md:text-lg">
               Wir lesen jede Bewerbung persönlich. Innerhalb von 24 Stunden bekommst du eine Antwort. Wenn es passt, telefonieren wir 20 Minuten. Ehrlich, locker, ohne Skript.
             </p>
 
-            <ul className="mt-10 space-y-4">
+            <ul className="mt-8 space-y-3 sm:space-y-4 md:mt-10">
               {[
                 "Antwort innerhalb von 24 Stunden",
                 "Komplett kostenlos, keine Verpflichtung",
@@ -91,7 +91,7 @@ export default function ApplyForm() {
               ))}
             </ul>
 
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3 md:mt-10">
               <a
                 href="https://wa.me/4915123456789"
                 target="_blank"
@@ -113,7 +113,7 @@ export default function ApplyForm() {
           </div>
 
           <div className="md:col-span-7">
-            <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-ink-800 p-6 md:p-10">
+            <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-ink-800 p-5 sm:p-6 md:p-10">
               <div
                 className="absolute inset-0 -z-10 opacity-60"
                 style={{
@@ -170,7 +170,7 @@ export default function ApplyForm() {
                     className="mt-10 space-y-8"
                   >
                     {step === 0 && (
-                      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
                         <Field label="Vor- und Nachname" required>
                           <input
                             value={data.name}

@@ -77,7 +77,7 @@ const accentLine = {
 
 export default function WhyBlitzon() {
   return (
-    <section id="why" className="relative overflow-hidden bg-ink-900 py-32 md:py-40">
+    <section id="why" className="relative overflow-hidden bg-ink-900 py-20 sm:py-28 md:py-40">
       <div className="absolute inset-0 -z-10 bg-grid-flame opacity-50" />
       <div className="absolute inset-0 grain pointer-events-none" />
 
@@ -100,7 +100,7 @@ export default function WhyBlitzon() {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-5">
+        <div className="mt-12 grid grid-cols-1 gap-4 md:mt-20 md:grid-cols-12 md:gap-5">
           {benefits.map((b, i) => (
             <motion.article
               key={b.no}
@@ -108,7 +108,7 @@ export default function WhyBlitzon() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ delay: i * 0.06, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className={`group relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-ink-800 p-8 transition-all duration-500 ${accentRing[b.accent]} md:min-h-[340px] md:p-10 ${b.span}`}
+              className={`group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-ink-800 p-6 transition-all duration-500 sm:min-h-[260px] sm:p-8 ${accentRing[b.accent]} md:min-h-[340px] md:p-10 ${b.span}`}
             >
               <div className={`absolute -right-12 -top-12 h-48 w-48 rounded-full bg-transparent blur-3xl transition-all duration-700 ${accentGlow[b.accent]}`} />
 

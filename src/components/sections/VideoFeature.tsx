@@ -24,7 +24,7 @@ export default function VideoFeature() {
     <section
       id="video"
       ref={ref}
-      className="relative overflow-hidden border-t border-white/10 bg-ink-900 py-20 md:py-28"
+      className="relative overflow-hidden border-t border-white/10 bg-ink-900 py-14 sm:py-20 md:py-28"
     >
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-32 top-1/3 h-[420px] w-[420px] rounded-full bg-electric/20 blur-[140px]" />
@@ -82,7 +82,7 @@ export default function VideoFeature() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-transparent" />
               <div className="absolute inset-0 grain pointer-events-none" />
               <div className="relative flex flex-col items-center gap-4 text-bone">
-                <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-brand text-bone shadow-[0_18px_60px_-12px_rgba(31,169,255,0.7)] transition-transform duration-500 group-hover:scale-110 md:h-28 md:w-28">
+                <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-brand text-bone shadow-[0_18px_60px_-12px_rgba(31,169,255,0.7)] transition-transform duration-500 group-hover:scale-110 sm:h-20 sm:w-20 md:h-28 md:w-28">
                   <span className="absolute inset-0 animate-pulseGlow rounded-full" />
                   <PlaySvg />
                 </span>

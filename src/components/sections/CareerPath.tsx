@@ -55,7 +55,7 @@ export default function CareerPath() {
   const current = levels[active];
 
   return (
-    <section id="career" ref={ref} className="relative overflow-hidden bg-ink-900 py-32 md:py-40">
+    <section id="career" ref={ref} className="relative overflow-hidden bg-ink-900 py-20 sm:py-28 md:py-40">
       <div className="absolute inset-0 -z-10">
         <div
           className="absolute inset-0 opacity-30"
@@ -100,15 +100,15 @@ export default function CareerPath() {
                   <button
                     onClick={() => setActive(i)}
                     onMouseEnter={() => setActive(i)}
-                    className={`group flex w-full items-center justify-between gap-6 rounded-xl border px-5 py-5 text-left transition-all duration-500 md:px-6 ${
+                    className={`group flex w-full items-center justify-between gap-3 rounded-xl border px-4 py-4 text-left transition-all duration-500 sm:gap-6 sm:px-5 sm:py-5 md:px-6 ${
                       i === active
                         ? "border-ember/70 bg-ink-700"
                         : "border-white/10 bg-ink-800 hover:border-white/25"
                     }`}
                   >
-                    <span className="flex items-center gap-5">
+                    <span className="flex min-w-0 items-center gap-3 sm:gap-5">
                       <span
-                        className={`flex h-10 w-10 items-center justify-center rounded-full font-mono text-[10px] tracking-[0.2em] transition ${
+                        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-mono text-[10px] tracking-[0.2em] transition sm:h-10 sm:w-10 ${
                           i === active
                             ? "bg-brand text-bone shadow-[0_8px_28px_-10px_rgba(3,124,194,0.8)]"
                             : "bg-ink-900 text-bone/65 group-hover:text-bone"
@@ -116,7 +116,7 @@ export default function CareerPath() {
                       >
                         {l.rank}
                       </span>
-                      <span className="font-display text-xl font-semibold tracking-tight text-bone md:text-2xl">
+                      <span className="truncate font-display text-lg font-semibold tracking-tight text-bone sm:text-xl md:text-2xl">
                         {l.title}
                       </span>
                     </span>
@@ -136,7 +136,7 @@ export default function CareerPath() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="relative overflow-hidden rounded-2xl border border-white/10 bg-ink-800 p-8 md:p-10"
+              className="relative overflow-hidden rounded-2xl border border-white/10 bg-ink-800 p-6 sm:p-8 md:p-10"
             >
               <div
                 className="absolute inset-0 -z-10 opacity-70"
@@ -155,11 +155,11 @@ export default function CareerPath() {
                 </span>
               </div>
 
-              <h3 className="mt-3 font-display text-4xl font-semibold tracking-tightest text-bone md:text-5xl">
+              <h3 className="mt-3 font-display text-3xl font-semibold tracking-tightest text-bone sm:text-4xl md:text-5xl">
                 {current.title}
               </h3>
 
-              <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
+              <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
                 <Metric label="Basis" value={current.income} accent />
                 <Metric label="Upside" value={current.bonus} />
                 <Metric label="Beförderung" value={`${4 + active} bis ${6 + active} Mo.`} />
@@ -211,10 +211,10 @@ export default function CareerPath() {
 
 function Metric({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-ink-900/70 p-4">
+    <div className="rounded-xl border border-white/10 bg-ink-900/70 p-3 sm:p-4">
       <div className="font-mono text-[9px] uppercase tracking-[0.3em] text-bone/55">{label}</div>
       <div
-        className={`mt-2 font-display text-xl font-semibold tracking-tight md:text-2xl ${
+        className={`mt-2 font-display text-base font-semibold tracking-tight sm:text-xl md:text-2xl ${
           accent ? "text-ember" : "text-bone"
         }`}
       >

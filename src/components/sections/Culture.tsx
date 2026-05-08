@@ -45,7 +45,7 @@ const tiles = [
 
 export default function Culture() {
   return (
-    <section id="team" className="relative overflow-hidden border-t border-white/10 bg-ink-800 py-32 md:py-40">
+    <section id="team" className="relative overflow-hidden border-t border-white/10 bg-ink-800 py-20 sm:py-28 md:py-40">
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
@@ -68,7 +68,7 @@ export default function Culture() {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-3 md:grid-cols-12 md:auto-rows-[180px] md:gap-4">
+        <div className="mt-12 grid grid-cols-2 gap-3 md:mt-16 md:grid-cols-12 md:auto-rows-[180px] md:gap-4">
           {tiles.map((t, i) => (
             <motion.figure
               key={t.src}
@@ -76,7 +76,7 @@ export default function Culture() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ delay: i * 0.06, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className={`group relative col-span-1 overflow-hidden rounded-xl border border-white/10 bg-ink-900 ${t.span}`}
+              className={`group relative col-span-1 aspect-[4/5] overflow-hidden rounded-xl border border-white/10 bg-ink-900 md:aspect-auto ${t.span}`}
             >
               <Image
                 src={asset(t.src)}
@@ -86,8 +86,8 @@ export default function Culture() {
                 className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 scale-110 group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-60" />
-              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-bone">
-                <span className="rounded-full bg-ink-900/80 px-3 py-1.5 backdrop-blur">
+              <figcaption className="absolute inset-x-2 bottom-2 flex items-center justify-between gap-2 text-[9px] uppercase tracking-[0.22em] text-bone sm:inset-x-4 sm:bottom-4 sm:text-[10px] sm:tracking-[0.28em]">
+                <span className="truncate rounded-full bg-ink-900/80 px-2 py-1 backdrop-blur sm:px-3 sm:py-1.5">
                   {t.label}
                 </span>
                 <span className="hidden rounded-full border border-ember/40 bg-ink-900/70 px-2 py-1 font-mono text-[9px] tracking-[0.32em] text-ember md:inline">
