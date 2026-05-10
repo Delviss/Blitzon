@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import RevealText from "@/components/system/RevealText";
+import { useMediaQuery } from "@/lib/useMediaQuery";
 
 const phases = [
   {
@@ -57,7 +58,13 @@ const phases = [
 
 export default function Training() {
   const ref = useRef<HTMLElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start 80%", "end start"] });
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  // The progress line is desktop-only; skip the scroll-tracker machinery on mobile.
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 80%", "end start"],
+    layoutEffect: false
+  });
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
@@ -87,12 +94,14 @@ export default function Training() {
         </div>
 
         <div className="relative mt-20">
-          <div className="absolute left-[19px] top-0 hidden h-full w-px bg-white/15 md:block">
-            <motion.div
-              style={{ height: lineHeight }}
-              className="absolute top-0 left-0 w-px bg-gradient-to-b from-ember via-coral to-electric"
-            />
-          </div>
+          {isDesktop && (
+            <div className="absolute left-[19px] top-0 hidden h-full w-px bg-white/15 md:block">
+              <motion.div
+                style={{ height: lineHeight }}
+                className="absolute top-0 left-0 w-px bg-gradient-to-b from-ember via-coral to-electric"
+              />
+            </div>
+          )}
 
           <ol className="space-y-3 md:space-y-4">
             {phases.map((p, i) => (

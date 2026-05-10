@@ -20,7 +20,18 @@ export default function Navbar() {
   const progressOpacity = useTransform(scrollYProgress, [0, 0.05, 1], [0, 1, 1]);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let pending = false;
+    const onScroll = () => {
+      if (pending) return;
+      pending = true;
+      requestAnimationFrame(() => {
+        pending = false;
+        setScrolled((prev) => {
+          const next = window.scrollY > 24;
+          return prev === next ? prev : next;
+        });
+      });
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);

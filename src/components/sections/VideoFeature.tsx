@@ -1,14 +1,19 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { asset } from "@/lib/asset";
+import { useMediaQuery } from "@/lib/useMediaQuery";
 
 export default function VideoFeature() {
   const ref = useRef<HTMLElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [playing, setPlaying] = useState(false);
+  // Skip scroll-driven transforms on mobile / reduced motion: the parallax adds
+  // continuous main-thread work for no real visual gain on small screens.
+  const isDesktop = useMediaQuery("(min-width: 768px) and (pointer: fine)");
+  const reduceMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
+  const enableScrollFx = isDesktop && !reduceMotion;
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.94, 1, 1.04]);
   const radius = useTransform(scrollYProgress, [0, 0.5, 1], ["28px", "12px", "28px"]);
@@ -47,7 +52,7 @@ export default function VideoFeature() {
         </div>
 
         <motion.div
-          style={{ scale, borderRadius: radius }}
+          style={enableScrollFx ? { scale, borderRadius: radius } : { borderRadius: "20px" }}
           className="relative aspect-[16/9] w-full overflow-hidden border border-white/10 bg-ink-800 shadow-[0_30px_120px_-30px_rgba(31,169,255,0.45)]"
         >
           <video
@@ -70,15 +75,9 @@ export default function VideoFeature() {
               className="group absolute inset-0 flex items-center justify-center"
               aria-label="Video abspielen"
             >
-              <Image
-                src={asset("/media/video-poster.jpg")}
-                alt="Ein Tag bei BLITZON"
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover grayscale-[0.35] brightness-[0.65]"
-              />
-              <div className="absolute inset-0 bg-[#06101C]/45 mix-blend-multiply" />
+              {/* The <video poster> already paints the same JPG — avoid a
+                  second fetch/decode by tinting it with overlays only. */}
+              <div className="absolute inset-0 bg-[#06101C]/55 mix-blend-multiply" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-transparent" />
               <div className="absolute inset-0 grain pointer-events-none" />
               <div className="relative flex flex-col items-center gap-4 text-bone">

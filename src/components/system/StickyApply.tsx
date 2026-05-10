@@ -7,14 +7,22 @@ export default function StickyApply() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
+    let pending = false;
+    const compute = () => {
+      pending = false;
       const y = window.scrollY;
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const ratio = max > 0 ? y / max : 0;
-      setShow(y > window.innerHeight * 0.6 && ratio < 0.94);
+      const next = y > window.innerHeight * 0.6 && ratio < 0.94;
+      setShow((prev) => (prev === next ? prev : next));
+    };
+    const onScroll = () => {
+      if (pending) return;
+      pending = true;
+      requestAnimationFrame(compute);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    compute();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
