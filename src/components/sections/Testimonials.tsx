@@ -86,7 +86,10 @@ export default function Testimonials() {
                       <img
                         src={asset(story.avatar)}
                         alt={story.name}
+                        width={56}
+                        height={56}
                         loading="lazy"
+                        decoding="async"
                         className="absolute inset-0 h-full w-full object-cover grayscale"
                       />
                     </span>
@@ -130,7 +133,10 @@ export default function Testimonials() {
                         <img
                           src={asset(s.avatar)}
                           alt={s.name}
+                          width={36}
+                          height={36}
                           loading="lazy"
+                          decoding="async"
                           className="absolute inset-0 h-full w-full object-cover grayscale"
                         />
                       </span>

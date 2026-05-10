@@ -8,7 +8,10 @@ import { asset } from "@/lib/asset";
 
 export default function Hero() {
   const ref = useRef<HTMLElement | null>(null);
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const boltRef = useRef<SVGSVGElement | null>(null);
+  const ambientRef = useRef<HTMLDivElement | null>(null);
+  const blobARef = useRef<HTMLDivElement | null>(null);
+  const blobBRef = useRef<HTMLDivElement | null>(null);
   const [time, setTime] = useState("");
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
@@ -16,13 +19,36 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 2;
-      const y = (e.clientY / window.innerHeight - 0.5) * 2;
-      setMouse({ x, y });
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let x = 0;
+    let y = 0;
+    let frame = 0;
+    let pending = false;
+
+    const apply = () => {
+      pending = false;
+      if (boltRef.current) boltRef.current.style.transform = `translate3d(${x * -8}px, ${y * -8}px, 0)`;
+      if (ambientRef.current) ambientRef.current.style.transform = `translate3d(${x * 18}px, 0, 0)`;
+      if (blobARef.current) blobARef.current.style.transform = `translate3d(${x * -40}px, ${y * -40}px, 0)`;
+      if (blobBRef.current) blobBRef.current.style.transform = `translate3d(${x * 40}px, ${y * 40}px, 0)`;
     };
-    window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
+
+    const onMove = (e: MouseEvent) => {
+      x = (e.clientX / window.innerWidth - 0.5) * 2;
+      y = (e.clientY / window.innerHeight - 0.5) * 2;
+      if (!pending) {
+        pending = true;
+        frame = requestAnimationFrame(apply);
+      }
+    };
+    window.addEventListener("mousemove", onMove, { passive: true });
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      cancelAnimationFrame(frame);
+    };
   }, []);
 
   useEffect(() => {
@@ -73,10 +99,10 @@ export default function Hero() {
       </motion.div>
 
       {/* Decorative giant lightning bolt on the right */}
-      <motion.svg
+      <svg
+        ref={boltRef}
         aria-hidden
         viewBox="0 0 200 320"
-        style={{ x: mouse.x * -8, y: mouse.y * -8 }}
         className="pointer-events-none absolute right-[6%] top-[6%] z-0 hidden h-[88%] w-auto opacity-[0.55] md:block"
       >
         <defs>
@@ -93,11 +119,11 @@ export default function Hero() {
           strokeWidth="2.5"
           strokeLinejoin="round"
         />
-      </motion.svg>
+      </svg>
 
       {/* Subtle background ambience */}
-      <motion.div
-        style={{ x: mouse.x * 18 }}
+      <div
+        ref={ambientRef}
         className="pointer-events-none absolute inset-0 -z-10"
       >
         <div className="absolute inset-0 bg-grid-flame opacity-90" />
@@ -109,16 +135,16 @@ export default function Hero() {
             backgroundSize: "70px 70px"
           }}
         />
-        <motion.div
-          style={{ x: mouse.x * -40, y: mouse.y * -40 }}
-          className="absolute -left-32 top-32 h-[600px] w-[600px] rounded-full bg-electric/25 blur-[140px]"
+        <div
+          ref={blobARef}
+          className="absolute -left-32 top-32 hidden h-[600px] w-[600px] rounded-full bg-electric/25 blur-[140px] md:block"
         />
-        <motion.div
-          style={{ x: mouse.x * 40, y: mouse.y * 40 }}
-          className="absolute -right-32 bottom-0 h-[640px] w-[640px] rounded-full bg-brand/30 blur-[160px]"
+        <div
+          ref={blobBRef}
+          className="absolute -right-32 bottom-0 hidden h-[640px] w-[640px] rounded-full bg-brand/30 blur-[160px] md:block"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink-900/40 via-transparent to-ink-900" />
-      </motion.div>
+      </div>
 
       <div className="absolute inset-0 grain pointer-events-none" />
 
