@@ -6,24 +6,32 @@ import CustomCursor from "@/components/system/CustomCursor";
 import StickyApply from "@/components/system/StickyApply";
 import { asset } from "@/lib/asset";
 
+// Tightly scoped font subsets/weights cut the woff2 payload roughly in half.
 const sans = Inter({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
-  display: "swap"
+  display: "swap",
+  preload: true,
+  fallback: ["Arial", "system-ui", "sans-serif"]
 });
 
 const display = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["600", "700"],
   variable: "--font-display",
-  display: "swap"
+  display: "swap",
+  preload: true,
+  fallback: ["Arial", "system-ui", "sans-serif"]
 });
 
 const mono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400"],
   variable: "--font-mono",
-  display: "swap"
+  display: "swap",
+  preload: false,
+  fallback: ["Arial", "system-ui", "sans-serif"]
 });
 
 export const metadata: Metadata = {
@@ -64,6 +72,18 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={`${sans.variable} ${display.variable} ${mono.variable}`}>
+      <head>
+        {/* Preload the LCP image so it starts downloading before JS runs. */}
+        <link
+          rel="preload"
+          as="image"
+          href={asset("/media/team-success-1600.webp")}
+          imageSrcSet={`${asset("/media/team-success-900.webp")} 900w, ${asset("/media/team-success-1600.webp")} 1600w`}
+          imageSizes="(min-width: 768px) 58vw, 100vw"
+          fetchPriority="high"
+        />
+        <meta name="format-detection" content="telephone=no" />
+      </head>
       <body className="bg-ink-900 font-sans text-bone antialiased">
         <SmoothScroll />
         <CustomCursor />

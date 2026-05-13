@@ -7,37 +7,37 @@ import { asset } from "@/lib/asset";
 
 const tiles = [
   {
-    src: "/media/team-success.jpg",
+    src: "/media/team-success.webp",
     label: "Top-Performer · München HQ",
     span: "md:col-span-5 md:row-span-2"
   },
   {
-    src: "/media/awards-2026.jpg",
+    src: "/media/awards-2026.webp",
     label: "ProvenExpert Awards 2026",
     span: "md:col-span-3"
   },
   {
-    src: "/media/closer-call.jpg",
+    src: "/media/closer-call.webp",
     label: "Closer im Kundengespräch",
     span: "md:col-span-4"
   },
   {
-    src: "/media/lifestyle-bmw.jpg",
+    src: "/media/lifestyle-bmw.webp",
     label: "Top-Performer Lifestyle",
     span: "md:col-span-4"
   },
   {
-    src: "/media/team-trainee.jpg",
+    src: "/media/team-trainee.webp",
     label: "Trainee · Class 04",
     span: "md:col-span-3"
   },
   {
-    src: "/media/lifestyle-fleet.jpg",
+    src: "/media/lifestyle-fleet.webp",
     label: "Augsburg Offsite",
     span: "md:col-span-5"
   },
   {
-    src: "/media/kodex-blitzon.jpg",
+    src: "/media/kodex-blitzon.webp",
     label: "Der BLITZON Kodex",
     span: "md:col-span-7"
   }
@@ -83,6 +83,7 @@ export default function Culture() {
                 alt={t.label}
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
+                loading="lazy"
                 className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 scale-110 group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-60" />

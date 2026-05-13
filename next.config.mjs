@@ -14,6 +14,16 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath
   },
+  // Squeeze the JS payload with package-level tree-shaking — framer-motion in
+  // particular ships a lot of code we never reach.
+  experimental: {
+    optimizePackageImports: ["framer-motion", "lenis"]
+  },
+  compiler: {
+    // Strip debug console.* from production bundles; keep error/warn.
+    removeConsole: isProd ? { exclude: ["error", "warn"] } : false
+  },
+  productionBrowserSourceMaps: false,
   images: {
     unoptimized: true,
     remotePatterns: [

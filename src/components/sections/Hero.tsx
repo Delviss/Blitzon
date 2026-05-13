@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import RevealText from "@/components/system/RevealText";
@@ -12,7 +11,6 @@ export default function Hero() {
   const ambientRef = useRef<HTMLDivElement | null>(null);
   const blobARef = useRef<HTMLDivElement | null>(null);
   const blobBRef = useRef<HTMLDivElement | null>(null);
-  const [time, setTime] = useState("");
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   const yContent = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
@@ -51,22 +49,6 @@ export default function Hero() {
     };
   }, []);
 
-  useEffect(() => {
-    const update = () => {
-      const now = new Date();
-      setTime(
-        now.toLocaleTimeString("de-DE", {
-          hour: "2-digit",
-          minute: "2-digit",
-          timeZone: "Europe/Berlin"
-        })
-      );
-    };
-    update();
-    const id = setInterval(update, 30_000);
-    return () => clearInterval(id);
-  }, []);
-
   return (
     <section
       ref={ref}
@@ -78,13 +60,17 @@ export default function Hero() {
         style={{ y: yBg, scale: 1.05 }}
         className="absolute inset-y-0 right-0 -z-10 w-full md:w-[58%]"
       >
-        <Image
-          src={asset("/media/team-success.jpg")}
-          alt="BLITZON Trainee in Aktion"
-          fill
-          priority
+        {/* Plain <img> with srcset for LCP control under static export */}
+        <img
+          src={asset("/media/team-success-1600.webp")}
+          srcSet={`${asset("/media/team-success-900.webp")} 900w, ${asset("/media/team-success-1600.webp")} 1600w`}
           sizes="(min-width: 768px) 58vw, 100vw"
-          className="object-cover object-center grayscale-[0.2] brightness-[0.55] contrast-[1.05]"
+          alt="BLITZON Trainee in Aktion"
+          width={1600}
+          height={1067}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover object-center grayscale-[0.2] brightness-[0.55] contrast-[1.05]"
         />
         {/* Blue color wash over photo */}
         <div className="absolute inset-0 bg-[#06101C]/55 mix-blend-multiply" />
@@ -155,7 +141,7 @@ export default function Hero() {
         transition={{ delay: 0.6, duration: 0.8 }}
         className="absolute left-0 right-0 top-20 z-10 mx-auto flex max-w-[1440px] items-center justify-between px-page text-[9px] uppercase tracking-[0.28em] text-bone/60 sm:top-24 sm:text-[10px] sm:tracking-[0.32em]"
       >
-        <span className="hidden sm:inline">// München · {time || "12:57"} CET</span>
+        <span className="hidden sm:inline">// München · <LiveTime /> CET</span>
         <span className="hidden sm:inline">
           // Class of 2026 · <span className="text-electric">Cohort 04</span>
         </span>
@@ -255,6 +241,29 @@ function PlayIcon() {
       <path d="M2 1l5 3-5 3z" />
     </svg>
   );
+}
+
+/**
+ * Isolated so the 30-second tick doesn't re-render the entire Hero subtree —
+ * only this tiny span flips text content.
+ */
+function LiveTime() {
+  const [time, setTime] = useState("12:57");
+  useEffect(() => {
+    const update = () => {
+      setTime(
+        new Date().toLocaleTimeString("de-DE", {
+          hour: "2-digit",
+          minute: "2-digit",
+          timeZone: "Europe/Berlin"
+        })
+      );
+    };
+    update();
+    const id = setInterval(update, 30_000);
+    return () => clearInterval(id);
+  }, []);
+  return <>{time}</>;
 }
 
 function ScrollHint() {

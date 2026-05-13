@@ -1,16 +1,20 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import SocialProof from "@/components/sections/SocialProof";
-import WhyBlitzon from "@/components/sections/WhyBlitzon";
-import Training from "@/components/sections/Training";
-import CareerPath from "@/components/sections/CareerPath";
-import Culture from "@/components/sections/Culture";
-import VideoFeature from "@/components/sections/VideoFeature";
-import Manifesto from "@/components/sections/Manifesto";
-import Testimonials from "@/components/sections/Testimonials";
-import Jobs from "@/components/sections/Jobs";
-import ApplyForm from "@/components/sections/ApplyForm";
-import Footer from "@/components/sections/Footer";
+
+// Below-the-fold sections are dynamically split off the initial JS bundle.
+// They still server-render (no `ssr: false`) so SEO and first paint stay intact.
+const VideoFeature = dynamic(() => import("@/components/sections/VideoFeature"));
+const WhyBlitzon = dynamic(() => import("@/components/sections/WhyBlitzon"));
+const Training = dynamic(() => import("@/components/sections/Training"));
+const CareerPath = dynamic(() => import("@/components/sections/CareerPath"));
+const Culture = dynamic(() => import("@/components/sections/Culture"));
+const Manifesto = dynamic(() => import("@/components/sections/Manifesto"));
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
+const Jobs = dynamic(() => import("@/components/sections/Jobs"));
+const ApplyForm = dynamic(() => import("@/components/sections/ApplyForm"));
+const Footer = dynamic(() => import("@/components/sections/Footer"));
 
 export default function HomePage() {
   return (
