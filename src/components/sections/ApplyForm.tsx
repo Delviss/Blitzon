@@ -50,10 +50,36 @@ export default function ApplyForm() {
       goals: d.goals.includes(g) ? d.goals.filter((x) => x !== g) : [...d.goals, g]
     }));
 
+  const sendApplicationEmail = () => {
+    const subject = `Neue Bewerbung – ${data.name || "Unbekannt"} (${data.role})`;
+    const lines = [
+      "Neue Bewerbung über blitzon.de",
+      "",
+      `Name: ${data.name || "–"}`,
+      `E-Mail: ${data.email || "–"}`,
+      `Telefon / WhatsApp: ${data.phone || "–"}`,
+      `Stadt: ${data.city || "–"}`,
+      `Rolle: ${data.role || "–"}`,
+      `Ziele: ${data.goals.length ? data.goals.join(", ") : "–"}`,
+      `Discovery-Call Slot: ${data.slot || "–"}`,
+      "",
+      `Eingegangen: ${new Date().toLocaleString("de-DE")}`
+    ];
+    const body = lines.join("\n");
+    const href = `mailto:Info@blitzon.de?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+    if (typeof window !== "undefined") window.location.href = href;
+  };
+
   const next = (e?: React.FormEvent) => {
     e?.preventDefault();
-    if (step < steps.length - 1) setStep((s) => s + 1);
-    else setSubmitted(true);
+    if (step < steps.length - 1) {
+      setStep((s) => s + 1);
+    } else {
+      sendApplicationEmail();
+      setSubmitted(true);
+    }
   };
 
   return (
