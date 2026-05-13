@@ -140,8 +140,8 @@ export default function Footer() {
               81373 München
             </p>
             <p className="mt-3 text-sm text-bone/75">
-              <a href="mailto:hello@blitzon.de" className="transition hover:text-ember">
-                hello@blitzon.de
+              <a href="mailto:Info@blitzon.de" className="transition hover:text-ember">
+                Info@blitzon.de
               </a>
             </p>
             <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.28em] text-bone/55">
@@ -159,7 +159,7 @@ export default function Footer() {
               BlitzON Consulting OHG · Radlkoferstraße 2 · 81373 München ·
               Persönlich haftende Gesellschafter: Hasan Blitz, Leon-Paul Ishimwe Harelimana ·
               Registergericht: Amtsgericht München · HRA 121039 ·
-              Verantwortlich i.S.d. § 18 Abs. 2 MStV: Hasan Blitz · hello@blitzon.de
+              Verantwortlich i.S.d. § 18 Abs. 2 MStV: Hasan Blitz · Info@blitzon.de
             </p>
           </div>
           <div className="md:col-span-5 md:text-right">
@@ -175,7 +175,15 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 md:flex-row md:items-center">
           <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
-            © {year} BlitzON Consulting OHG · Bewegung · Made in München und Augsburg
+            © {year} BlitzON Consulting OHG · Bewegung · Made by{" "}
+            <a
+              href="https://descale.services/it"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-bone"
+            >
+              Descale Services
+            </a>
           </span>
           <div className="flex flex-wrap gap-6 font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
             <a href="https://blitzon.de/Impressum.html" className="transition hover:text-bone">Impressum</a>
