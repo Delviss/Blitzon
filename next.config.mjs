@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
+// The site is served at the root of the custom domain (blitzonconsulting.de),
+// so basePath/assetPrefix must stay empty — keeping `/Blitzon` here 404s every
+// asset under the custom domain.
 const isProd = process.env.NODE_ENV === "production";
-const repo = "Blitzon";
-const basePath = isProd ? `/${repo}` : "";
+const basePath = "";
 
 process.env.NEXT_PUBLIC_BASE_PATH = basePath;
 
@@ -10,7 +12,7 @@ const nextConfig = {
   output: "export",
   trailingSlash: true,
   basePath,
-  assetPrefix: isProd ? `/${repo}/` : "",
+  assetPrefix: "",
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath
   },
