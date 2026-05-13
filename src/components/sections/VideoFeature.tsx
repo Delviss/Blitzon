@@ -62,10 +62,16 @@ export default function VideoFeature() {
             }`}
             playsInline
             controls={playing}
-            preload="metadata"
-            poster={asset("/media/video-poster.jpg")}
+            preload="none"
+            poster={asset("/media/video-poster.webp")}
           >
-            <source src={asset("/media/blitzon-hero.mp4")} type="video/mp4" />
+            {/* Resolution-aware sources: mobile gets the lighter 720p file */}
+            <source
+              src={asset("/media/blitzon-hero-720.mp4")}
+              type="video/mp4"
+              media="(max-width: 767px)"
+            />
+            <source src={asset("/media/blitzon-hero-1080.mp4")} type="video/mp4" />
           </video>
 
           {!playing && (

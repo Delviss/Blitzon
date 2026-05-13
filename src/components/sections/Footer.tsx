@@ -77,10 +77,11 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-4">
             <div className="flex items-center gap-3">
               <Image
-                src={asset("/logo/blitzon-mark-transparent.png")}
+                src={asset("/logo/blitzon-mark-transparent.webp")}
                 alt="BLITZON Consulting"
                 width={40}
                 height={40}
+                loading="lazy"
                 className="h-10 w-10 object-contain drop-shadow-[0_8px_24px_rgba(31,169,255,0.45)]"
               />
               <span className="flex flex-col leading-tight">

@@ -56,7 +56,7 @@ export default function Navbar() {
           <a href="#" className="group relative flex items-center gap-2 sm:gap-2.5">
             <span className="relative flex h-8 w-8 items-center justify-center sm:h-9 sm:w-9">
               <Image
-                src={asset("/logo/blitzon-mark-transparent.png")}
+                src={asset("/logo/blitzon-mark-transparent.webp")}
                 alt="BLITZON"
                 width={36}
                 height={36}
@@ -125,10 +125,11 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
       <div className="relative flex items-center justify-between px-page py-4 sm:py-5">
         <span className="flex items-center gap-2 sm:gap-2.5">
           <Image
-            src="/logo/blitzon-mark-transparent.png"
+            src={asset("/logo/blitzon-mark-transparent.webp")}
             alt="BLITZON"
             width={36}
             height={36}
+            loading="lazy"
             className="h-8 w-8 object-contain drop-shadow-[0_6px_18px_rgba(31,169,255,0.45)] sm:h-9 sm:w-9"
           />
           <span className="font-display text-base font-bold tracking-[0.16em] text-bone sm:text-lg sm:tracking-[0.18em]">BLITZON</span>
