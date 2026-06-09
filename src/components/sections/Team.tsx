@@ -38,7 +38,7 @@ const TEAM = [
     id: '04',
     name: 'D. May',
     role: 'Ausbilder',
-    image: asset('/media/team/extra.jpg'),
+    image: asset('/media/team/may.jpg'),
   },
   // ── Rookies ───────────────────────────────────────────────────────
   {
@@ -51,7 +51,7 @@ const TEAM = [
     id: '06',
     name: 'G. Soumalia',
     role: 'Rookie',
-    image: asset('/media/team/ghaffar.jpg'),
+    image: asset('/media/team/soumalia.jpg'),
   },
   {
     id: '07',
