@@ -1,10 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import { asset } from "@/lib/asset";
 
-const cols = [
+type FooterLink = { label: string; href?: string };
+type FooterCol = { title: string; links: FooterLink[] };
+
+const cols: FooterCol[] = [
   {
-    title: "Movement",
+    title: "Bewegung",
     links: [
       { label: "Über uns", href: "#movement" },
       { label: "Training", href: "#training" },
@@ -13,9 +18,9 @@ const cols = [
     ]
   },
   {
-    title: "Apply",
+    title: "Bewerben",
     links: [
-      { label: "Open Roles", href: "#jobs" },
+      { label: "Offene Rollen", href: "#jobs" },
       { label: "Jetzt bewerben", href: "#apply" },
       { label: "Werkstudent", href: "#jobs" },
       { label: "Quereinsteiger", href: "#jobs" }
@@ -24,10 +29,16 @@ const cols = [
   {
     title: "Connect",
     links: [
-      { label: "Instagram", href: "https://instagram.com" },
-      { label: "TikTok", href: "https://tiktok.com" },
-      { label: "LinkedIn", href: "https://linkedin.com" },
-      { label: "YouTube", href: "https://youtube.com" }
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/blitzonconsulting?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+      },
+      {
+        label: "TikTok",
+        href: "https://www.tiktok.com/@blitzon_consulting?is_from_webapp=1&sender_device=pc"
+      },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/blitzon/" },
+      { label: "YouTube · coming soon" }
     ]
   }
 ];
@@ -37,97 +48,153 @@ export default function Footer() {
   useEffect(() => setYear(String(new Date().getFullYear())), []);
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/5 bg-ink-900">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-flame opacity-40" />
+    <footer className="relative overflow-hidden border-t border-white/10 bg-ink-900">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-flame opacity-50" />
 
-      <div className="mx-auto max-w-[1440px] px-page pt-24 pb-16">
-        <div className="flex flex-col gap-12 md:flex-row md:items-end md:justify-between">
+      <div className="mx-auto max-w-[1440px] px-page pt-16 pb-12 sm:pt-20 sm:pb-14 md:pt-24 md:pb-16">
+        <div className="flex flex-col gap-8 sm:gap-12 md:flex-row md:items-end md:justify-between">
           <div>
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-flame">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
               · Class 04 · 2026
             </span>
-            <h2 className="mt-3 font-display text-[clamp(3rem,9vw,9rem)] font-bold uppercase leading-[0.85] tracking-tightest">
-              <span className="block">Train.</span>
-              <span className="block">Grow.</span>
-              <span className="block flame-text">Earn.</span>
+            <h2 className="mt-3 font-display text-[clamp(2.25rem,9vw,9rem)] font-bold uppercase leading-[0.88] tracking-tightest text-bone">
+              <span className="block">Lerne.</span>
+              <span className="block">Wachse.</span>
+              <span className="block flame-text">Verdien.</span>
             </h2>
           </div>
 
           <a
             href="#apply"
-            className="group inline-flex items-center gap-3 rounded-full bg-flame px-7 py-5 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900 transition hover:bg-flame-400"
+            className="group inline-flex w-full items-center justify-between gap-3 rounded-full bg-brand px-5 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition hover:bg-brand-400 hover:shadow-[0_22px_70px_-16px_rgba(3,124,194,0.8)] sm:w-auto sm:px-7 sm:py-5 sm:text-xs sm:tracking-[0.22em]"
           >
             Werde Teil der Bewegung
             <span className="transition group-hover:translate-x-1">→</span>
           </a>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 gap-10 md:grid-cols-12 md:gap-6">
+        <div className="mt-14 grid grid-cols-2 gap-8 sm:gap-10 md:mt-20 md:grid-cols-12 md:gap-6">
           <div className="col-span-2 md:col-span-4">
-            <div className="flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-flame text-ink-900">
-                <Bolt />
+            <div className="flex items-center gap-3">
+              <Image
+                src={asset("/logo/blitzon-mark-transparent.webp")}
+                alt="BLITZON Consulting"
+                width={40}
+                height={40}
+                loading="lazy"
+                className="h-10 w-10 object-contain drop-shadow-[0_8px_24px_rgba(31,169,255,0.45)]"
+              />
+              <span className="flex flex-col leading-tight">
+                <span className="font-display text-base font-bold tracking-[0.2em] text-bone">BLITZON</span>
+                <span className="font-mono text-[9px] uppercase tracking-[0.32em] text-bone/60">
+                  Consulting · Energie. Sales. Performance.
+                </span>
               </span>
-              <span className="font-display text-base font-bold tracking-[0.2em]">BLITZON</span>
             </div>
-            <p className="mt-4 max-w-sm text-sm text-bone/55">
-              BLITZON ist eine moderne Sales-Akademie & Recruiting-Plattform mit Sitz in Berlin. Wir
-              bauen die nächste Generation von Vertriebstalenten.
+            <p className="mt-4 max-w-sm text-sm text-bone/75">
+              BLITZON ist eine moderne Sales-Akademie und Recruiting-Plattform mit Standorten in München und Augsburg. Wir bauen die nächste Generation deutscher Vertriebstalente.
             </p>
-            <div className="mt-6 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-bone/55">
-              <span className="rounded-full border border-white/10 px-3 py-1.5">DACH</span>
-              <span className="rounded-full border border-white/10 px-3 py-1.5">B2B · B2C</span>
-              <span className="rounded-full border border-flame/40 px-3 py-1.5 text-flame">Hiring</span>
+            <div className="mt-6 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-bone/75">
+              <span className="rounded-full border border-white/15 px-3 py-1.5">DACH</span>
+              <span className="rounded-full border border-white/15 px-3 py-1.5">B2B · B2C</span>
+              <span className="rounded-full border border-ember/50 bg-ember/10 px-3 py-1.5 text-ember">Wir stellen ein</span>
             </div>
           </div>
 
           {cols.map((c) => (
             <div key={c.title} className="md:col-span-2">
-              <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/40">
+              <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
                 · {c.title}
               </span>
               <ul className="mt-4 space-y-2">
-                {c.links.map((l) => (
-                  <li key={l.label}>
-                    <a
-                      href={l.href}
-                      className="text-sm text-bone/75 transition hover:text-flame"
-                    >
-                      {l.label}
-                    </a>
-                  </li>
-                ))}
+                {c.links.map((l) => {
+                  const isExternal = l.href?.startsWith("http");
+                  return (
+                    <li key={l.label}>
+                      {l.href ? (
+                        <a
+                          href={l.href}
+                          target={isExternal ? "_blank" : undefined}
+                          rel={isExternal ? "noopener noreferrer" : undefined}
+                          className="text-sm text-bone/85 transition hover:text-ember"
+                        >
+                          {l.label}
+                        </a>
+                      ) : (
+                        <span className="text-sm text-bone/50">{l.label}</span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
 
           <div className="col-span-2 md:col-span-2">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/40">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
               · HQ
             </span>
-            <p className="mt-4 text-sm text-bone/75">
-              BLITZON GmbH<br />
-              Friedrichstr. 68<br />
-              10117 Berlin
+            <p className="mt-4 text-sm text-bone/85">
+              BlitzON Consulting OHG<br />
+              Radlkoferstraße 2<br />
+              81373 München
             </p>
-            <p className="mt-3 text-sm text-bone/55">hello@blitzon.de</p>
+            <p className="mt-3 text-sm text-bone/75">
+              <a href="mailto:Info@blitzon.de" className="transition hover:text-ember">
+                Info@blitzon.de
+              </a>
+            </p>
+            <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.28em] text-bone/55">
+              · Standort 02 · Augsburg
+            </p>
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-white/5 pt-6 md:flex-row md:items-center">
-          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/40">
-            © {year} BLITZON · Movement · Made in Berlin
+        <div className="mt-16 grid grid-cols-1 gap-4 border-t border-white/10 pt-6 text-[11px] text-bone/60 md:grid-cols-12">
+          <div className="md:col-span-7">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-bone/55">
+              · Pflichtangaben gem. § 5 TMG
+            </p>
+            <p className="mt-2 leading-relaxed">
+              BlitzON Consulting OHG · Radlkoferstraße 2 · 81373 München ·
+              Persönlich haftende Gesellschafter: Hasan Blitz, Leon-Paul Ishimwe Harelimana ·
+              Registergericht: Amtsgericht München · HRA 121039 ·
+              Verantwortlich i.S.d. § 18 Abs. 2 MStV: Hasan Blitz · Info@blitzon.de
+            </p>
+          </div>
+          <div className="md:col-span-5 md:text-right">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-bone/55">
+              · Standorte
+            </p>
+            <p className="mt-2">
+              München · Radlkoferstraße 2 · 81373 München<br />
+              Augsburg · Office DACH-Süd
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 md:flex-row md:items-center">
+          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
+            © {year} BlitzON Consulting OHG · Bewegung · Made by{" "}
+            <a
+              href="https://descale.services/it"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-bone"
+            >
+              Descale Services
+            </a>
           </span>
-          <div className="flex flex-wrap gap-6 font-mono text-[10px] uppercase tracking-[0.32em] text-bone/40">
-            <a href="#" className="transition hover:text-bone">Impressum</a>
-            <a href="#" className="transition hover:text-bone">Datenschutz</a>
-            <a href="#" className="transition hover:text-bone">AGB</a>
+          <div className="flex flex-wrap gap-6 font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
+            <a href="https://blitzon.de/Impressum.html" className="transition hover:text-bone">Impressum</a>
+            <a href="https://blitzon.de/Datenschutz.html" className="transition hover:text-bone">Datenschutz</a>
+            <a href="https://blitzon.de/AGB.html" className="transition hover:text-bone">AGB</a>
           </div>
         </div>
       </div>
 
-      <div className="pointer-events-none select-none overflow-hidden border-t border-white/5 py-8 md:py-12">
-        <div className="flex w-max animate-marquee gap-12 whitespace-nowrap font-display text-[clamp(4rem,14vw,16rem)] font-extrabold uppercase leading-none tracking-tightest text-bone/[0.06]">
+      <div className="pointer-events-none select-none overflow-hidden border-t border-white/10 py-8 md:py-12">
+        <div className="flex w-max animate-marquee gap-12 whitespace-nowrap font-display text-[clamp(4rem,14vw,16rem)] font-extrabold uppercase leading-none tracking-tightest text-bone/[0.07]">
           {Array.from({ length: 4 }).map((_, k) => (
             <span key={k} className="flex items-center gap-12">
               BLITZON · BLITZON · BLITZON ·
@@ -136,13 +203,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
-
-function Bolt() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M13 2 3 14h7l-1 8 11-13h-7l0-7z" />
-    </svg>
   );
 }

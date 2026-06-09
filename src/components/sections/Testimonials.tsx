@@ -2,51 +2,44 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { asset } from "@/lib/asset";
 
 const stories = [
   {
-    name: "Lina K.",
-    role: "Senior Closer · Berlin",
-    age: 24,
-    avatar:
-      "https://images.unsplash.com/photo-1502323777036-f29e3972d82f?w=400&q=80",
+    name: "H. Aliyar",
+    role: "Ausbilder",
+    avatar: "/media/team/hojat.webp",
     quote:
-      "Ich war Studentin, jetzt schließe ich Deals im 5-stelligen Bereich. BLITZON hat mir den Mindset-Shift gegeben, den keine Uni je liefert.",
-    metric: "+412%",
-    metricLabel: "Einkommenssteigerung in 8 Mo."
+      "Vertriebspartner aufzubauen ist mein Handwerk. Aus Disziplin, klaren Prozessen und ehrlichem Feedback wird Leistung — gerade dann, wenn es unbequem wird.",
+    metric: "150+",
+    metricLabel: "Vertriebler entwickelt"
   },
   {
-    name: "Noah R.",
-    role: "Team Lead · München",
-    age: 27,
-    avatar:
-      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80",
+    name: "H. Blitz",
+    role: "Gründer & Geschäftsführer",
+    avatar: "/media/team/blitz.webp",
     quote:
-      "Ich habe den Konzern verlassen, weil ich Stillstand gespürt habe. Hier wachse ich jeden Monat — fachlich und persönlich.",
-    metric: "9 Monate",
-    metricLabel: "Vom Quereinsteiger zum Team Lead"
+      "Nach zehn Jahren im Energiemarkt weiß ich: Direktvertrieb funktioniert nur mit System. Keine Quereinsteiger-Show — sondern Qualität, Struktur und echte Marktexpertise.",
+    metric: "10+ Jahre",
+    metricLabel: "Energiemarkt-Expertise"
   },
   {
-    name: "Yara S.",
-    role: "Closer · Hamburg",
-    age: 22,
-    avatar:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&q=80",
+    name: "H. Leon",
+    role: "Gründer & Geschäftsführer",
+    avatar: "/media/team/leon.webp",
     quote:
-      "Das Niveau der Mentoren ist unfair gut. Ich habe mehr in einem Quartal gelernt als in zwei Jahren Studium.",
-    metric: "Top 5%",
-    metricLabel: "Performer Cohort 03"
+      "Wir bauen den Vertrieb, der Energielösungen einfach macht. Schneller zum richtigen Tarif, klarer zum nächsten Deal — und mit jedem Schritt skalierbar.",
+    metric: "Co-Founder",
+    metricLabel: "Vision & Strategie"
   },
   {
-    name: "Eli D.",
-    role: "Junior Closer · Frankfurt",
-    age: 20,
-    avatar:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+    name: "M. Mory",
+    role: "Rookie",
+    avatar: "/media/team/mory.webp",
     quote:
-      "Mit 19 hätte ich nie geglaubt, dass ich Enterprise-Pitches halte. BLITZON hat mich gebaut.",
-    metric: "1. Karriere",
-    metricLabel: "Direkt nach dem Abi"
+      "Vor ein paar Monaten hätte ich mich an keine Tür getraut. Heute hole ich mit dem Team raus, was vorher in mir verborgen lag.",
+    metric: "Rookie 03",
+    metricLabel: "Cohort des Quartals"
   }
 ];
 
@@ -55,16 +48,16 @@ export default function Testimonials() {
   const story = stories[active];
 
   return (
-    <section className="relative overflow-hidden border-t border-white/5 bg-ink-900 py-32 md:py-40">
+    <section className="relative overflow-hidden border-t border-white/10 bg-ink-900 py-20 sm:py-28 md:py-40">
       <div className="absolute inset-0 -z-10 bg-grid-flame opacity-30" />
 
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-flame">
-              · Transformations
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+              · Verwandlungen
             </span>
-            <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest">
+            <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
               Echte Menschen.
               <span className="block flame-text">Echte Wins.</span>
             </h2>
@@ -78,39 +71,42 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="relative overflow-hidden rounded-2xl border border-white/5 bg-ink-800 p-8 md:p-12"
+              className="relative overflow-hidden rounded-2xl border border-white/10 bg-ink-800 p-6 sm:p-8 md:p-12"
             >
-              <span className="absolute right-8 top-8 font-display text-[160px] leading-none text-flame/10 md:text-[260px]">
-                ”
+              <span className="pointer-events-none absolute right-4 top-4 font-display text-[100px] leading-none text-ember/15 sm:right-8 sm:top-8 sm:text-[160px] md:text-[260px]">
+                "
               </span>
-              <div className="relative z-10 flex flex-col gap-8">
-                <p className="text-balance font-display text-2xl font-medium leading-snug tracking-tight md:text-4xl">
+              <div className="relative z-10 flex flex-col gap-6 sm:gap-8">
+                <p className="text-balance font-display text-xl font-medium leading-snug tracking-tight text-bone sm:text-2xl md:text-4xl">
                   „{story.quote}"
                 </p>
-                <div className="flex flex-wrap items-center justify-between gap-6">
-                  <div className="flex items-center gap-4">
-                    <span className="relative h-14 w-14 overflow-hidden rounded-full ring-1 ring-white/10">
+                <div className="flex flex-wrap items-center justify-between gap-4 sm:gap-6">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full ring-1 ring-ember/30 sm:h-14 sm:w-14">
                       <img
-                        src={story.avatar}
+                        src={asset(story.avatar)}
                         alt={story.name}
+                        width={56}
+                        height={56}
                         loading="lazy"
+                        decoding="async"
                         className="absolute inset-0 h-full w-full object-cover grayscale"
                       />
                     </span>
-                    <div>
-                      <div className="font-display text-lg font-semibold tracking-tight">
-                        {story.name} <span className="text-bone/40">· {story.age}</span>
+                    <div className="min-w-0">
+                      <div className="font-display text-base font-semibold tracking-tight text-bone sm:text-lg">
+                        {story.name}
                       </div>
-                      <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/50">
+                      <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-bone/65 sm:tracking-[0.32em]">
                         {story.role}
                       </div>
                     </div>
                   </div>
-                  <div className="rounded-xl border border-flame/30 bg-flame/10 px-5 py-3">
-                    <div className="font-display text-xl font-semibold text-flame md:text-2xl">
+                  <div className="rounded-xl border border-ember/40 bg-ember/15 px-4 py-2.5 sm:px-5 sm:py-3">
+                    <div className="font-display text-lg font-semibold text-ember-200 sm:text-xl md:text-2xl">
                       {story.metric}
                     </div>
-                    <div className="font-mono text-[9px] uppercase tracking-[0.28em] text-bone/60">
+                    <div className="font-mono text-[9px] uppercase tracking-[0.24em] text-bone/80 sm:tracking-[0.28em]">
                       {story.metricLabel}
                     </div>
                   </div>
@@ -128,29 +124,32 @@ export default function Testimonials() {
                     onMouseEnter={() => setActive(i)}
                     className={`group flex w-full items-center justify-between gap-4 rounded-xl border px-4 py-4 text-left transition-all duration-500 ${
                       i === active
-                        ? "border-flame/50 bg-ink-800"
-                        : "border-white/5 bg-ink-800/30 hover:border-white/15"
+                        ? "border-ember/60 bg-ink-800"
+                        : "border-white/10 bg-ink-800/40 hover:border-white/25"
                     }`}
                   >
                     <span className="flex items-center gap-3">
-                      <span className="relative h-9 w-9 overflow-hidden rounded-full ring-1 ring-white/10">
+                      <span className="relative h-9 w-9 overflow-hidden rounded-full ring-1 ring-white/15">
                         <img
-                          src={s.avatar}
+                          src={asset(s.avatar)}
                           alt={s.name}
+                          width={36}
+                          height={36}
                           loading="lazy"
+                          decoding="async"
                           className="absolute inset-0 h-full w-full object-cover grayscale"
                         />
                       </span>
                       <span>
-                        <span className="block text-sm font-semibold">{s.name}</span>
-                        <span className="block font-mono text-[9px] uppercase tracking-[0.28em] text-bone/50">
+                        <span className="block text-sm font-semibold text-bone">{s.name}</span>
+                        <span className="block font-mono text-[9px] uppercase tracking-[0.28em] text-bone/65">
                           {s.role}
                         </span>
                       </span>
                     </span>
                     <span
                       className={`font-mono text-[10px] tracking-[0.28em] transition ${
-                        i === active ? "text-flame" : "text-bone/30"
+                        i === active ? "text-ember" : "text-bone/45"
                       }`}
                     >
                       {`0${i + 1}`}

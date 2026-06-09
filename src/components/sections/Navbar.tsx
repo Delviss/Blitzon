@@ -1,10 +1,12 @@
 "use client";
 
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import { asset } from "@/lib/asset";
 
 const links = [
-  { href: "#movement", label: "Movement" },
+  { href: "#movement", label: "Bewegung" },
   { href: "#training", label: "Training" },
   { href: "#career", label: "Karriere" },
   { href: "#team", label: "Team" },
@@ -18,7 +20,18 @@ export default function Navbar() {
   const progressOpacity = useTransform(scrollYProgress, [0, 0.05, 1], [0, 1, 1]);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let pending = false;
+    const onScroll = () => {
+      if (pending) return;
+      pending = true;
+      requestAnimationFrame(() => {
+        pending = false;
+        setScrolled((prev) => {
+          const next = window.scrollY > 24;
+          return prev === next ? prev : next;
+        });
+      });
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
@@ -32,41 +45,48 @@ export default function Navbar() {
     <>
       <motion.div
         style={{ scaleX: scrollYProgress, opacity: progressOpacity }}
-        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-flame via-flame-400 to-copper"
+        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-ember via-coral to-electric"
       />
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          scrolled ? "border-b border-white/5 bg-ink-900/70 backdrop-blur-xl" : "bg-transparent"
+          scrolled ? "border-b border-white/10 bg-ink-900/80 backdrop-blur-xl" : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between px-page py-5">
-          <a href="#" className="group relative flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-md bg-flame text-ink-900">
-              <BoltSvg />
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 px-page py-4 md:py-5">
+          <a href="#" className="group relative flex items-center gap-2 sm:gap-2.5">
+            <span className="relative flex h-8 w-8 items-center justify-center sm:h-9 sm:w-9">
+              <Image
+                src={asset("/logo/blitzon-mark-transparent.webp")}
+                alt="BLITZON"
+                width={36}
+                height={36}
+                priority
+                className="h-8 w-8 object-contain drop-shadow-[0_6px_18px_rgba(31,169,255,0.45)] transition-transform duration-500 group-hover:scale-105 sm:h-9 sm:w-9"
+              />
             </span>
-            <span className="font-display text-lg font-bold tracking-[0.18em]">BLITZON</span>
-            <span className="font-mono text-[10px] tracking-[0.3em] text-bone/40">/ DE</span>
+            <span className="font-display text-base font-bold tracking-[0.16em] text-bone sm:text-lg sm:tracking-[0.18em]">BLITZON</span>
+            <span className="hidden font-mono text-[10px] tracking-[0.3em] text-ember/80 sm:inline">/ DE</span>
           </a>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-6 lg:flex lg:gap-8">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
-                className="group relative text-[11px] font-medium uppercase tracking-[0.24em] text-bone/70 transition hover:text-bone"
+                className="group relative text-[11px] font-medium uppercase tracking-[0.24em] text-bone/80 transition hover:text-bone"
               >
                 <span className="relative">
                   {l.label}
-                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-flame transition-all duration-500 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-ember transition-all duration-500 group-hover:w-full" />
                 </span>
               </a>
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="#apply"
-              className="group hidden h-11 items-center gap-2 rounded-full bg-flame px-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-900 transition-all hover:bg-flame-400 md:inline-flex"
+              className="group hidden h-10 items-center gap-2 rounded-full bg-brand px-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_10px_30px_-12px_rgba(3,124,194,0.7)] transition-all hover:bg-brand-400 hover:shadow-[0_14px_40px_-10px_rgba(3,124,194,0.8)] sm:inline-flex sm:h-11 sm:px-5 sm:text-[11px] sm:tracking-[0.22em]"
             >
               Bewerben
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -75,7 +95,7 @@ export default function Navbar() {
               type="button"
               aria-label="Menü öffnen"
               onClick={() => setOpen(true)}
-              className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-white/10 bg-ink-700/40 transition hover:border-flame md:hidden"
+              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full border border-white/15 bg-ink-700/40 transition hover:border-ember sm:h-11 sm:w-11 lg:hidden"
             >
               <span className="block h-px w-5 bg-bone" />
               <span className="block h-px w-3 bg-bone" />
@@ -102,18 +122,28 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
     >
       <div className="absolute inset-0 bg-grid-flame opacity-60" />
       <div className="absolute inset-0 grain" />
-      <div className="relative flex items-center justify-between px-page py-5">
-        <span className="font-display text-lg font-bold tracking-[0.18em]">BLITZON</span>
+      <div className="relative flex items-center justify-between px-page py-4 sm:py-5">
+        <span className="flex items-center gap-2 sm:gap-2.5">
+          <Image
+            src={asset("/logo/blitzon-mark-transparent.webp")}
+            alt="BLITZON"
+            width={36}
+            height={36}
+            loading="lazy"
+            className="h-8 w-8 object-contain drop-shadow-[0_6px_18px_rgba(31,169,255,0.45)] sm:h-9 sm:w-9"
+          />
+          <span className="font-display text-base font-bold tracking-[0.16em] text-bone sm:text-lg sm:tracking-[0.18em]">BLITZON</span>
+        </span>
         <button
           type="button"
           onClick={onClose}
           aria-label="Menü schließen"
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-2xl"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-2xl text-bone sm:h-11 sm:w-11"
         >
           ×
         </button>
       </div>
-      <nav className="relative flex flex-1 flex-col justify-center gap-4 px-page">
+      <nav className="relative flex flex-1 flex-col justify-center gap-3 overflow-y-auto px-page py-6 sm:gap-4">
         {links.map((l, i) => (
           <motion.a
             key={l.href}
@@ -122,35 +152,27 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 + i * 0.06, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="group flex items-baseline justify-between border-b border-white/5 py-5"
+            className="group flex items-baseline justify-between gap-3 border-b border-white/10 py-3 sm:py-5"
           >
-            <span className="font-display text-5xl font-semibold tracking-tightest">
+            <span className="font-display text-3xl font-semibold tracking-tightest text-bone sm:text-4xl md:text-5xl">
               {l.label}
             </span>
-            <span className="font-mono text-xs text-bone/40 transition group-hover:text-flame">
+            <span className="font-mono text-xs text-bone/55 transition group-hover:text-ember">
               0{i + 1}
             </span>
           </motion.a>
         ))}
       </nav>
-      <div className="relative px-page pb-10">
+      <div className="safe-pb relative px-page pb-6 sm:pb-10">
         <a
           href="#apply"
           onClick={onClose}
-          className="flex w-full items-center justify-between rounded-full bg-flame px-6 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-ink-900"
+          className="flex w-full items-center justify-between rounded-full bg-brand px-5 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] sm:px-6 sm:py-5 sm:text-sm"
         >
-          Bewirb dich jetzt
+          Bewirb dich
           <span>→</span>
         </a>
       </div>
     </motion.div>
-  );
-}
-
-function BoltSvg() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M13 2 3 14h7l-1 8 11-13h-7l0-7z" />
-    </svg>
   );
 }

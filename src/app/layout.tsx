@@ -4,59 +4,86 @@ import "./globals.css";
 import SmoothScroll from "@/components/system/SmoothScroll";
 import CustomCursor from "@/components/system/CustomCursor";
 import StickyApply from "@/components/system/StickyApply";
+import { asset } from "@/lib/asset";
 
+// Tightly scoped font subsets/weights cut the woff2 payload roughly in half.
 const sans = Inter({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
-  display: "swap"
+  display: "swap",
+  preload: true,
+  fallback: ["Arial", "system-ui", "sans-serif"]
 });
 
 const display = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["600", "700"],
   variable: "--font-display",
-  display: "swap"
+  display: "swap",
+  preload: true,
+  fallback: ["Arial", "system-ui", "sans-serif"]
 });
 
 const mono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400"],
   variable: "--font-mono",
-  display: "swap"
+  display: "swap",
+  preload: false,
+  fallback: ["Arial", "system-ui", "sans-serif"]
 });
 
 export const metadata: Metadata = {
-  title: "BLITZON — Wo ehrgeizige Menschen gewinnen",
+  title: "BLITZON · Wo Ehrgeiz auf Können trifft",
   description:
-    "BLITZON ist die nächste Generation des Vertriebs. Elite-Training, echtes Einkommen, kompromisslose Karriere. Bewirb dich für das Movement.",
+    "BLITZON baut die nächste Generation deutscher Vertriebstalente. Premium Training, ehrliche Provisionen, klare Karrieren. Standorte München und Augsburg.",
   keywords: [
-    "Sales Ausbildung Deutschland",
-    "Vertrieb Karriere",
-    "Sales Training Germany",
+    "Sales Ausbildung München",
+    "Vertrieb Karriere Augsburg",
+    "Sales Training Bayern",
     "Karriere im Vertrieb",
     "Junge Vertriebstalente",
-    "Sales Recruiting",
-    "Vertrieb Ausbildung"
+    "Sales Recruiting München",
+    "BlitzON Consulting"
   ],
+  icons: {
+    icon: [{ url: asset("/logo/favicon-64.png"), type: "image/png", sizes: "64x64" }],
+    apple: [{ url: asset("/logo/favicon-64.png") }]
+  },
   openGraph: {
-    title: "BLITZON — Wo ehrgeizige Menschen gewinnen",
+    title: "BLITZON · Wo Ehrgeiz auf Können trifft",
     description:
-      "Elite Sales Movement. Premium Training. Hohe Provisionen. Werde Teil der nächsten Generation Vertriebstalente.",
+      "Sales-Bewegung mit Substanz. Premium Training, ehrliche Provisionen. München und Augsburg.",
     type: "website",
-    locale: "de_DE"
+    locale: "de_DE",
+    images: [{ url: asset("/logo/blitzon-lockup.png"), width: 1024, height: 1024, alt: "BLITZON Consulting" }]
   }
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  themeColor: "#050505"
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: "#06101C"
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={`${sans.variable} ${display.variable} ${mono.variable}`}>
+      <head>
+        {/* Preload the LCP image so it starts downloading before JS runs. */}
+        <link
+          rel="preload"
+          as="image"
+          href={asset("/media/team-success-1600.webp")}
+          imageSrcSet={`${asset("/media/team-success-900.webp")} 900w, ${asset("/media/team-success-1600.webp")} 1600w`}
+          imageSizes="(min-width: 768px) 58vw, 100vw"
+          fetchPriority="high"
+        />
+        <meta name="format-detection" content="telephone=no" />
+      </head>
       <body className="bg-ink-900 font-sans text-bone antialiased">
         <SmoothScroll />
         <CustomCursor />

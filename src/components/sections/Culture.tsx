@@ -1,56 +1,58 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import RevealText from "@/components/system/RevealText";
+import { asset } from "@/lib/asset";
 
 const tiles = [
   {
-    src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80",
-    label: "Strategie-Session · Berlin HQ",
+    src: "/media/team-success.webp",
+    label: "Top-Performer · München HQ",
     span: "md:col-span-5 md:row-span-2"
   },
   {
-    src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900&q=80",
-    label: "Quarterly Gala",
+    src: "/media/awards-2026.webp",
+    label: "ProvenExpert Awards 2026",
     span: "md:col-span-3"
   },
   {
-    src: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=900&q=80",
-    label: "Closer Workshop",
+    src: "/media/closer-call.webp",
+    label: "Closer im Kundengespräch",
     span: "md:col-span-4"
   },
   {
-    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80",
-    label: "Top-Performer Retreat",
+    src: "/media/lifestyle-bmw.webp",
+    label: "Top-Performer Lifestyle",
     span: "md:col-span-4"
   },
   {
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80",
-    label: "Daily Standup",
+    src: "/media/team-trainee.webp",
+    label: "Trainee · Class 04",
     span: "md:col-span-3"
   },
   {
-    src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=900&q=80",
-    label: "Lisbon Offsite",
+    src: "/media/lifestyle-fleet.webp",
+    label: "Augsburg Offsite",
     span: "md:col-span-5"
   },
   {
-    src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&q=80",
-    label: "Onboarding Cohort 04",
+    src: "/media/kodex-blitzon.webp",
+    label: "Der BLITZON Kodex",
     span: "md:col-span-7"
   }
 ];
 
 export default function Culture() {
   return (
-    <section id="team" className="relative overflow-hidden border-t border-white/5 bg-ink-800 py-32 md:py-40">
+    <section id="team" className="relative overflow-hidden border-t border-white/10 bg-ink-800 py-20 sm:py-28 md:py-40">
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-flame">
-              · Team &amp; Kultur
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+              · Team und Kultur
             </span>
-            <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest">
+            <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
               <RevealText as="span">Die Crew</RevealText>
               <span className="block">
                 <RevealText as="span" className="flame-text">
@@ -60,15 +62,13 @@ export default function Culture() {
             </h2>
           </div>
           <div className="md:col-span-5">
-            <p className="text-base text-bone/65 md:text-lg">
-              Du joinst keinen Job — du joinst eine Crew. Hohe Energie, harter Kalender, echte
-              Loyalität. Wir feiern jeden Win, lernen aus jedem Loss, und gehen die extra Meile —
-              gemeinsam.
+            <p className="text-base text-bone/85 md:text-lg">
+              Du landest hier nicht in einem Job, sondern in einer Crew. Hohe Energie, voller Kalender, ehrliche Loyalität. Wir feiern jeden Win, lernen aus jedem Loss und gehen die extra Meile gemeinsam.
             </p>
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-3 md:grid-cols-12 md:auto-rows-[180px] md:gap-4">
+        <div className="mt-12 grid grid-cols-2 gap-3 md:mt-16 md:grid-cols-12 md:auto-rows-[180px] md:gap-4">
           {tiles.map((t, i) => (
             <motion.figure
               key={t.src}
@@ -76,20 +76,22 @@ export default function Culture() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ delay: i * 0.06, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className={`group relative col-span-1 overflow-hidden rounded-xl border border-white/5 bg-ink-900 ${t.span}`}
+              className={`group relative col-span-1 aspect-[4/5] overflow-hidden rounded-xl border border-white/10 bg-ink-900 md:aspect-auto ${t.span}`}
             >
-              <img
-                src={t.src}
+              <Image
+                src={asset(t.src)}
                 alt={t.label}
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
                 loading="lazy"
-                className="absolute inset-0 h-full w-full scale-110 object-cover grayscale transition-all duration-700 group-hover:scale-100 group-hover:grayscale-0"
+                className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 scale-110 group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-60" />
-              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-bone/80">
-                <span className="rounded-full bg-ink-900/70 px-3 py-1.5 backdrop-blur">
+              <figcaption className="absolute inset-x-2 bottom-2 flex items-center justify-between gap-2 text-[9px] uppercase tracking-[0.22em] text-bone sm:inset-x-4 sm:bottom-4 sm:text-[10px] sm:tracking-[0.28em]">
+                <span className="truncate rounded-full bg-ink-900/80 px-2 py-1 backdrop-blur sm:px-3 sm:py-1.5">
                   {t.label}
                 </span>
-                <span className="hidden rounded-full border border-white/10 bg-ink-900/60 px-2 py-1 font-mono text-[9px] tracking-[0.32em] text-flame md:inline">
+                <span className="hidden rounded-full border border-ember/40 bg-ink-900/70 px-2 py-1 font-mono text-[9px] tracking-[0.32em] text-ember md:inline">
                   IRL
                 </span>
               </figcaption>

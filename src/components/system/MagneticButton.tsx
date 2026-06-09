@@ -43,11 +43,11 @@ export default function MagneticButton({
     "group relative inline-flex items-center gap-3 overflow-hidden rounded-full px-7 py-4 text-xs font-semibold uppercase tracking-[0.22em] transition-colors";
   const variants = {
     primary:
-      "bg-flame text-ink-900 hover:bg-flame-400 shadow-[0_18px_60px_-18px_rgba(255,90,31,0.85)]",
+      "bg-brand text-bone hover:bg-brand-400 shadow-[0_18px_60px_-18px_rgba(3,124,194,0.65)] hover:shadow-[0_22px_70px_-16px_rgba(3,124,194,0.85)]",
     ghost:
-      "bg-white/[0.04] text-bone hover:bg-white/[0.08] border border-white/10",
+      "bg-white/[0.05] text-bone hover:bg-white/[0.10] hover:border-brand/50 border border-white/15",
     outline:
-      "border border-bone/40 text-bone hover:border-bone hover:bg-bone hover:text-ink-900"
+      "border border-brand text-brand hover:bg-brand hover:text-bone"
   } as const;
 
   const inner = (
