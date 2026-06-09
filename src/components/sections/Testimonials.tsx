@@ -24,15 +24,6 @@ const stories = [
     metricLabel: "Energiemarkt-Expertise"
   },
   {
-    name: "H. Leon",
-    role: "Gründer & Geschäftsführer",
-    avatar: "/media/team/leon.webp",
-    quote:
-      "Wir bauen den Vertrieb, der Energielösungen einfach macht. Schneller zum richtigen Tarif, klarer zum nächsten Deal — und mit jedem Schritt skalierbar.",
-    metric: "Co-Founder",
-    metricLabel: "Vision & Strategie"
-  },
-  {
     name: "M. Mory",
     role: "Rookie",
     avatar: "/media/team/mory.webp",
