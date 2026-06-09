@@ -6,7 +6,7 @@ import { asset } from '@/lib/asset';
 
 /* ------------------------------------------------------------------ */
 /*  Team roster — ordered by rank:                                      */
-/*  1. Gründer / Co-Founder & CEO                                       */
+/*  1. Co-Founder & CEO / Gründer                                       */
 /*  2. Ausbilder                                                        */
 /*  3. Rookie                                                           */
 /*  4. Recruiting Agent                                                 */
@@ -14,33 +14,33 @@ import { asset } from '@/lib/asset';
 /* ------------------------------------------------------------------ */
 
 const TEAM = [
-  // ── Gründer ──────────────────────────────────────────────────────
+  // ── Co-Founder & CEO ─────────────────────────────────────────────
   {
     id: '01',
     name: 'H. Blitz',
-    role: 'Gründer & Geschäftsführer',
+    role: 'Co-Founder & CEO',
     image: asset('/media/team/blitz.webp'),
   },
   {
     id: '02',
-    name: 'H. Leon',
-    role: 'Gründer & Geschäftsführer',
-    image: asset('/media/team/leon.webp'),
-  },
-  {
-    id: '03',
     name: 'L. Harelimana',
-    role: 'Gründer',
-    image: asset('/media/team/harelimana.jpg'),
+    role: 'Co-Founder & CEO',
+    image: asset('/media/team/harelimana_new.jpg'),
   },
   // ── Ausbilder ─────────────────────────────────────────────────────
   {
-    id: '04',
+    id: '03',
     name: 'H. Aliyar',
     role: 'Ausbilder',
     image: asset('/media/team/hojat.webp'),
   },
-  // ── Rookies ───────────────────────────────────────────────────────
+  {
+    id: '04',
+    name: 'D. May',
+    role: 'Ausbilder',
+    image: asset('/media/team/dmay.jpg'),
+  },
+  // ── Rookie ────────────────────────────────────────────────────────
   {
     id: '05',
     name: 'M. Mory',
@@ -49,59 +49,59 @@ const TEAM = [
   },
   {
     id: '06',
-    name: 'D. Berger',
+    name: 'G. Soumalia',
     role: 'Rookie',
-    image: asset('/media/team/unrecht.jpg'),   // curly dark hair
+    image: asset('/media/team/soumalia.jpg'),
   },
   {
     id: '07',
-    name: 'D. Unrecht',
+    name: 'D. Berger',
     role: 'Rookie',
-    image: asset('/media/team/extra.jpg'),     // large build
+    image: asset('/media/team/dberger.jpg'),
   },
   {
     id: '08',
-    name: 'N. Dullovi',
+    name: 'L. Rosa',
     role: 'Rookie',
-    image: asset('/media/team/dullovi.jpg'),
+    image: asset('/media/team/lrosa.jpg'),
   },
   {
     id: '09',
-    name: 'A. Ghaffar',
+    name: 'N. Dullovi',
     role: 'Rookie',
-    image: asset('/media/team/berger_d.jpg'),  // glasses
+    image: asset('/media/team/ndullovi.jpg'),
   },
   {
     id: '10',
-    name: 'Lucas Rosa',
+    name: 'D. Unrecht',
     role: 'Rookie',
-    image: asset('/media/team/atesli.jpg'),    // curly hair, office bg
+    image: asset('/media/team/dunrecht.jpg'),
   },
   // ── Recruiting Agent ──────────────────────────────────────────────
   {
     id: '11',
-    name: 'Jana Berger',
+    name: 'J. Berger',
     role: 'Recruiting Agent',
-    image: asset('/media/team/will.jpg'),      // woman with headset
+    image: asset('/media/team/jberger.jpg'),
   },
   // ── BlitzON-Partner ───────────────────────────────────────────────
   {
     id: '12',
-    name: 'A. Alrammahi',
+    name: 'J. Atesli',
     role: 'BlitzON-Partner',
-    image: asset('/media/team/alrammahi.jpg'),
+    image: asset('/media/team/jatesli.jpg'),
   },
   {
     id: '13',
-    name: 'Michael Will',
+    name: 'M. Will',
     role: 'BlitzON-Partner',
-    image: asset('/media/team/berger_j.jpg'),  // older man with glasses
+    image: asset('/media/team/mwill.jpg'),
   },
   {
     id: '14',
-    name: 'Jan Atesli',
+    name: 'A. Alrammahi',
     role: 'BlitzON-Partner',
-    image: asset('/media/team/ghaffar.jpg'),   // brown hair, blue shirt
+    image: asset('/media/team/aalrammahi.jpg'),
   },
 ];
 
@@ -133,7 +133,7 @@ export default function Team() {
           {/* Rank legend — visible on md+ */}
           <div className="hidden flex-col gap-2 md:flex">
             {[
-              'Gründer & Geschäftsführer',
+              'Co-Founder & CEO',
               'Ausbilder',
               'Rookie',
               'Recruiting Agent',
