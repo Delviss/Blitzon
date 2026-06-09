@@ -7,48 +7,101 @@ import RevealText from "@/components/system/RevealText";
 const levels = [
   {
     rank: "L1",
-    title: "Starter",
-    income: "2.500€",
-    bonus: "+ Provision",
-    skills: ["Lead-Generierung", "Discovery Calls", "Pipeline-Hygiene"],
-    pct: 22
+    title: "Außendienstmitarbeiter",
+    tagline: "Dein Einstieg in den Vertrieb",
+    summary:
+      "Du berätst Kunden zu passenden Angeboten, überzeugst mit deinem Auftreten und entwickelst dich stetig weiter.",
+    requirements: [
+      "Pünktlich, zuverlässig und engagiert",
+      "Gepflegtes Erscheinungsbild",
+      "Lernbereitschaft und Motivation, im Verkauf besser zu werden"
+    ],
+    goals: [
+      "Ohne Druck verkaufen lernen – mit Ruhe und Fokus auf hohe Beratungsqualität",
+      "Mit jedem Gespräch sicherer, überzeugender und erfolgreicher werden"
+    ],
+    perks: [
+      "Einstieg in die Vertriebswelt",
+      "Praxisnahe Ausbildung im Verkauf",
+      "Persönliche Entwicklung und Aufstiegschancen"
+    ],
+    pct: 25
   },
   {
     rank: "L2",
-    title: "Junior Closer",
-    income: "5.000€",
-    bonus: "+ Provision ohne Deckel",
-    skills: ["High-Ticket Closing", "Einwandbehandlung", "Verhandlung"],
-    pct: 42
+    title: "Ausbilder",
+    tagline: "Vom Verkäufer zum Coach",
+    summary:
+      "Du gibst dein Wissen an neue Mitarbeiter weiter, begleitest sie und trägst Verantwortung für deren Entwicklung.",
+    requirements: [
+      "Konstant gute Verkaufsleistung und Zuverlässigkeit (mind. 3 Aufträge netto pro Tag)",
+      "Positives Denken und Handeln – du bist Motivator, kein Bremser",
+      "Sehr gute Stornoquote (1A)",
+      "Verantwortungsbewusster Umgang mit Teammitgliedern"
+    ],
+    goals: [
+      "Erfolgreiche Einarbeitung neuer Mitarbeiter",
+      "Aktive Mitarbeit im Team mit Vorbildfunktion",
+      "Nachweislich exzellente Auftragsqualität",
+      "Ø 3 Aufträge netto (provisionsfähige Aufträge) pro Tag über 2 Wochen"
+    ],
+    perks: [
+      "Overhead: Privatkunden 5 € / Vertrag, Gewerbekunden 20 € / Vertrag",
+      "Berechtigt zum Abschluss von B2B-Verträgen"
+    ],
+    pct: 50
   },
   {
     rank: "L3",
-    title: "Senior Closer",
-    income: "9.000€",
-    bonus: "+ Bonus-Pool",
-    skills: ["Enterprise Deals", "Account-Strategie", "Cross-Selling"],
-    pct: 64
+    title: "Teamleiter",
+    tagline: "Vom Coach zum Leader",
+    summary:
+      "Du leitest dein eigenes Team, motivierst, planst und sorgst für den gemeinsamen Vertriebserfolg.",
+    requirements: [
+      "Führungsstärke und Verantwortungsbewusstsein",
+      "Hohe Eigenmotivation und Organisationstalent",
+      "Vorbild in Auftreten, Struktur und Arbeitsweise"
+    ],
+    goals: [
+      "Mindestens 3 aktive Teammitglieder (1 Außendienstmitarbeiter + 2 Ausbilder)",
+      "Durchschnittlich 250 Aufträge pro Monat (3-Monats-Check)",
+      "Stabile Teamleistung und geringe Stornoquote"
+    ],
+    perks: [
+      "Overhead: Privatkunde 10 € / Vertrag, Geschäftskunde 60 € / Vertrag",
+      "Dienstfahrzeug (mit Privatnutzung)",
+      "Schulung im Bereich Management & Expansion"
+    ],
+    pct: 75
   },
   {
     rank: "L4",
-    title: "Team Lead",
-    income: "14.000€",
-    bonus: "+ Team-Override",
-    skills: ["Führungsarbeit", "Hiring", "Forecast"],
-    pct: 82
-  },
-  {
-    rank: "L5",
-    title: "Management",
-    income: "20.000€+",
-    bonus: "+ Equity / Profit-Share",
-    skills: ["P&L Verantwortung", "Markt-Expansion", "Strategie"],
+    title: "Standortleiter",
+    tagline: "Vom Leader zum Unternehmer",
+    summary:
+      "Du führst deine eigene BlitzON-Niederlassung, entwickelst Strategien und trägst die Gesamtverantwortung.",
+    requirements: [
+      "Führungsstark, unternehmerisch denkend, zielorientiert",
+      "Kennt und beherrscht alle Stufen der Karriereleiter",
+      "Plant langfristig und setzt Unternehmensziele konsequent um",
+      "Teilt Erfahrung und gibt die Chancen weiter, die seinen Weg möglich gemacht haben"
+    ],
+    goals: [
+      "Aufbau und Leitung eines Standorts mit 20 oder mehr Mitarbeitern",
+      "Nachhaltiger Unternehmenserfolg und Teamwachstum",
+      "Aktive Entwicklung neuer Vertriebspotenziale"
+    ],
+    perks: [
+      "Nahezu alle Benefits der vorherigen Stufen",
+      "Volle unternehmerische Freiheit",
+      "Beteiligung am Standorterfolg"
+    ],
     pct: 100
   }
 ];
 
 export default function CareerPath() {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(0);
   const ref = useRef<HTMLElement | null>(null);
   const inView = useInView(ref, { once: true, margin: "-20% 0px" });
 
@@ -73,20 +126,20 @@ export default function CareerPath() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-5">
             <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
-              · Karriere Roadmap
+              · Karriereleiter · D2D Business
             </span>
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
-              <RevealText as="span">Skalier</RevealText>
+              <RevealText as="span">Den Weg</RevealText>
               <span className="block">
                 <RevealText as="span" className="flame-text">
-                  dein Level.
+                  nach oben.
                 </RevealText>
               </span>
             </h2>
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <p className="text-base text-bone/85 md:text-lg">
-              Klare Stufen. Klare Zahlen. Keine Politik. Klick durch die Levels und sieh, wie sich Einkommen, Skills und Verantwortung mit dir entwickeln.
+              Vier klare Stufen – vom Einstieg in den Vertrieb bis zur eigenen Niederlassung. Klick dich durch und sieh, welche Voraussetzungen, Ziele und Vorteile jede Stufe mit sich bringt.
             </p>
           </div>
         </div>
@@ -116,8 +169,13 @@ export default function CareerPath() {
                       >
                         {l.rank}
                       </span>
-                      <span className="truncate font-display text-lg font-semibold tracking-tight text-bone sm:text-xl md:text-2xl">
-                        {l.title}
+                      <span className="min-w-0">
+                        <span className="block truncate font-display text-lg font-semibold tracking-tight text-bone sm:text-xl md:text-2xl">
+                          {l.title}
+                        </span>
+                        <span className="block truncate font-mono text-[9px] uppercase tracking-[0.24em] text-bone/45 sm:text-[10px]">
+                          {l.tagline}
+                        </span>
                       </span>
                     </span>
                     <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-bone/55">
@@ -148,7 +206,7 @@ export default function CareerPath() {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
-                  Level {current.rank}
+                  Level {current.rank} · {current.tagline}
                 </span>
                 <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
                   Trajectory · {current.pct}%
@@ -159,33 +217,20 @@ export default function CareerPath() {
                 {current.title}
               </h3>
 
-              <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
-                <Metric label="Basis" value={current.income} accent />
-                <Metric label="Upside" value={current.bonus} />
-                <Metric label="Beförderung" value={`${4 + active} bis ${6 + active} Mo.`} />
-                <Metric label="Squad" value={active < 3 ? "Solo / Pair" : `${(active - 1) * 5}+ Personen`} />
-              </div>
+              <p className="mt-4 max-w-2xl text-sm text-bone/80 sm:text-base">
+                {current.summary}
+              </p>
 
-              <div className="mt-8">
-                <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
-                  Skill Stack
-                </span>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {current.skills.map((s) => (
-                    <span
-                      key={s}
-                      className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-bone/85"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
+              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                <InfoList label="Voraussetzungen" items={current.requirements} accent />
+                <InfoList label="Zielvorgabe" items={current.goals} />
+                <InfoList label="Vorteile" items={current.perks} />
               </div>
 
               <div className="mt-10">
                 <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
-                  <span>Einkommensentwicklung</span>
-                  <span>Jahr 1 bis Jahr 5</span>
+                  <span>Aufstieg</span>
+                  <span>Stufe 1 bis 4</span>
                 </div>
                 <div className="relative mt-3 h-12 overflow-hidden rounded-md border border-white/10 bg-ink-900">
                   <motion.div
@@ -194,14 +239,18 @@ export default function CareerPath() {
                     transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
                     className="absolute inset-y-0 left-0 origin-left bg-gradient-to-r from-ember via-coral to-electric"
                   />
-                  <div className="pointer-events-none absolute inset-0 grid grid-cols-5">
-                    {Array.from({ length: 5 }).map((_, k) => (
+                  <div className="pointer-events-none absolute inset-0 grid grid-cols-4">
+                    {Array.from({ length: 4 }).map((_, k) => (
                       <span key={k} className="border-r border-white/10 last:border-r-0" />
                     ))}
                   </div>
                 </div>
               </div>
             </motion.div>
+
+            <p className="mt-6 text-center font-mono text-[10px] uppercase tracking-[0.28em] text-bone/45 sm:text-left">
+              BlitzON – Erfolg ist kein Zufall, sondern das Ergebnis harter Arbeit.
+            </p>
           </div>
         </div>
       </div>
@@ -209,17 +258,24 @@ export default function CareerPath() {
   );
 }
 
-function Metric({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
+function InfoList({ label, items, accent }: { label: string; items: string[]; accent?: boolean }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-ink-900/70 p-3 sm:p-4">
-      <div className="font-mono text-[9px] uppercase tracking-[0.3em] text-bone/55">{label}</div>
+    <div className="rounded-xl border border-white/10 bg-ink-900/70 p-4 sm:p-5">
       <div
-        className={`mt-2 font-display text-base font-semibold tracking-tight sm:text-xl md:text-2xl ${
-          accent ? "text-ember" : "text-bone"
+        className={`font-mono text-[9px] uppercase tracking-[0.3em] ${
+          accent ? "text-ember" : "text-bone/55"
         }`}
       >
-        {value}
+        {label}
       </div>
+      <ul className="mt-3 space-y-2.5">
+        {items.map((item) => (
+          <li key={item} className="flex gap-2 text-xs leading-relaxed text-bone/80 sm:text-[13px]">
+            <span className={`mt-1.5 h-1 w-1 shrink-0 rounded-full ${accent ? "bg-ember" : "bg-electric"}`} />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
