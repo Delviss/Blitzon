@@ -19,7 +19,7 @@ const TEAM = [
     id: '01',
     name: 'H. Blitz',
     role: 'Gründer & Geschäftsführer',
-    image: asset('/media/team/blitz.webp'),
+    image: asset('/media/team/blitz.jpg'),
   },
   {
     id: '02',
@@ -32,7 +32,7 @@ const TEAM = [
     id: '03',
     name: 'H. Aliyar',
     role: 'Ausbilder',
-    image: asset('/media/team/hojat.webp'),
+    image: asset('/media/team/aliyar.jpg'),
   },
   {
     id: '04',
@@ -45,7 +45,7 @@ const TEAM = [
     id: '05',
     name: 'M. Mory',
     role: 'Rookie',
-    image: asset('/media/team/mory.webp'),
+    image: asset('/media/team/mory.jpg'),
   },
   {
     id: '06',
