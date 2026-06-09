@@ -14,7 +14,7 @@ import { asset } from '@/lib/asset';
 /* ------------------------------------------------------------------ */
 
 const TEAM = [
-  // ── Gründer ──────────────────────────────────────────────────────
+  // ── Gründer & Geschäftsführer ─────────────────────────────────────
   {
     id: '01',
     name: 'H. Blitz',
@@ -23,22 +23,22 @@ const TEAM = [
   },
   {
     id: '02',
-    name: 'H. Leon',
-    role: 'Gründer & Geschäftsführer',
-    image: asset('/media/team/leon.webp'),
-  },
-  {
-    id: '03',
     name: 'L. Harelimana',
-    role: 'Gründer',
+    role: 'Gründer & Geschäftsführer',
     image: asset('/media/team/harelimana.jpg'),
   },
   // ── Ausbilder ─────────────────────────────────────────────────────
   {
-    id: '04',
+    id: '03',
     name: 'H. Aliyar',
     role: 'Ausbilder',
     image: asset('/media/team/hojat.webp'),
+  },
+  {
+    id: '04',
+    name: 'D. May',
+    role: 'Ausbilder',
+    image: asset('/media/team/extra.jpg'),
   },
   // ── Rookies ───────────────────────────────────────────────────────
   {
@@ -49,9 +49,9 @@ const TEAM = [
   },
   {
     id: '06',
-    name: 'D. Unrecht',
+    name: 'G. Soumalia',
     role: 'Rookie',
-    image: asset('/media/team/unrecht.jpg'),
+    image: asset('/media/team/ghaffar.jpg'),
   },
   {
     id: '07',
@@ -61,47 +61,47 @@ const TEAM = [
   },
   {
     id: '08',
+    name: 'L. Rosa',
+    role: 'Rookie',
+    image: asset('/media/team/rosa.jpg'),
+  },
+  {
+    id: '09',
     name: 'N. Dullovi',
     role: 'Rookie',
     image: asset('/media/team/dullovi.jpg'),
   },
   {
-    id: '09',
-    name: 'A. Ghaffar',
-    role: 'Rookie',
-    image: asset('/media/team/ghaffar.jpg'),
-  },
-  {
     id: '10',
-    name: 'Lucas Rosa',
+    name: 'D. Unrecht',
     role: 'Rookie',
-    image: asset('/media/team/rosa.jpg'),
+    image: asset('/media/team/unrecht.jpg'),
   },
   // ── Recruiting Agent ──────────────────────────────────────────────
   {
     id: '11',
-    name: 'Jana Berger',
+    name: 'J. Berger',
     role: 'Recruiting Agent',
     image: asset('/media/team/berger_j.jpg'),
   },
   // ── BlitzON-Partner ───────────────────────────────────────────────
   {
     id: '12',
-    name: 'A. Alrammahi',
+    name: 'J. Atesli',
     role: 'BlitzON-Partner',
-    image: asset('/media/team/alrammahi.jpg'),
+    image: asset('/media/team/atesli.jpg'),
   },
   {
     id: '13',
-    name: 'Michael Will',
+    name: 'M. Will',
     role: 'BlitzON-Partner',
     image: asset('/media/team/will.jpg'),
   },
   {
     id: '14',
-    name: 'Jan Atesli',
+    name: 'A. Alrammahi',
     role: 'BlitzON-Partner',
-    image: asset('/media/team/atesli.jpg'),
+    image: asset('/media/team/alrammahi.jpg'),
   },
 ];
 
