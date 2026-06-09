@@ -49,15 +49,15 @@ const TEAM = [
   },
   {
     id: '06',
-    name: 'D. Unrecht',
+    name: 'D. Berger',
     role: 'Rookie',
-    image: asset('/media/team/unrecht.jpg'),
+    image: asset('/media/team/unrecht.jpg'),   // curly dark hair
   },
   {
     id: '07',
-    name: 'D. Berger',
+    name: 'D. Unrecht',
     role: 'Rookie',
-    image: asset('/media/team/berger_d.jpg'),
+    image: asset('/media/team/extra.jpg'),     // large build
   },
   {
     id: '08',
@@ -69,20 +69,20 @@ const TEAM = [
     id: '09',
     name: 'A. Ghaffar',
     role: 'Rookie',
-    image: asset('/media/team/ghaffar.jpg'),
+    image: asset('/media/team/berger_d.jpg'),  // glasses
   },
   {
     id: '10',
     name: 'Lucas Rosa',
     role: 'Rookie',
-    image: asset('/media/team/rosa.jpg'),
+    image: asset('/media/team/atesli.jpg'),    // curly hair, office bg
   },
   // ── Recruiting Agent ──────────────────────────────────────────────
   {
     id: '11',
     name: 'Jana Berger',
     role: 'Recruiting Agent',
-    image: asset('/media/team/berger_j.jpg'),
+    image: asset('/media/team/will.jpg'),      // woman with headset
   },
   // ── BlitzON-Partner ───────────────────────────────────────────────
   {
@@ -95,13 +95,13 @@ const TEAM = [
     id: '13',
     name: 'Michael Will',
     role: 'BlitzON-Partner',
-    image: asset('/media/team/will.jpg'),
+    image: asset('/media/team/berger_j.jpg'),  // older man with glasses
   },
   {
     id: '14',
     name: 'Jan Atesli',
     role: 'BlitzON-Partner',
-    image: asset('/media/team/atesli.jpg'),
+    image: asset('/media/team/ghaffar.jpg'),   // brown hair, blue shirt
   },
 ];
 
