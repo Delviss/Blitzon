@@ -6,7 +6,7 @@ import { asset } from "@/lib/asset";
 
 const stories = [
   {
-    name: "Hojat Aliyar",
+    name: "H. Aliyar",
     role: "Ausbilder",
     avatar: "/media/team/hojat.webp",
     quote:

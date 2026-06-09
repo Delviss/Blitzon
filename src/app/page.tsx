@@ -12,6 +12,7 @@ const CareerPath = dynamic(() => import("@/components/sections/CareerPath"));
 const Culture = dynamic(() => import("@/components/sections/Culture"));
 const Manifesto = dynamic(() => import("@/components/sections/Manifesto"));
 const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
+const Team = dynamic(() => import("@/components/sections/Team"));
 const Jobs = dynamic(() => import("@/components/sections/Jobs"));
 const ApplyForm = dynamic(() => import("@/components/sections/ApplyForm"));
 const Footer = dynamic(() => import("@/components/sections/Footer"));
@@ -29,6 +30,7 @@ export default function HomePage() {
       <Culture />
       <Manifesto />
       <Testimonials />
+      <Team />
       <Jobs />
       <ApplyForm />
       <Footer />
