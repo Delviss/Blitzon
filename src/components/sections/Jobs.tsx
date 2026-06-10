@@ -6,65 +6,65 @@ import { useMemo, useState } from "react";
 type Job = {
   title: string;
   city: string;
-  type: "Vollzeit" | "Werkstudent" | "Trainee" | "Lead";
-  level: "Starter" | "Junior" | "Senior" | "Lead";
+  type: "Vollzeit" | "Werkstudent" | "Trainee" | "Leitung";
+  level: "Einsteiger" | "Junior" | "Senior" | "Leitung";
   income: string;
   tags: string[];
 };
 
 const jobs: Job[] = [
   {
-    title: "Sales Trainee",
+    title: "Vertriebs-Trainee",
     city: "München",
     type: "Trainee",
-    level: "Starter",
+    level: "Einsteiger",
     income: "2.500€ + Provision",
-    tags: ["Bootcamp", "1-zu-1 Mentor", "DACH"]
+    tags: ["Intensivtraining", "1-zu-1 Mentor", "DACH"]
   },
   {
-    title: "High-Ticket Closer",
+    title: "Vertriebsprofi",
     city: "München",
     type: "Vollzeit",
     level: "Junior",
     income: "5.000 bis 9.000€",
-    tags: ["High Ticket", "Outbound"]
+    tags: ["Großkunden", "Neukundengewinnung"]
   },
   {
-    title: "Senior Account Closer",
+    title: "Senior-Kundenberater",
     city: "Augsburg",
     type: "Vollzeit",
     level: "Senior",
     income: "8.000 bis 14.000€",
-    tags: ["Enterprise", "Cross-Selling"]
+    tags: ["Geschäftskunden", "Zusatzverkauf"]
   },
   {
-    title: "Sales Werkstudent",
+    title: "Werkstudent Vertrieb",
     city: "Augsburg",
     type: "Werkstudent",
-    level: "Starter",
+    level: "Einsteiger",
     income: "20€ pro Std. plus Bonus",
-    tags: ["Studierende", "Flex 20h"]
+    tags: ["Studierende", "Flexible 20 Std."]
   },
   {
-    title: "Team Lead Vertrieb",
+    title: "Teamleiter Vertrieb",
     city: "Frankfurt",
-    type: "Lead",
-    level: "Lead",
-    income: "12.000€ plus Override",
-    tags: ["Leadership", "Hiring"]
+    type: "Leitung",
+    level: "Leitung",
+    income: "12.000€ plus Teamprovision",
+    tags: ["Führung", "Teamaufbau"]
   },
   {
-    title: "Closer DACH (Remote)",
-    city: "Remote",
+    title: "Vertriebsprofi DACH (Homeoffice)",
+    city: "Homeoffice",
     type: "Vollzeit",
     level: "Junior",
     income: "Ohne Deckel",
-    tags: ["Remote", "Closing"]
+    tags: ["Homeoffice", "Abschluss"]
   }
 ];
 
-const cities = ["Alle", "München", "Augsburg", "Frankfurt", "Remote"];
-const types: ("Alle" | Job["type"])[] = ["Alle", "Vollzeit", "Trainee", "Werkstudent", "Lead"];
+const cities = ["Alle", "München", "Augsburg", "Frankfurt", "Homeoffice"];
+const types: ("Alle" | Job["type"])[] = ["Alle", "Vollzeit", "Trainee", "Werkstudent", "Leitung"];
 
 export default function Jobs() {
   const [city, setCity] = useState("Alle");
@@ -196,16 +196,16 @@ export default function Jobs() {
                 <div className="grid grid-cols-1 gap-6 border-t border-white/10 bg-ink-800 px-5 py-6 sm:px-6 sm:py-8 md:grid-cols-12 md:px-10">
                   <div className="md:col-span-7 space-y-3 text-sm text-bone/85 md:text-base">
                     <p>
-                      Wir suchen ehrliche {j.level === "Starter" ? "Talente" : "Closer"}, die Ergebnisse lieben. Du arbeitest mit Top-Mentoren, baust deine Pipeline auf und machst aus Cold Calls echte Karriereschritte.
+                      Wir suchen ehrliche {j.level === "Einsteiger" ? "Talente" : "Verkäufer"}, die Ergebnisse lieben. Du arbeitest mit Top-Mentoren, baust deinen Kundenstamm auf und machst aus jedem Gespräch echte Karriereschritte.
                     </p>
                     <ul className="grid grid-cols-1 gap-2 pt-3 md:grid-cols-2">
                       {[
-                        "Strukturiertes Onboarding",
-                        "Premium Tech-Stack",
+                        "Strukturierte Einarbeitung",
+                        "Moderne Arbeitsausstattung",
                         "Provision ohne Deckel",
-                        "Quartals-Retreats",
+                        "Teamreisen pro Quartal",
                         "Persönlicher Mentor",
-                        "Equity-Optionen ab L4"
+                        "Beteiligungsmodelle ab L4"
                       ].map((p) => (
                         <li key={p} className="flex items-center gap-2 text-sm text-bone/85">
                           <span className="h-1.5 w-1.5 rounded-full bg-ember" />

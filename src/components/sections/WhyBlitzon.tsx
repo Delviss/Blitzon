@@ -9,31 +9,31 @@ const benefits = [
     title: "Echtes Tempo",
     body:
       "Vom ersten Pitch zur Teamführung in unter neun Monaten. Wir messen, was du lieferst, nicht wie lange du sitzt.",
-    tags: ["Beförderung in Monaten", "Leadership-Programm", "Persönlicher Mentor"],
+    tags: ["Beförderung in Monaten", "Führungsprogramm", "Persönlicher Mentor"],
     accent: "ember" as const,
     span: "md:col-span-7"
   },
   {
     no: "02",
     title: "Echtes Geld",
-    body: "Provision ohne Deckel. Unsere Top-Closer landen schon im ersten Jahr im sechsstelligen Bereich.",
-    tags: ["Bonus-Pool", "Quartalsprämien"],
+    body: "Provision ohne Deckel. Unsere besten Verkäufer landen schon im ersten Jahr im sechsstelligen Bereich.",
+    tags: ["Bonustopf", "Quartalsprämien"],
     accent: "coral" as const,
     span: "md:col-span-5"
   },
   {
     no: "03",
-    title: "Premium Training",
-    body: "Sales-Psychologie, Closing-Frameworks, Persönlichkeit. Jeden Tag, nicht nur im Onboarding.",
-    tags: ["1-zu-1 Coaching", "Roleplay Lab", "Verkaufspsychologie"],
+    title: "Erstklassiges Training",
+    body: "Verkaufspsychologie, Abschlusstechniken, Persönlichkeit. Jeden Tag, nicht nur in der Einarbeitung.",
+    tags: ["1-zu-1 Coaching", "Rollenspiel-Training", "Verkaufspsychologie"],
     accent: "electric" as const,
     span: "md:col-span-5"
   },
   {
     no: "04",
     title: "Lifestyle, der zählt",
-    body: "Retreats in Lissabon, Skiwochen in Tirol, Quartalsgalas. Hart arbeiten und richtig feiern.",
-    tags: ["International Retreats", "Top-Performer-Trips"],
+    body: "Teamreisen nach Lissabon, Skiwochen in Tirol, Quartalsgalas. Hart arbeiten und richtig feiern.",
+    tags: ["Internationale Teamreisen", "Prämienreisen"],
     accent: "ember" as const,
     span: "md:col-span-7"
   },
@@ -41,7 +41,7 @@ const benefits = [
     no: "05",
     title: "Du wächst als Mensch",
     body: "Kommunikation, Führung, Disziplin, Selbstvertrauen. Wir formen die Person hinter dem Verkäufer.",
-    tags: ["Mindset Lab", "Speaker Sessions"],
+    tags: ["Mentaltraining", "Gastvorträge"],
     accent: "moss" as const,
     span: "md:col-span-12"
   }

@@ -6,7 +6,7 @@ import { useMemo, useState } from "react";
 const steps = [
   { id: 1, label: "Profil" },
   { id: 2, label: "Ambition" },
-  { id: 3, label: "Slot wählen" }
+  { id: 3, label: "Termin wählen" }
 ];
 
 const goals = [
@@ -34,7 +34,7 @@ export default function ApplyForm() {
     email: "",
     phone: "",
     city: "",
-    role: "Sales Trainee",
+    role: "Vertriebs-Trainee",
     goals: [] as string[],
     slot: ""
   });
@@ -51,17 +51,17 @@ export default function ApplyForm() {
     }));
 
   const sendApplicationEmail = () => {
-    const subject = `Neue Bewerbung – ${data.name || "Unbekannt"} (${data.role})`;
+    const subject = `Neue Bewerbung: ${data.name || "Unbekannt"} (${data.role})`;
     const lines = [
       "Neue Bewerbung über blitzon.de",
       "",
-      `Name: ${data.name || "–"}`,
-      `E-Mail: ${data.email || "–"}`,
-      `Telefon / WhatsApp: ${data.phone || "–"}`,
-      `Stadt: ${data.city || "–"}`,
-      `Rolle: ${data.role || "–"}`,
-      `Ziele: ${data.goals.length ? data.goals.join(", ") : "–"}`,
-      `Discovery-Call Slot: ${data.slot || "–"}`,
+      `Name: ${data.name || "-"}`,
+      `E-Mail: ${data.email || "-"}`,
+      `Telefon / WhatsApp: ${data.phone || "-"}`,
+      `Stadt: ${data.city || "-"}`,
+      `Rolle: ${data.role || "-"}`,
+      `Ziele: ${data.goals.length ? data.goals.join(", ") : "-"}`,
+      `Wunschtermin Erstgespräch: ${data.slot || "-"}`,
       "",
       `Eingegangen: ${new Date().toLocaleString("de-DE")}`
     ];
@@ -94,7 +94,7 @@ export default function ApplyForm() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5 md:sticky md:top-32 md:self-start">
             <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
-              · Class 04 · 2026
+              · Jahrgang 04 · 2026
             </span>
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
               Starte
@@ -108,7 +108,7 @@ export default function ApplyForm() {
               {[
                 "Antwort innerhalb von 24 Stunden",
                 "Komplett kostenlos, keine Verpflichtung",
-                "Persönliches Discovery-Call statt Massenmail"
+                "Persönliches Erstgespräch statt Massenmail"
               ].map((p) => (
                 <li key={p} className="flex items-start gap-3 text-sm text-bone/85">
                   <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-ember" />
@@ -125,7 +125,7 @@ export default function ApplyForm() {
                 className="group inline-flex items-center gap-2 rounded-full border border-moss/40 bg-moss/15 px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-moss transition hover:border-moss hover:text-bone"
               >
                 <span className="h-2 w-2 rounded-full bg-moss" />
-                WhatsApp Quick-Connect
+                WhatsApp Direktkontakt
               </a>
               <a
                 href="https://calendly.com/blitzon"
@@ -246,10 +246,10 @@ export default function ApplyForm() {
                             className="w-full appearance-none bg-transparent py-3 text-base text-bone outline-none"
                           >
                             {[
-                              "Sales Trainee",
-                              "High-Ticket Closer",
-                              "Senior Account Closer",
-                              "Team Lead",
+                              "Vertriebs-Trainee",
+                              "Vertriebsprofi",
+                              "Senior-Kundenberater",
+                              "Teamleiter",
                               "Werkstudent"
                             ].map((r) => (
                               <option key={r} className="bg-ink-800">
@@ -286,7 +286,7 @@ export default function ApplyForm() {
                     {step === 2 && (
                       <div className="space-y-6">
                         <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/65">
-                          Wähl deinen Discovery-Call · KW 23
+                          Wähl dein Erstgespräch · KW 23
                         </span>
                         <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
                           {slots.map((s) => (
@@ -301,7 +301,7 @@ export default function ApplyForm() {
                               }`}
                             >
                               <span className="block font-mono text-[10px] uppercase tracking-[0.28em] opacity-80">
-                                Slot
+                                Termin
                               </span>
                               <span className="mt-1 block font-display text-xl font-semibold">{s}</span>
                             </button>

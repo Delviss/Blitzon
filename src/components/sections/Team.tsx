@@ -40,13 +40,13 @@ const TEAM = [
     role: 'Ausbilder',
     image: asset('/media/team/may.jpg'),
   },
-  // ── Rookies ───────────────────────────────────────────────────────
   {
     id: '05',
     name: 'M. Mory',
-    role: 'Rookie',
+    role: 'Ausbilder',
     image: asset('/media/team/mory.jpg'),
   },
+  // ── Rookies ───────────────────────────────────────────────────────
   {
     id: '06',
     name: 'G. Soumalia',
