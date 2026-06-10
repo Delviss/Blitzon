@@ -8,7 +8,7 @@ const stories = [
   {
     name: "H. Aliyar",
     role: "Ausbilder",
-    avatar: "/media/team/hojat.webp",
+    avatar: "/media/team/aliyar.jpg",
     quote:
       "Vertriebspartner aufzubauen ist mein Handwerk. Aus Disziplin, klaren Prozessen und ehrlichem Feedback wird Leistung. Gerade dann, wenn es unbequem wird.",
     metric: "150+",
@@ -17,16 +17,16 @@ const stories = [
   {
     name: "H. Blitz",
     role: "Gründer & Geschäftsführer",
-    avatar: "/media/team/blitz.webp",
+    avatar: "/media/team/blitz.jpg",
     quote:
       "Nach zehn Jahren im Energiemarkt weiß ich: Direktvertrieb funktioniert nur mit System. Keine Quereinsteiger-Show, sondern Qualität, Struktur und echte Marktexpertise.",
     metric: "10+ Jahre",
     metricLabel: "Energiemarkt-Expertise"
   },
   {
-    name: "H. Leon",
+    name: "L. Harelimana",
     role: "Gründer & Geschäftsführer",
-    avatar: "/media/team/leon.webp",
+    avatar: "/media/team/harelimana.jpg",
     quote:
       "Wir bauen den Vertrieb, der Energielösungen einfach macht. Schneller zum richtigen Tarif, klarer zum nächsten Abschluss und mit jedem Schritt skalierbar.",
     metric: "Mitgründer",
@@ -35,7 +35,7 @@ const stories = [
   {
     name: "M. Mory",
     role: "Ausbilder",
-    avatar: "/media/team/mory.webp",
+    avatar: "/media/team/mory.jpg",
     quote:
       "Vor ein paar Monaten hätte ich mich an keine Tür getraut. Heute hole ich mit dem Team raus, was vorher in mir verborgen lag.",
     metric: "Ausbilder",
