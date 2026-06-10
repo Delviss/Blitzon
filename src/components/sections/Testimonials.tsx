@@ -10,7 +10,7 @@ const stories = [
     role: "Ausbilder",
     avatar: "/media/team/aliyar.jpg",
     quote:
-      "Vertriebspartner aufzubauen ist mein Handwerk. Aus Disziplin, klaren Prozessen und ehrlichem Feedback wird Leistung — gerade dann, wenn es unbequem wird.",
+      "Vertriebspartner aufzubauen ist mein Handwerk. Aus Disziplin, klaren Prozessen und ehrlichem Feedback wird Leistung. Gerade dann, wenn es unbequem wird.",
     metric: "150+",
     metricLabel: "Vertriebler entwickelt"
   },
@@ -19,7 +19,7 @@ const stories = [
     role: "Gründer & Geschäftsführer",
     avatar: "/media/team/blitz.jpg",
     quote:
-      "Nach zehn Jahren im Energiemarkt weiß ich: Direktvertrieb funktioniert nur mit System. Keine Quereinsteiger-Show — sondern Qualität, Struktur und echte Marktexpertise.",
+      "Nach zehn Jahren im Energiemarkt weiß ich: Direktvertrieb funktioniert nur mit System. Keine Quereinsteiger-Show, sondern Qualität, Struktur und echte Marktexpertise.",
     metric: "10+ Jahre",
     metricLabel: "Energiemarkt-Expertise"
   },
@@ -28,18 +28,18 @@ const stories = [
     role: "Gründer & Geschäftsführer",
     avatar: "/media/team/harelimana.jpg",
     quote:
-      "Wir bauen den Vertrieb, der Energielösungen einfach macht. Schneller zum richtigen Tarif, klarer zum nächsten Deal — und mit jedem Schritt skalierbar.",
-    metric: "Co-Founder",
+      "Wir bauen den Vertrieb, der Energielösungen einfach macht. Schneller zum richtigen Tarif, klarer zum nächsten Abschluss und mit jedem Schritt skalierbar.",
+    metric: "Mitgründer",
     metricLabel: "Vision & Strategie"
   },
   {
     name: "M. Mory",
-    role: "Rookie",
+    role: "Ausbilder",
     avatar: "/media/team/mory.jpg",
     quote:
       "Vor ein paar Monaten hätte ich mich an keine Tür getraut. Heute hole ich mit dem Team raus, was vorher in mir verborgen lag.",
-    metric: "Rookie 03",
-    metricLabel: "Cohort des Quartals"
+    metric: "Ausbilder",
+    metricLabel: "Aufstieg des Quartals"
   }
 ];
 
@@ -59,7 +59,7 @@ export default function Testimonials() {
             </span>
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
               Echte Menschen.
-              <span className="block flame-text">Echte Wins.</span>
+              <span className="block flame-text">Echte Erfolge.</span>
             </h2>
           </div>
         </div>

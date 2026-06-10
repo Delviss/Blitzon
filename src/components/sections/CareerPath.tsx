@@ -17,7 +17,7 @@ const levels = [
       "Lernbereitschaft und Motivation, im Verkauf besser zu werden"
     ],
     goals: [
-      "Ohne Druck verkaufen lernen – mit Ruhe und Fokus auf hohe Beratungsqualität",
+      "Ohne Druck verkaufen lernen, mit Ruhe und Fokus auf hohe Beratungsqualität",
       "Mit jedem Gespräch sicherer, überzeugender und erfolgreicher werden"
     ],
     perks: [
@@ -35,7 +35,7 @@ const levels = [
       "Du gibst dein Wissen an neue Mitarbeiter weiter, begleitest sie und trägst Verantwortung für deren Entwicklung.",
     requirements: [
       "Konstant gute Verkaufsleistung und Zuverlässigkeit (mind. 3 Aufträge netto pro Tag)",
-      "Positives Denken und Handeln – du bist Motivator, kein Bremser",
+      "Positives Denken und Handeln, du bist Motivator, kein Bremser",
       "Sehr gute Stornoquote (1A)",
       "Verantwortungsbewusster Umgang mit Teammitgliedern"
     ],
@@ -46,7 +46,7 @@ const levels = [
       "Ø 3 Aufträge netto (provisionsfähige Aufträge) pro Tag über 2 Wochen"
     ],
     perks: [
-      "Overhead: Privatkunden 5 € / Vertrag, Gewerbekunden 20 € / Vertrag",
+      "Zusatzprovision: Privatkunden 5 € / Vertrag, Gewerbekunden 20 € / Vertrag",
       "Berechtigt zum Abschluss von B2B-Verträgen"
     ],
     pct: 50
@@ -54,7 +54,7 @@ const levels = [
   {
     rank: "L3",
     title: "Teamleiter",
-    tagline: "Vom Coach zum Leader",
+    tagline: "Vom Coach zur Führungskraft",
     summary:
       "Du leitest dein eigenes Team, motivierst, planst und sorgst für den gemeinsamen Vertriebserfolg.",
     requirements: [
@@ -68,7 +68,7 @@ const levels = [
       "Stabile Teamleistung und geringe Stornoquote"
     ],
     perks: [
-      "Overhead: Privatkunde 10 € / Vertrag, Geschäftskunde 60 € / Vertrag",
+      "Zusatzprovision: Privatkunde 10 € / Vertrag, Geschäftskunde 60 € / Vertrag",
       "Dienstfahrzeug (mit Privatnutzung)",
       "Schulung im Bereich Management & Expansion"
     ],
@@ -77,7 +77,7 @@ const levels = [
   {
     rank: "L4",
     title: "Standortleiter",
-    tagline: "Vom Leader zum Unternehmer",
+    tagline: "Von der Führungskraft zum Unternehmer",
     summary:
       "Du führst deine eigene BlitzON-Niederlassung, entwickelst Strategien und trägst die Gesamtverantwortung.",
     requirements: [
@@ -92,7 +92,7 @@ const levels = [
       "Aktive Entwicklung neuer Vertriebspotenziale"
     ],
     perks: [
-      "Nahezu alle Benefits der vorherigen Stufen",
+      "Nahezu alle Vorteile der vorherigen Stufen",
       "Volle unternehmerische Freiheit",
       "Beteiligung am Standorterfolg"
     ],
@@ -126,7 +126,7 @@ export default function CareerPath() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-5">
             <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
-              · Karriereleiter · D2D Business
+              · Karriereleiter · Direktvertrieb
             </span>
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
               <RevealText as="span">Den Weg</RevealText>
@@ -139,7 +139,7 @@ export default function CareerPath() {
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <p className="text-base text-bone/85 md:text-lg">
-              Vier klare Stufen – vom Einstieg in den Vertrieb bis zur eigenen Niederlassung. Klick dich durch und sieh, welche Voraussetzungen, Ziele und Vorteile jede Stufe mit sich bringt.
+              Vier klare Stufen, vom Einstieg in den Vertrieb bis zur eigenen Niederlassung. Klick dich durch und sieh, welche Voraussetzungen, Ziele und Vorteile jede Stufe mit sich bringt.
             </p>
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function CareerPath() {
                   Level {current.rank} · {current.tagline}
                 </span>
                 <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
-                  Trajectory · {current.pct}%
+                  Fortschritt · {current.pct}%
                 </span>
               </div>
 
@@ -249,7 +249,7 @@ export default function CareerPath() {
             </motion.div>
 
             <p className="mt-6 text-center font-mono text-[10px] uppercase tracking-[0.28em] text-bone/45 sm:text-left">
-              BlitzON – Erfolg ist kein Zufall, sondern das Ergebnis harter Arbeit.
+              BlitzON: Erfolg ist kein Zufall, sondern das Ergebnis harter Arbeit.
             </p>
           </div>
         </div>

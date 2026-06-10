@@ -7,7 +7,7 @@ import { useMediaQuery } from "@/lib/useMediaQuery";
 const lines = [
   { text: "Wir glauben nicht an Mittelmaß.", accent: "default" as const },
   { text: "Wir glauben an Ergebnisse.", accent: "ember" as const },
-  { text: "An echte Skills.", accent: "default" as const },
+  { text: "An echtes Können.", accent: "default" as const },
   { text: "An echte Karrieren.", accent: "coral" as const },
   { text: "An Menschen, die mehr wollen.", accent: "default" as const }
 ];
