@@ -87,18 +87,12 @@ const TEAM = [
   // ── BlitzON-Partner ───────────────────────────────────────────────
   {
     id: '12',
-    name: 'J. Atesli',
-    role: 'BlitzON-Partner',
-    image: asset('/media/team/atesli.jpg'),
-  },
-  {
-    id: '13',
     name: 'M. Will',
     role: 'BlitzON-Partner',
     image: asset('/media/team/will.jpg'),
   },
   {
-    id: '14',
+    id: '13',
     name: 'A. Alrammahi',
     role: 'BlitzON-Partner',
     image: asset('/media/team/alrammahi.jpg'),
