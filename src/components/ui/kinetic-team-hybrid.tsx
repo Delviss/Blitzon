@@ -79,13 +79,13 @@ export default function KineticTeamHybrid({ members }: Props) {
                 animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                 exit={{ opacity: 0, scale: 0.5, filter: 'blur(10px)' }}
                 transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-                className="relative h-64 w-80 overflow-hidden rounded-xl border border-white/10 bg-ink-800 shadow-2xl"
+                className="relative aspect-[4/5] w-64 overflow-hidden rounded-xl border border-white/10 bg-ink-800 shadow-2xl"
               >
                 <Image
                   src={activeImage}
                   alt="Vorschau"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                 />
                 <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
                   <div className="flex items-center gap-2">
@@ -175,12 +175,12 @@ function TeamRow({
             className="overflow-hidden bg-ink-800/60"
           >
             <div className="p-4">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg">
                 <Image
                   src={data.image}
                   alt={data.name}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-3 left-4">
