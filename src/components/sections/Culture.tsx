@@ -38,7 +38,7 @@ const tiles = [
   },
   {
     src: "/media/kodex-blitzon.webp",
-    label: "Der BLITZON Kodex",
+    label: "Der BlitzON Kodex",
     span: "md:col-span-7"
   }
 ];

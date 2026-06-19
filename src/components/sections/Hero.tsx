@@ -65,7 +65,7 @@ export default function Hero() {
           src={asset("/media/team-success-1600.webp")}
           srcSet={`${asset("/media/team-success-900.webp")} 900w, ${asset("/media/team-success-1600.webp")} 1600w`}
           sizes="(min-width: 768px) 58vw, 100vw"
-          alt="BLITZON Trainee in Aktion"
+          alt="BlitzON Trainee in Aktion"
           width={1600}
           height={1067}
           fetchPriority="high"
@@ -73,15 +73,15 @@ export default function Hero() {
           className="absolute inset-0 h-full w-full object-cover object-center grayscale-[0.2] brightness-[0.55] contrast-[1.05]"
         />
         {/* Blue color wash over photo */}
-        <div className="absolute inset-0 bg-[#06101C]/55 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[#06101C]/35 mix-blend-multiply" />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(115deg, rgba(6,16,28,0.96) 0%, rgba(6,16,28,0.85) 30%, rgba(6,16,28,0.45) 55%, rgba(6,16,28,0.65) 100%)"
+              "linear-gradient(115deg, rgba(6,16,28,0.85) 0%, rgba(6,16,28,0.65) 30%, rgba(6,16,28,0.25) 55%, rgba(6,16,28,0.45) 100%)"
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-ink-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-ink-900/20" />
       </motion.div>
 
       {/* Decorative giant lightning bolt on the right */}
@@ -123,18 +123,11 @@ export default function Hero() {
         />
         <div
           ref={blobARef}
-          className="absolute -left-32 top-32 hidden h-[600px] w-[600px] rounded-full bg-electric/25 blur-[140px] md:block"
+          className="absolute -left-32 top-32 hidden h-[600px] w-[600px] rounded-full bg-gold/25 blur-[140px] md:block"
         />
         <div
           ref={blobBRef}
           className="absolute -right-32 bottom-0 hidden h-[640px] w-[640px] rounded-full bg-brand/30 blur-[160px] md:block"
-        />
-        <div
-          className="absolute right-0 top-0 hidden h-[420px] w-[420px] opacity-[0.08] md:block"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(115deg, transparent 0 18px, rgba(212,175,55,0.9) 18px 19px, transparent 19px 46px, rgba(31,169,255,0.7) 46px 47px)"
-          }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink-900/40 via-transparent to-ink-900" />
       </div>
@@ -194,7 +187,7 @@ export default function Hero() {
         >
           <div className="md:col-span-6">
             <p className="text-balance text-sm text-bone/85 sm:text-base md:text-lg">
-              BLITZON ist kein Vertriebsjob von der Stange. Wir bauen die Generation, die Deutschlands Vertrieb neu schreibt. Jung, ehrlich, hungrig.
+              BlitzON ist kein Vertriebsjob von der Stange. Wir bauen die Generation, die Deutschlands Vertrieb neu schreibt. Jung, ehrlich, hungrig.
             </p>
             <p className="mt-4 text-sm font-medium text-electric sm:text-base md:text-lg">
               Trainier mit den Besten.

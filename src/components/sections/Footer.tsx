@@ -78,21 +78,21 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Image
                 src={asset("/logo/blitzon-mark-transparent.webp")}
-                alt="BLITZON Consulting"
+                alt="BlitzON Consulting"
                 width={40}
                 height={40}
                 loading="lazy"
                 className="h-10 w-10 object-contain drop-shadow-[0_8px_24px_rgba(31,169,255,0.45)]"
               />
               <span className="flex flex-col leading-tight">
-                <span className="font-display text-base font-bold tracking-[0.2em] text-bone">BLITZON</span>
+                <span className="font-display text-base font-bold tracking-[0.2em] text-bone">BlitzON</span>
                 <span className="font-mono text-[9px] uppercase tracking-[0.32em] text-bone/60">
                   Consulting · Energie. Vertrieb. Leistung.
                 </span>
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-bone/75">
-              BLITZON ist eine moderne Vertriebsakademie und Recruiting-Plattform mit Standorten in München und Augsburg. Wir bauen die nächste Generation deutscher Vertriebstalente.
+              BlitzON ist eine moderne Vertriebsakademie und Recruiting-Plattform mit Standorten in München und Augsburg. Wir bauen die nächste Generation deutscher Vertriebstalente.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-bone/75">
               <span className="rounded-full border border-white/15 px-3 py-1.5">DACH</span>
@@ -197,7 +197,7 @@ export default function Footer() {
         <div className="flex w-max animate-marquee gap-12 whitespace-nowrap font-display text-[clamp(4rem,14vw,16rem)] font-extrabold uppercase leading-none tracking-tightest text-bone/[0.07]">
           {Array.from({ length: 4 }).map((_, k) => (
             <span key={k} className="flex items-center gap-12">
-              BLITZON · BLITZON · BLITZON ·
+              BlitzON · BlitzON · BlitzON ·
             </span>
           ))}
         </div>

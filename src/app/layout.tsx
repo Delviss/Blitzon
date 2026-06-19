@@ -35,9 +35,9 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BLITZON · Wo Ehrgeiz auf Können trifft",
+  title: "BlitzON · Wo Ehrgeiz auf Können trifft",
   description:
-    "BLITZON baut die nächste Generation deutscher Vertriebstalente. Erstklassiges Training, ehrliche Provisionen, klare Karrieren. Standorte München und Augsburg.",
+    "BlitzON baut die nächste Generation deutscher Vertriebstalente. Erstklassiges Training, ehrliche Provisionen, klare Karrieren. Standorte München und Augsburg.",
   keywords: [
     "Sales Ausbildung München",
     "Vertrieb Karriere Augsburg",
@@ -52,12 +52,12 @@ export const metadata: Metadata = {
     apple: [{ url: asset("/logo/favicon-64.png") }]
   },
   openGraph: {
-    title: "BLITZON · Wo Ehrgeiz auf Können trifft",
+    title: "BlitzON · Wo Ehrgeiz auf Können trifft",
     description:
       "Vertriebsbewegung mit Substanz. Erstklassiges Training, ehrliche Provisionen. München und Augsburg.",
     type: "website",
     locale: "de_DE",
-    images: [{ url: asset("/logo/blitzon-lockup.png"), width: 1024, height: 1024, alt: "BLITZON Consulting" }]
+    images: [{ url: asset("/logo/blitzon-lockup.png"), width: 1024, height: 1024, alt: "BlitzON Consulting" }]
   }
 };
 
