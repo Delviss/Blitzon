@@ -112,8 +112,8 @@ const config: Config = {
           "55%": { opacity: "0.85" }
         },
         pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(31,169,255,0.55)" },
-          "50%": { boxShadow: "0 0 48px 8px rgba(31,169,255,0.22)" }
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(212,175,55,0.55)" },
+          "50%": { boxShadow: "0 0 48px 8px rgba(212,175,55,0.22)" }
         },
         scanline: {
           "0%": { transform: "translateY(-100%)" },

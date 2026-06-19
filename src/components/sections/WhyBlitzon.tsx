@@ -78,7 +78,7 @@ export default function WhyBlitzon() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-4">
             <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
-              · Warum BLITZON
+              · Warum BlitzON
             </span>
           </div>
           <div className="md:col-span-8">
