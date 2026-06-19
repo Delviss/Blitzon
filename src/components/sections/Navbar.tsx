@@ -73,11 +73,11 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className="group relative text-[11px] font-medium uppercase tracking-[0.24em] text-bone/80 transition hover:text-bone"
+                className="group relative text-[11px] font-medium uppercase tracking-[0.24em] text-bone/80 transition hover:text-gold"
               >
                 <span className="relative">
                   {l.label}
-                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-ember transition-all duration-500 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </span>
               </a>
             ))}
@@ -86,7 +86,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="#apply"
-              className="group hidden h-10 items-center gap-2 rounded-full bg-brand px-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_10px_30px_-12px_rgba(3,124,194,0.7)] transition-all hover:bg-brand-400 hover:shadow-[0_14px_40px_-10px_rgba(3,124,194,0.8)] sm:inline-flex sm:h-11 sm:px-5 sm:text-[11px] sm:tracking-[0.22em]"
+              className="group hidden h-10 items-center gap-2 rounded-full btn-gold px-4 text-[10px] font-semibold uppercase tracking-[0.2em] sm:inline-flex sm:h-11 sm:px-5 sm:text-[11px] sm:tracking-[0.22em]"
             >
               Bewerben
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -167,7 +167,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         <a
           href="#apply"
           onClick={onClose}
-          className="flex w-full items-center justify-between rounded-full bg-brand px-5 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] sm:px-6 sm:py-5 sm:text-sm"
+          className="flex w-full items-center justify-between rounded-full btn-gold px-5 py-4 text-xs font-semibold uppercase tracking-[0.2em] sm:px-6 sm:py-5 sm:text-sm"
         >
           Bewirb dich
           <span>→</span>

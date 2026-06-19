@@ -129,6 +129,13 @@ export default function Hero() {
           ref={blobBRef}
           className="absolute -right-32 bottom-0 hidden h-[640px] w-[640px] rounded-full bg-brand/30 blur-[160px] md:block"
         />
+        <div
+          className="absolute right-0 top-0 hidden h-[420px] w-[420px] opacity-[0.08] md:block"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(115deg, transparent 0 18px, rgba(212,175,55,0.9) 18px 19px, transparent 19px 46px, rgba(31,169,255,0.7) 46px 47px)"
+          }}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-ink-900/40 via-transparent to-ink-900" />
       </div>
 
@@ -199,7 +206,7 @@ export default function Hero() {
             <div className="flex w-full flex-wrap items-center gap-3 sm:w-auto">
               <a
                 href="#apply"
-                className="group inline-flex flex-1 items-center justify-center gap-3 rounded-full bg-brand px-5 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition-all hover:bg-brand-400 hover:shadow-[0_22px_70px_-16px_rgba(31,169,255,0.85)] sm:flex-none sm:px-7 sm:py-4 sm:tracking-[0.22em]"
+                className="group inline-flex flex-1 items-center justify-center gap-3 rounded-full btn-gold px-5 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] sm:flex-none sm:px-7 sm:py-4 sm:tracking-[0.22em]"
               >
                 <span>Jetzt bewerben</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

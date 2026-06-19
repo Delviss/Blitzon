@@ -19,6 +19,9 @@
   /* Legacy aliases retained for backwards compatibility */
   --flame: #1FA9FF;
   --copper: #7DE2FF;
+  --gold: #D4AF37;
+  --gold-light: #E8C76A;
+  --gold-dark: #A67C00;
 }
 
 * {
@@ -143,6 +146,35 @@ svg {
     background: currentColor;
     margin-right: 12px;
     vertical-align: middle;
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, #D4AF37, #F5D97A, #B8860B);
+  }
+  .gold-text,
+  .gold-text * {
+    background-image: linear-gradient(120deg, #E8C76A 0%, #D4AF37 50%, #A67C00 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, #D4AF37, #F5D97A, #B8860B);
+    color: #1A1300;
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
+  }
+  .gold-card {
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .gold-card:hover {
+    border-color: #D4AF37;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
   }
 }
 

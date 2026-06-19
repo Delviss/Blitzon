@@ -52,7 +52,7 @@ export default function SocialProof() {
             <span className={`font-mono text-[9px] uppercase tracking-[0.24em] sm:text-[10px] sm:tracking-[0.3em] ${accentMap[s.accent]} opacity-80`}>
               0{i + 1} /
             </span>
-            <span className="font-display text-3xl font-semibold tracking-tightest text-bone sm:text-5xl md:text-6xl">
+            <span className="font-display text-3xl font-semibold tracking-tightest text-gold sm:text-5xl md:text-6xl" style={{ textShadow: "0 0 40px rgba(212,175,55,0.18)" }}>
               <Counter to={s.value} suffix={s.suffix} />
             </span>
             <span className="text-[11px] text-bone/75 sm:text-xs">{s.label}</span>

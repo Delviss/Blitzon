@@ -42,8 +42,7 @@ export default function MagneticButton({
   const base =
     "group relative inline-flex items-center gap-3 overflow-hidden rounded-full px-7 py-4 text-xs font-semibold uppercase tracking-[0.22em] transition-colors";
   const variants = {
-    primary:
-      "bg-brand text-bone hover:bg-brand-400 shadow-[0_18px_60px_-18px_rgba(3,124,194,0.65)] hover:shadow-[0_22px_70px_-16px_rgba(3,124,194,0.85)]",
+    primary: "btn-gold",
     ghost:
       "bg-white/[0.05] text-bone hover:bg-white/[0.10] hover:border-brand/50 border border-white/15",
     outline:
