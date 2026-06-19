@@ -47,13 +47,6 @@ const benefits = [
   }
 ];
 
-const accentRing = {
-  ember: "hover:border-ember/60",
-  coral: "hover:border-coral/60",
-  electric: "hover:border-electric-400/60",
-  moss: "hover:border-moss/60"
-} as const;
-
 const accentGlow = {
   ember: "group-hover:bg-ember/15",
   coral: "group-hover:bg-coral/15",
@@ -108,7 +101,7 @@ export default function WhyBlitzon() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ delay: i * 0.06, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className={`group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-ink-800 p-6 transition-all duration-500 sm:min-h-[260px] sm:p-8 ${accentRing[b.accent]} md:min-h-[340px] md:p-10 ${b.span}`}
+              className={`group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-2xl gold-card bg-ink-800 p-6 hover:-translate-y-1 sm:min-h-[260px] sm:p-8 md:min-h-[340px] md:p-10 ${b.span}`}
             >
               <div className={`absolute -right-12 -top-12 h-48 w-48 rounded-full bg-transparent blur-3xl transition-all duration-700 ${accentGlow[b.accent]}`} />
 

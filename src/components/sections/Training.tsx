@@ -111,10 +111,10 @@ export default function Training() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-15% 0px" }}
                 transition={{ delay: i * 0.06, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="group relative grid grid-cols-12 items-stretch gap-3 rounded-2xl border border-white/10 bg-ink-700/50 p-5 backdrop-blur-sm transition-all duration-500 hover:border-ember/50 hover:bg-ink-700 sm:gap-4 sm:p-6 md:gap-8 md:p-8"
+                className="group relative grid grid-cols-12 items-stretch gap-3 rounded-2xl gold-card bg-ink-700/50 p-5 backdrop-blur-sm hover:bg-ink-700 hover:-translate-y-1 sm:gap-4 sm:p-6 md:gap-8 md:p-8"
               >
                 <div className="col-span-12 flex items-center gap-4 md:col-span-1">
-                  <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-ink-900 font-mono text-[10px] tracking-[0.2em] text-bone/85 transition group-hover:border-ember group-hover:text-ember">
+                  <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-gold/10 font-mono text-[10px] tracking-[0.2em] text-gold transition group-hover:border-gold group-hover:bg-gold/20">
                     {p.no}
                   </span>
                   <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55 md:hidden">

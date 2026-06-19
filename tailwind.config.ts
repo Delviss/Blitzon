@@ -74,6 +74,11 @@ const config: Config = {
           DEFAULT: "#7DE2FF",
           400: "#A8ECFF",
           500: "#7DE2FF"
+        },
+        gold: {
+          DEFAULT: "#D4AF37",
+          light: "#E8C76A",
+          dark: "#A67C00"
         }
       },
       fontFamily: {
