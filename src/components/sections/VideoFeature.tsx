@@ -40,7 +40,7 @@ export default function VideoFeature() {
         <div className="mb-10 flex flex-col items-start gap-3 md:flex-row md:items-end md:justify-between md:gap-6">
           <div>
             <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-electric">
-              · Ein Tag bei BLITZON
+              · Ein Tag bei BlitzON
             </span>
             <h2 className="mt-3 font-display text-display-md uppercase tracking-tightest text-bone">
               60 Sekunden <span className="text-electric">Realität.</span>
