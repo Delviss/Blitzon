@@ -12,47 +12,47 @@ const phases = [
     duration: "Tag 0",
     headline: "Wir filtern die Top 5%",
     body:
-      "Vier Schritte, klar und fair. Eignungsanalyse, Pitch-Probe, Kultur-Check, Interview. Wir nehmen nur die Hungrigen."
+      "Vier Schritte, klar und fair. Eignungsanalyse, Verkaufsprobe, Kultur-Check, Gespräch. Wir nehmen nur die Hungrigen."
   },
   {
     no: "02",
-    name: "Onboarding",
+    name: "Einarbeitung",
     duration: "Woche 1",
     headline: "Identität und Haltung",
     body:
-      "Du lernst, wie unsere Closer ticken. Disziplin, Energie, klare Standards. Setup, Mentor und Mission stehen am Tag eins."
+      "Du lernst, wie unsere besten Verkäufer ticken. Disziplin, Energie, klare Standards. Ausstattung, Mentor und Auftrag stehen am Tag eins."
   },
   {
     no: "03",
-    name: "Bootcamp",
+    name: "Intensivtraining",
     duration: "Woche 2 bis 3",
-    headline: "Das Sales-Betriebssystem",
+    headline: "Das Vertriebs-Betriebssystem",
     body:
-      "Discovery, Framing, Einwandbehandlung, Closing. Live-Roleplays, Voice-Lab, NLP-Frameworks. Über 60 Stunden ehrliche Trainingsarbeit."
+      "Bedarfsanalyse, Gesprächsführung, Einwandbehandlung, Abschluss. Rollenspiele, Stimmtraining, erprobte Gesprächsleitfäden. Über 60 Stunden ehrliche Trainingsarbeit."
   },
   {
     no: "04",
-    name: "Mentorship",
+    name: "Mentoring",
     duration: "Monat 2 bis 3",
     headline: "Schulter an Schulter",
     body:
-      "Tägliche Calls mit Senior-Closern, Live-Reviews deiner Pitches, persönliches Coaching auf dein Niveau abgestimmt."
+      "Tägliche Gespräche mit erfahrenen Verkäufern, gemeinsame Auswertung deiner Kundengespräche, persönliches Coaching auf dein Niveau abgestimmt."
   },
   {
     no: "05",
-    name: "Field",
+    name: "Praxis",
     duration: "Monat 3 bis 6",
     headline: "Volle Verantwortung",
     body:
-      "Eigene Pipeline, eigene Deals, eigene Provision. Wir messen, was du abschließt und feiern jeden Win mit dir."
+      "Eigene Kunden, eigene Abschlüsse, eigene Provision. Wir messen, was du abschließt und feiern jeden Erfolg mit dir."
   },
   {
     no: "06",
-    name: "Leadership",
+    name: "Führung",
     duration: "Ab Monat 6",
     headline: "Bau dein Team",
     body:
-      "Top-Performer übernehmen Teams, Märkte oder Standorte. Equity-Optionen, Profit-Share, Founder-Track stehen offen."
+      "Die Besten übernehmen Teams, Märkte oder Standorte. Beteiligungen, Gewinnbeteiligung und der Weg zum eigenen Standort stehen offen."
   }
 ];
 
@@ -82,7 +82,7 @@ export default function Training() {
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
               <RevealText as="span">Vom Talent</RevealText>
               <span className="block flame-text">
-                <RevealText as="span">zum Closer.</RevealText>
+                <RevealText as="span">zum Profi.</RevealText>
               </span>
             </h2>
           </div>

@@ -83,7 +83,7 @@ export default function KineticTeamHybrid({ members }: Props) {
               >
                 <Image
                   src={activeImage}
-                  alt="Preview"
+                  alt="Vorschau"
                   fill
                   className="object-cover object-top"
                 />

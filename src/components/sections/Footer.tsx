@@ -27,7 +27,7 @@ const cols: FooterCol[] = [
     ]
   },
   {
-    title: "Connect",
+    title: "Kontakt",
     links: [
       {
         label: "Instagram",
@@ -38,7 +38,7 @@ const cols: FooterCol[] = [
         href: "https://www.tiktok.com/@blitzon_consulting?is_from_webapp=1&sender_device=pc"
       },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/blitzon/" },
-      { label: "YouTube · coming soon" }
+      { label: "YouTube · bald verfügbar" }
     ]
   }
 ];
@@ -55,7 +55,7 @@ export default function Footer() {
         <div className="flex flex-col gap-8 sm:gap-12 md:flex-row md:items-end md:justify-between">
           <div>
             <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
-              · Class 04 · 2026
+              · Jahrgang 04 · 2026
             </span>
             <h2 className="mt-3 font-display text-[clamp(2.25rem,9vw,9rem)] font-bold uppercase leading-[0.88] tracking-tightest text-bone">
               <span className="block">Lerne.</span>
@@ -87,12 +87,12 @@ export default function Footer() {
               <span className="flex flex-col leading-tight">
                 <span className="font-display text-base font-bold tracking-[0.2em] text-bone">BlitzON</span>
                 <span className="font-mono text-[9px] uppercase tracking-[0.32em] text-bone/60">
-                  Consulting · Energie. Sales. Performance.
+                  Consulting · Energie. Vertrieb. Leistung.
                 </span>
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-bone/75">
-              BlitzON ist eine moderne Sales-Akademie und Recruiting-Plattform mit Standorten in München und Augsburg. Wir bauen die nächste Generation deutscher Vertriebstalente.
+              BlitzON ist eine moderne Vertriebsakademie und Recruiting-Plattform mit Standorten in München und Augsburg. Wir bauen die nächste Generation deutscher Vertriebstalente.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-bone/75">
               <span className="rounded-full border border-white/15 px-3 py-1.5">DACH</span>
@@ -132,7 +132,7 @@ export default function Footer() {
 
           <div className="col-span-2 md:col-span-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
-              · HQ
+              · Zentrale
             </span>
             <p className="mt-4 text-sm text-bone/85">
               BlitzON Consulting OHG<br />
@@ -168,14 +168,14 @@ export default function Footer() {
             </p>
             <p className="mt-2">
               München · Radlkoferstraße 2 · 81373 München<br />
-              Augsburg · Office DACH-Süd
+              Augsburg · Büro DACH-Süd
             </p>
           </div>
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 md:flex-row md:items-center">
           <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
-            © {year} BlitzON Consulting OHG · Bewegung · Made by{" "}
+            © {year} BlitzON Consulting OHG · Bewegung · Umgesetzt von{" "}
             <a
               href="https://descale.services/it"
               target="_blank"

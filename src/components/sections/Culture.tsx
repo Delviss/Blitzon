@@ -8,32 +8,32 @@ import { asset } from "@/lib/asset";
 const tiles = [
   {
     src: "/media/team-success.webp",
-    label: "Top-Performer · München HQ",
+    label: "Top-Verkäufer · Zentrale München",
     span: "md:col-span-5 md:row-span-2"
   },
   {
     src: "/media/awards-2026.webp",
-    label: "ProvenExpert Awards 2026",
+    label: "ProvenExpert Auszeichnungen 2026",
     span: "md:col-span-3"
   },
   {
     src: "/media/closer-call.webp",
-    label: "Closer im Kundengespräch",
+    label: "Verkäufer im Kundengespräch",
     span: "md:col-span-4"
   },
   {
     src: "/media/lifestyle-bmw.webp",
-    label: "Top-Performer Lifestyle",
+    label: "Lifestyle der Top-Verkäufer",
     span: "md:col-span-4"
   },
   {
     src: "/media/team-trainee.webp",
-    label: "Trainee · Class 04",
+    label: "Trainee · Jahrgang 04",
     span: "md:col-span-3"
   },
   {
     src: "/media/lifestyle-fleet.webp",
-    label: "Augsburg Offsite",
+    label: "Teamtag Augsburg",
     span: "md:col-span-5"
   },
   {
@@ -56,14 +56,14 @@ export default function Culture() {
               <RevealText as="span">Die Crew</RevealText>
               <span className="block">
                 <RevealText as="span" className="flame-text">
-                  hinter den Wins.
+                  hinter den Erfolgen.
                 </RevealText>
               </span>
             </h2>
           </div>
           <div className="md:col-span-5">
             <p className="text-base text-bone/85 md:text-lg">
-              Du landest hier nicht in einem Job, sondern in einer Crew. Hohe Energie, voller Kalender, ehrliche Loyalität. Wir feiern jeden Win, lernen aus jedem Loss und gehen die extra Meile gemeinsam.
+              Du landest hier nicht in einem Job, sondern in einer Crew. Hohe Energie, voller Kalender, ehrliche Loyalität. Wir feiern jeden Erfolg, lernen aus jeder Niederlage und gehen die Extrameile gemeinsam.
             </p>
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function Culture() {
                   {t.label}
                 </span>
                 <span className="hidden rounded-full border border-ember/40 bg-ink-900/70 px-2 py-1 font-mono text-[9px] tracking-[0.32em] text-ember md:inline">
-                  IRL
+                  Echt
                 </span>
               </figcaption>
             </motion.figure>
