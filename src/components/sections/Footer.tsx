@@ -14,7 +14,8 @@ const cols: FooterCol[] = [
       { label: "Über uns", href: "#movement" },
       { label: "Training", href: "#training" },
       { label: "Karriere-Pfad", href: "#career" },
-      { label: "Team", href: "#team" }
+      { label: "Team", href: "#team" },
+      { label: "Events", href: "/events/" }
     ]
   },
   {

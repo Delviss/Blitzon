@@ -10,7 +10,8 @@ const links = [
   { href: "#training", label: "Training" },
   { href: "#career", label: "Karriere" },
   { href: "#team", label: "Team" },
-  { href: "#jobs", label: "Jobs" }
+  { href: "#jobs", label: "Jobs" },
+  { href: "/events/", label: "Events" }
 ];
 
 export default function Navbar() {
