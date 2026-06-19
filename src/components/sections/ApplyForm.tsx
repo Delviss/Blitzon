@@ -321,7 +321,7 @@ export default function ApplyForm() {
                       </button>
                       <button
                         type="submit"
-                        className="group inline-flex items-center gap-2 rounded-full bg-brand px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_18px_60px_-18px_rgba(3,124,194,0.7)] transition hover:bg-brand-400 hover:shadow-[0_22px_70px_-16px_rgba(3,124,194,0.8)]"
+                        className="group inline-flex items-center gap-2 rounded-full btn-gold px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.22em]"
                       >
                         {step === steps.length - 1 ? "Bewerbung absenden" : "Weiter"}
                         <span className="transition group-hover:translate-x-1">→</span>

@@ -223,7 +223,7 @@ export default function Jobs() {
                     </div>
                     <a
                       href="#apply"
-                      className="group inline-flex items-center justify-between rounded-full bg-brand px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-bone shadow-[0_12px_40px_-14px_rgba(3,124,194,0.7)] transition hover:bg-brand-400 hover:shadow-[0_16px_50px_-12px_rgba(3,124,194,0.8)]"
+                      className="group inline-flex items-center justify-between rounded-full btn-gold px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.22em]"
                     >
                       Schnell bewerben
                       <span className="transition group-hover:translate-x-1">→</span>
