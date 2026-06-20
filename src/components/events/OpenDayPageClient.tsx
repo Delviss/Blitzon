@@ -8,7 +8,18 @@ import Countdown from "@/components/events/Countdown";
 import AgendaTimeline from "@/components/events/AgendaTimeline";
 import SpeakerCard from "@/components/events/SpeakerCard";
 import EventRegistrationForm from "@/components/events/EventRegistrationForm";
+import EventGallery, { type GalleryImage } from "@/components/events/EventGallery";
 import type { EventItem } from "@/data/events";
+
+const galleryImages: GalleryImage[] = [
+  { src: "/events/open-day-2026/poster-tag-2026.jpg", alt: "BlitzON Tag 2026 Eventposter", className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2" },
+  { src: "/events/open-day-2026/poster-open-day-frame.jpg", alt: "BlitzON Open Day Einladung", className: "row-span-1" },
+  { src: "/events/open-day-2026/poster-roundtable.jpg", alt: "Team im Gespräch beim Open Day", className: "row-span-1" },
+  { src: "/events/open-day-2026/poster-was-passiert.jpg", alt: "Was passiert eigentlich bei BlitzON", className: "row-span-1" },
+  { src: "/events/open-day-2026/poster-energie-check.jpg", alt: "Energie-Check und Sales Challenge", className: "row-span-1" },
+  { src: "/events/open-day-2026/poster-training-quote.jpg", alt: "Training heute, Erfolg morgen", className: "col-span-2 row-span-2 md:col-span-1 md:row-span-2" },
+  { src: "/events/open-day-2026/poster-team-quote.jpg", alt: "Hinter jeder starken Performance steht ein starkes Team", className: "row-span-1" }
+];
 
 const aboutCards = [
   { title: "Karriere", body: "Erfahren Sie mehr über Ihre Entwicklungsmöglichkeiten bei BlitzON." },
@@ -138,6 +149,19 @@ export default function OpenDayPageClient({ event }: { event: EventItem }) {
           </div>
         </section>
       )}
+
+      {/* Visuals */}
+      <section className="relative bg-ink-900 py-20 sm:py-28">
+        <div className="mx-auto max-w-[1440px] px-page">
+          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">· Visuals</span>
+          <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
+            Stimmung vom <span className="gold-text">Open Day.</span>
+          </h2>
+          <div className="mt-12">
+            <EventGallery images={galleryImages} />
+          </div>
+        </div>
+      </section>
 
       {/* Team culture */}
       <section className="relative bg-ink-900 py-20 sm:py-28">
