@@ -59,7 +59,7 @@ export default function OpenDayPageClient({ event }: { event: EventItem }) {
               href="#register"
               className="group inline-flex items-center gap-2 rounded-full btn-gold px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.22em]"
             >
-              Jetzt kostenlos anmelden
+              Jetzt Ticket sichern
               <span className="transition group-hover:translate-x-1">→</span>
             </a>
             <a
@@ -180,6 +180,11 @@ export default function OpenDayPageClient({ event }: { event: EventItem }) {
               </h2>
               <p className="mt-6 max-w-md text-sm text-bone/85 sm:text-base">
                 {event.dateLabel} · {event.location}
+              </p>
+              <p className="mt-4 max-w-md text-sm text-bone/70">
+                Ihr Ticket sichert Ihnen die Teilnahme an unserer Verlosung und deckt die Verpflegung
+                vor Ort ab. Nach der Anmeldung erhalten Sie eine Bestätigung mit Zahlungslink per
+                E-Mail. Bitte bringen Sie Ihr Ticket zum Einlass mit.
               </p>
             </div>
             <div className="md:col-span-7">
