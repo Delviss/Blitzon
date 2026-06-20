@@ -6,6 +6,7 @@ import Footer from "@/components/sections/Footer";
 import RevealText from "@/components/system/RevealText";
 import Countdown from "@/components/events/Countdown";
 import AgendaTimeline from "@/components/events/AgendaTimeline";
+import EventGallery from "@/components/events/EventGallery";
 import SpeakerCard from "@/components/events/SpeakerCard";
 import EventRegistrationForm from "@/components/events/EventRegistrationForm";
 import type { EventItem } from "@/data/events";
@@ -122,6 +123,18 @@ export default function OpenDayPageClient({ event }: { event: EventItem }) {
           </div>
         </section>
       )}
+
+      {/* Gallery */}
+      <section className="relative bg-ink-900 py-20 sm:py-28">
+        <div className="mx-auto max-w-[1440px] px-page">
+          <h2 className="text-center font-display text-display-md uppercase tracking-tightest text-bone">
+            Eindrücke vom <span className="gold-text">BlitzON Open Day</span>
+          </h2>
+          <div className="mt-12">
+            <EventGallery />
+          </div>
+        </div>
+      </section>
 
       {/* Speakers */}
       {event.speakers && event.speakers.length > 0 && (
