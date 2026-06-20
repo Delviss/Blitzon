@@ -61,7 +61,14 @@ export const events: EventItem[] = [
       {
         name: "Hasan Blitz",
         role: "Geschäftsführung",
-        bio: "Unternehmer und Vertriebsexperte."
+        bio: "Unternehmer und Vertriebsexperte.",
+        image: "/media/team/blitz.jpg"
+      },
+      {
+        name: "L. Harelimana",
+        role: "Gründer & Geschäftsführer",
+        bio: "Mitgründer und Geschäftsführer von BlitzON.",
+        image: "/media/team/harelimana.jpg"
       }
     ]
   }
