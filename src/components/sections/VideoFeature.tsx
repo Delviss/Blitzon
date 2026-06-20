@@ -47,7 +47,7 @@ export default function VideoFeature() {
             </h2>
           </div>
           <p className="max-w-sm text-sm text-bone/75 md:text-right">
-            Trainings, Closing-Sessions, Lifestyle, Wins. Ungefiltert. Ton an, lohnt sich.
+            Trainings, Verkaufsgespräche, Lifestyle, Erfolge. Ungefiltert. Ton an, lohnt sich.
           </p>
         </div>
 
@@ -96,9 +96,9 @@ export default function VideoFeature() {
                 </span>
               </div>
               <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-center justify-between gap-3 border-t border-white/15 bg-ink-900/75 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.3em] text-bone/75 backdrop-blur md:px-8 md:py-4">
-                <span>· Cohort 04 · München</span>
-                <span className="hidden md:inline">Gedreht in HQ · Kein Stockmaterial</span>
-                <span className="text-electric">REC ●</span>
+                <span>· Jahrgang 04 · München</span>
+                <span className="hidden md:inline">Gedreht in der Zentrale · Kein Archivmaterial</span>
+                <span className="text-electric">Aufnahme ●</span>
               </div>
             </button>
           )}

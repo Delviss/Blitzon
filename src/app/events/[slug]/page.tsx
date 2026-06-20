@@ -15,7 +15,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     return {
       title: "BlitzON Open Day 2026 | Karriere & Networking Event",
       description:
-        "Erleben Sie BlitzON hautnah beim Open Day 2026 in München. Jetzt kostenlos anmelden."
+        "Erleben Sie BlitzON hautnah beim Open Day 2026 in Augsburg. Sichern Sie sich Ihr Ticket und die Chance auf tolle Gewinne."
     };
   }
 

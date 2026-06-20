@@ -106,6 +106,14 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" }
         },
+        "marquee-loop": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" }
+        },
+        "marquee-loop-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" }
+        },
         flicker: {
           "0%, 100%": { opacity: "1" },
           "45%": { opacity: "0.92" },
@@ -122,6 +130,8 @@ const config: Config = {
       },
       animation: {
         marquee: "marquee 38s linear infinite",
+        "marquee-loop": "marquee-loop var(--duration, 30s) infinite linear",
+        "marquee-loop-vertical": "marquee-loop-vertical var(--duration, 30s) linear infinite",
         flicker: "flicker 5s ease-in-out infinite",
         pulseGlow: "pulseGlow 3.5s ease-in-out infinite",
         scanline: "scanline 8s linear infinite"

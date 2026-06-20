@@ -141,9 +141,9 @@ export default function Hero() {
         transition={{ delay: 0.6, duration: 0.8 }}
         className="absolute left-0 right-0 top-20 z-10 mx-auto flex max-w-[1440px] items-center justify-between px-page text-[9px] uppercase tracking-[0.28em] text-bone/60 sm:top-24 sm:text-[10px] sm:tracking-[0.32em]"
       >
-        <span className="hidden sm:inline">// München · <LiveTime /> CET</span>
+        <span className="hidden sm:inline">// München · <LiveTime /> MEZ</span>
         <span className="hidden sm:inline">
-          // Class of 2026 · <span className="text-electric">Cohort 04</span>
+          // Jahrgang 2026 · <span className="text-electric">Gruppe 04</span>
         </span>
       </motion.div>
 
@@ -162,7 +162,7 @@ export default function Hero() {
             <span className="relative inline-flex h-2 w-2 rounded-full bg-electric" />
           </span>
           <span className="text-electric-400">Bewerbungen offen</span>
-          <span className="text-bone/65">Class 04 / 2026</span>
+          <span className="text-bone/65">Jahrgang 04 / 2026</span>
         </motion.div>
 
         <h1 className="font-display text-display-lg uppercase leading-[0.88] tracking-tightest text-bone">
@@ -187,7 +187,7 @@ export default function Hero() {
         >
           <div className="md:col-span-6">
             <p className="text-balance text-sm text-bone/85 sm:text-base md:text-lg">
-              BlitzON ist kein Vertriebsjob von der Stange. Wir bauen die Generation, die Deutschlands Sales neu schreibt. Jung, ehrlich, hungrig.
+              BlitzON ist kein Vertriebsjob von der Stange. Wir bauen die Generation, die Deutschlands Vertrieb neu schreibt. Jung, ehrlich, hungrig.
             </p>
             <p className="mt-4 text-sm font-medium text-electric sm:text-base md:text-lg">
               Trainier mit den Besten.
@@ -269,7 +269,7 @@ function LiveTime() {
 function ScrollHint() {
   return (
     <div className="pointer-events-none absolute bottom-12 right-6 z-10 hidden flex-col items-center gap-3 text-[9px] uppercase tracking-[0.4em] text-bone/55 md:flex">
-      <span className="rotate-90 [writing-mode:vertical-rl]">scroll</span>
+      <span className="rotate-90 [writing-mode:vertical-rl]">Scrollen</span>
       <span className="block h-12 w-px overflow-hidden bg-white/15">
         <span className="block h-1/2 w-px bg-electric" />
       </span>

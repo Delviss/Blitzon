@@ -1,6 +1,6 @@
 'use client';
 
-import KineticTeamHybrid from '@/components/ui/kinetic-team-hybrid';
+import TeamMarquee from '@/components/ui/team-marquee';
 import RevealText from '@/components/system/RevealText';
 import { asset } from '@/lib/asset';
 
@@ -40,13 +40,13 @@ const TEAM = [
     role: 'Ausbilder',
     image: asset('/media/team/may.jpg'),
   },
-  // ── Rookies ───────────────────────────────────────────────────────
   {
     id: '05',
     name: 'M. Mory',
-    role: 'Rookie',
+    role: 'Ausbilder',
     image: asset('/media/team/mory.jpg'),
   },
+  // ── Rookies ───────────────────────────────────────────────────────
   {
     id: '06',
     name: 'G. Soumalia',
@@ -87,18 +87,12 @@ const TEAM = [
   // ── BlitzON-Partner ───────────────────────────────────────────────
   {
     id: '12',
-    name: 'J. Atesli',
-    role: 'BlitzON-Partner',
-    image: asset('/media/team/atesli.jpg'),
-  },
-  {
-    id: '13',
     name: 'M. Will',
     role: 'BlitzON-Partner',
     image: asset('/media/team/will.jpg'),
   },
   {
-    id: '14',
+    id: '13',
     name: 'A. Alrammahi',
     role: 'BlitzON-Partner',
     image: asset('/media/team/alrammahi.jpg'),
@@ -113,47 +107,21 @@ export default function Team() {
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-flame opacity-20" />
 
-      <div className="mx-auto max-w-[1440px] px-page">
-        {/* Header */}
-        <div className="mb-14 flex flex-col gap-6 md:mb-20 md:flex-row md:items-end md:justify-between">
-          <div>
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
-              · Das Team
+      <TeamMarquee
+        description="Die Menschen, die BlitzON jeden Tag antreiben — von der Gründung bis zum Vertrieb."
+        eyebrow="· Das Team"
+        members={TEAM}
+        title={
+          <>
+            <RevealText as="span">Menschen</RevealText>
+            <span className="block">
+              <RevealText as="span" className="flame-text">
+                hinter BlitzON.
+              </RevealText>
             </span>
-            <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
-              <RevealText as="span">Menschen</RevealText>
-              <span className="block">
-                <RevealText as="span" className="flame-text">
-                  hinter BlitzON.
-                </RevealText>
-              </span>
-            </h2>
-          </div>
-
-          {/* Rank legend — visible on md+ */}
-          <div className="hidden flex-col gap-2 md:flex">
-            {[
-              'Gründer & Geschäftsführer',
-              'Ausbilder',
-              'Rookie',
-              'Recruiting Agent',
-              'BlitzON-Partner',
-            ].map((rank, i) => (
-              <div key={rank} className="flex items-center gap-3">
-                <span className="font-mono text-[9px] text-bone/30">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-bone/50">
-                  {rank}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Kinetic list */}
-        <KineticTeamHybrid members={TEAM} />
-      </div>
+          </>
+        }
+      />
     </section>
   );
 }
