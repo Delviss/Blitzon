@@ -93,7 +93,7 @@ export default function ApplyForm() {
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5 md:sticky md:top-32 md:self-start">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
               · Jahrgang 04 · 2026
             </span>
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
@@ -111,7 +111,7 @@ export default function ApplyForm() {
                 "Persönliches Erstgespräch statt Massenmail"
               ].map((p) => (
                 <li key={p} className="flex items-start gap-3 text-sm text-bone/85">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-ember" />
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold" />
                   {p}
                 </li>
               ))}
@@ -152,7 +152,7 @@ export default function ApplyForm() {
                 <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/65">
                   Schritt 0{step + 1} / 0{steps.length}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+                <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
                   {steps[step].label}
                 </span>
               </div>
@@ -162,7 +162,7 @@ export default function ApplyForm() {
                   initial={false}
                   animate={{ width: `${progress}%` }}
                   transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                  className="h-full bg-gradient-to-r from-ember via-coral to-electric"
+                  className="h-full bg-gradient-to-r from-gold via-gold-light to-gold-dark"
                 />
               </div>
 
@@ -175,7 +175,7 @@ export default function ApplyForm() {
                     exit={{ opacity: 0, y: -16 }}
                     className="mt-12 flex flex-col items-start gap-6 text-bone"
                   >
-                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-ember via-coral to-electric text-ink-900 shadow-[0_12px_40px_-12px_rgba(31,169,255,0.7)]">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-gold via-gold-light to-gold-dark text-ink-900 shadow-[0_12px_40px_-12px_rgba(31,169,255,0.7)]">
                       ✓
                     </span>
                     <h3 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
@@ -348,9 +348,9 @@ function Field({
   required?: boolean;
 }) {
   return (
-    <label className="group block border-b border-white/15 transition focus-within:border-ember">
+    <label className="group block border-b border-white/15 transition focus-within:border-gold">
       <span className="block font-mono text-[10px] uppercase tracking-[0.32em] text-bone/60">
-        {label} {required && <span className="text-ember">*</span>}
+        {label} {required && <span className="text-gold">*</span>}
       </span>
       {children}
     </label>

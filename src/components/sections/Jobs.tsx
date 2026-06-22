@@ -85,7 +85,7 @@ export default function Jobs() {
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
               · Offene Rollen
             </span>
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
@@ -159,7 +159,7 @@ export default function Jobs() {
                 <span className="col-span-2 flex justify-end md:col-span-2 md:justify-start md:order-none order-last">
                   <span
                     className={`flex h-8 w-8 items-center justify-center rounded-full border border-white/15 transition sm:h-9 sm:w-9 ${
-                      open === i ? "rotate-45 border-ember text-ember" : "text-bone/75"
+                      open === i ? "rotate-45 border-gold text-gold" : "text-bone/75"
                     }`}
                     aria-hidden
                   >
@@ -169,7 +169,7 @@ export default function Jobs() {
                 <span className="col-span-6 font-mono text-[10px] uppercase tracking-[0.24em] text-bone/85 sm:text-[11px] sm:tracking-[0.28em] md:col-span-2">
                   · {j.city}
                 </span>
-                <span className="col-span-6 font-mono text-[10px] uppercase tracking-[0.24em] text-ember sm:text-[11px] sm:tracking-[0.28em] md:col-span-3">
+                <span className="col-span-6 font-mono text-[10px] uppercase tracking-[0.24em] text-gold sm:text-[11px] sm:tracking-[0.28em] md:col-span-3">
                   {j.income}
                 </span>
                 <span className="col-span-12 hidden gap-2 md:col-span-2 md:flex md:justify-end">
@@ -208,7 +208,7 @@ export default function Jobs() {
                         "Beteiligungsmodelle ab L4"
                       ].map((p) => (
                         <li key={p} className="flex items-center gap-2 text-sm text-bone/85">
-                          <span className="h-1.5 w-1.5 rounded-full bg-ember" />
+                          <span className="h-1.5 w-1.5 rounded-full bg-gold" />
                           {p}
                         </li>
                       ))}
@@ -243,7 +243,7 @@ function Row({ label, value, accent }: { label: string; value: string; accent?: 
   return (
     <div className="flex items-center justify-between border-b border-white/10 pb-2 last:border-0">
       <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-bone/55">{label}</span>
-      <span className={`font-mono text-xs uppercase tracking-[0.22em] ${accent ? "text-ember" : "text-bone"}`}>
+      <span className={`font-mono text-xs uppercase tracking-[0.22em] ${accent ? "text-gold" : "text-bone"}`}>
         {value}
       </span>
     </div>

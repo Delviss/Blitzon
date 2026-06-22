@@ -48,21 +48,21 @@ const benefits = [
 ];
 
 const accentGlow = {
-  ember: "group-hover:bg-ember/15",
+  ember: "group-hover:bg-gold/15",
   coral: "group-hover:bg-coral/15",
   electric: "group-hover:bg-electric-400/15",
   moss: "group-hover:bg-moss/15"
 } as const;
 
 const accentNumber = {
-  ember: "text-ember",
+  ember: "text-gold",
   coral: "text-coral",
   electric: "text-electric-400",
   moss: "text-moss"
 } as const;
 
 const accentLine = {
-  ember: "from-ember",
+  ember: "from-gold",
   coral: "from-coral",
   electric: "from-electric-400",
   moss: "from-moss"
@@ -77,7 +77,7 @@ export default function WhyBlitzon() {
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-4">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
               · Warum BlitzON
             </span>
           </div>

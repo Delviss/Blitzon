@@ -49,7 +49,7 @@ export default function StickyApply() {
             WhatsApp
           </a>
           <a
-            href="#apply"
+            href="/#apply"
             className="group relative flex h-11 items-center gap-2 overflow-hidden rounded-full btn-gold px-4 text-[11px] font-semibold uppercase tracking-[0.18em] sm:h-12 sm:px-5 sm:text-xs sm:tracking-[0.2em] md:px-6"
           >
             <span className="relative z-10">Bewirb dich</span>
