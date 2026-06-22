@@ -16,9 +16,7 @@ const galleryImages: GalleryImage[] = [
   { src: "/events/open-day-2026/poster-open-day-frame.jpg", alt: "BlitzON Open Day Einladung", className: "row-span-1" },
   { src: "/events/open-day-2026/poster-roundtable.jpg", alt: "Team im Gespräch beim Open Day", className: "row-span-1" },
   { src: "/events/open-day-2026/poster-was-passiert.jpg", alt: "Was passiert eigentlich bei BlitzON", className: "row-span-1" },
-  { src: "/events/open-day-2026/poster-energie-check.jpg", alt: "Energie-Check und Sales Challenge", className: "row-span-1" },
-  { src: "/events/open-day-2026/poster-training-quote.jpg", alt: "Training heute, Erfolg morgen", className: "col-span-2 row-span-2 md:col-span-1 md:row-span-2" },
-  { src: "/events/open-day-2026/poster-team-quote.jpg", alt: "Hinter jeder starken Performance steht ein starkes Team", className: "row-span-1" }
+  { src: "/events/open-day-2026/poster-energie-check.jpg", alt: "Energie-Check und Sales Challenge", className: "col-span-2 row-span-2 md:col-span-1 md:row-span-2" }
 ];
 
 const aboutCards = [
