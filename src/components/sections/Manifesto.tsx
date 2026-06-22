@@ -26,7 +26,7 @@ export default function Manifesto() {
       <div className="absolute -left-32 top-1/4 -z-10 hidden h-[420px] w-[420px] rounded-full bg-ember/15 blur-[140px] md:block" />
       <div className="absolute right-0 bottom-1/4 -z-10 hidden h-[420px] w-[420px] rounded-full bg-electric/15 blur-[140px] md:block" />
       <div className="mx-auto max-w-[1440px] px-page">
-        <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+        <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
           · Manifest
         </span>
         <div className="mt-10 space-y-2 md:mt-12">
@@ -72,7 +72,7 @@ function Line({
   const opacity = useTransform(progress, [start, (start + end) / 2, end], [0.25, 1, 1]);
   const x = useTransform(progress, [start, end], ["-2%", "0%"]);
   const colorClass =
-    accent === "ember" ? "flame-text" : accent === "coral" ? "text-coral" : "text-bone";
+    accent === "ember" ? "gold-text" : accent === "coral" ? "text-coral" : "text-bone";
   return (
     <motion.h3
       style={enabled ? { opacity, x } : undefined}

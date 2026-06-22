@@ -11,20 +11,20 @@ const cols: FooterCol[] = [
   {
     title: "Bewegung",
     links: [
-      { label: "Über uns", href: "#movement" },
-      { label: "Training", href: "#training" },
-      { label: "Karriere-Pfad", href: "#career" },
-      { label: "Team", href: "#team" },
+      { label: "Über uns", href: "/#movement" },
+      { label: "Training", href: "/#training" },
+      { label: "Karriere-Pfad", href: "/#career" },
+      { label: "Team", href: "/#team" },
       { label: "Events", href: "/events/" }
     ]
   },
   {
     title: "Bewerben",
     links: [
-      { label: "Offene Rollen", href: "#jobs" },
-      { label: "Jetzt bewerben", href: "#apply" },
-      { label: "Werkstudent", href: "#jobs" },
-      { label: "Quereinsteiger", href: "#jobs" }
+      { label: "Offene Rollen", href: "/#jobs" },
+      { label: "Jetzt bewerben", href: "/#apply" },
+      { label: "Werkstudent", href: "/#jobs" },
+      { label: "Quereinsteiger", href: "/#jobs" }
     ]
   },
   {
@@ -55,7 +55,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1440px] px-page pt-16 pb-12 sm:pt-20 sm:pb-14 md:pt-24 md:pb-16">
         <div className="flex flex-col gap-8 sm:gap-12 md:flex-row md:items-end md:justify-between">
           <div>
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
               · Jahrgang 04 · 2026
             </span>
             <h2 className="mt-3 font-display text-[clamp(2.25rem,9vw,9rem)] font-bold uppercase leading-[0.88] tracking-tightest text-bone">
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
 
           <a
-            href="#apply"
+            href="/#apply"
             className="group inline-flex w-full items-center justify-between gap-3 rounded-full btn-gold px-5 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] sm:w-auto sm:px-7 sm:py-5 sm:text-xs sm:tracking-[0.22em]"
           >
             Werde Teil der Bewegung
@@ -98,7 +98,7 @@ export default function Footer() {
             <div className="mt-6 flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-bone/75">
               <span className="rounded-full border border-white/15 px-3 py-1.5">DACH</span>
               <span className="rounded-full border border-white/15 px-3 py-1.5">B2B · B2C</span>
-              <span className="rounded-full border border-ember/50 bg-ember/10 px-3 py-1.5 text-ember">Wir stellen ein</span>
+              <span className="rounded-full border border-gold/50 bg-gold/10 px-3 py-1.5 text-gold">Wir stellen ein</span>
             </div>
           </div>
 
@@ -117,7 +117,7 @@ export default function Footer() {
                           href={l.href}
                           target={isExternal ? "_blank" : undefined}
                           rel={isExternal ? "noopener noreferrer" : undefined}
-                          className="text-sm text-bone/85 transition hover:text-ember"
+                          className="text-sm text-bone/85 transition hover:text-gold"
                         >
                           {l.label}
                         </a>
@@ -141,7 +141,7 @@ export default function Footer() {
               81373 München
             </p>
             <p className="mt-3 text-sm text-bone/75">
-              <a href="mailto:Info@blitzon.de" className="transition hover:text-ember">
+              <a href="mailto:Info@blitzon.de" className="transition hover:text-gold">
                 Info@blitzon.de
               </a>
             </p>
