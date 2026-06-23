@@ -61,12 +61,14 @@ export const events: EventItem[] = [
       {
         name: "Hasan Blitz",
         role: "Gründer & Geschäftsführer",
-        bio: "Unternehmer und Vertriebsexperte."
+        bio: "Unternehmer und Vertriebsexperte.",
+        image: "/media/team/blitz.jpg"
       },
       {
         name: "L.Harelimana",
         role: "Mitgründer & Geschäftsführer",
-        bio: "Prozessentwickler & Systemexperte."
+        bio: "Prozessentwickler & Systemexperte.",
+        image: "/media/team/harelimana.jpg"
       }
     ]
   }

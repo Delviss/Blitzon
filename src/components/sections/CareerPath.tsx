@@ -125,7 +125,7 @@ export default function CareerPath() {
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-5">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
               · Karriereleiter · Direktvertrieb
             </span>
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
@@ -155,7 +155,7 @@ export default function CareerPath() {
                     onMouseEnter={() => setActive(i)}
                     className={`group flex w-full items-center justify-between gap-3 rounded-xl border px-4 py-4 text-left transition-all duration-500 sm:gap-6 sm:px-5 sm:py-5 md:px-6 ${
                       i === active
-                        ? "border-ember/70 bg-ink-700"
+                        ? "border-gold/70 bg-ink-700"
                         : "border-white/10 bg-ink-800 hover:border-white/25"
                     }`}
                   >
@@ -163,7 +163,7 @@ export default function CareerPath() {
                       <span
                         className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-mono text-[10px] tracking-[0.2em] transition sm:h-10 sm:w-10 ${
                           i === active
-                            ? "bg-brand text-bone shadow-[0_8px_28px_-10px_rgba(3,124,194,0.8)]"
+                            ? "bg-gold text-ink-900 shadow-[0_8px_28px_-10px_rgba(212,175,55,0.8)]"
                             : "bg-ink-900 text-bone/65 group-hover:text-bone"
                         }`}
                       >
@@ -208,7 +208,7 @@ export default function CareerPath() {
                 <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-bone/55">
                   Level {current.rank} · {current.tagline}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+                <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
                   Fortschritt · {current.pct}%
                 </span>
               </div>
@@ -237,7 +237,7 @@ export default function CareerPath() {
                     initial={{ width: 0 }}
                     animate={inView ? { width: `${current.pct}%` } : { width: 0 }}
                     transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-                    className="absolute inset-y-0 left-0 origin-left bg-gradient-to-r from-ember via-coral to-electric"
+                    className="absolute inset-y-0 left-0 origin-left bg-gradient-to-r from-gold via-gold-light to-gold-dark"
                   />
                   <div className="pointer-events-none absolute inset-0 grid grid-cols-4">
                     {Array.from({ length: 4 }).map((_, k) => (
@@ -263,7 +263,7 @@ function InfoList({ label, items, accent }: { label: string; items: string[]; ac
     <div className="rounded-xl border border-white/10 bg-ink-900/70 p-4 sm:p-5">
       <div
         className={`font-mono text-[9px] uppercase tracking-[0.3em] ${
-          accent ? "text-ember" : "text-bone/55"
+          accent ? "text-gold" : "text-bone/55"
         }`}
       >
         {label}
@@ -271,7 +271,7 @@ function InfoList({ label, items, accent }: { label: string; items: string[]; ac
       <ul className="mt-3 space-y-2.5">
         {items.map((item) => (
           <li key={item} className="flex gap-2 text-xs leading-relaxed text-bone/80 sm:text-[13px]">
-            <span className={`mt-1.5 h-1 w-1 shrink-0 rounded-full ${accent ? "bg-ember" : "bg-electric"}`} />
+            <span className={`mt-1.5 h-1 w-1 shrink-0 rounded-full ${accent ? "bg-gold" : "bg-electric"}`} />
             <span>{item}</span>
           </li>
         ))}
