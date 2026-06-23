@@ -60,8 +60,13 @@ export const events: EventItem[] = [
     speakers: [
       {
         name: "Hasan Blitz",
-        role: "Geschäftsführung",
+        role: "Gründer & Geschäftsführer",
         bio: "Unternehmer und Vertriebsexperte."
+      },
+      {
+        name: "L.Harelimana",
+        role: "Mitgründer & Geschäftsführer",
+        bio: "Prozessentwickler & Systemexperte."
       }
     ]
   }
