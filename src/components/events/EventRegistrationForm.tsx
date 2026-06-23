@@ -22,12 +22,13 @@ export default function EventRegistrationForm({ event }: { event: EventItem }) {
         src={`https://form.jotform.com/${JOTFORM_ID}`}
         className="min-h-[720px] w-full rounded-xl border-0 sm:min-h-[780px]"
         scrolling="no"
+        loading="lazy"
         allow="geolocation; microphone; camera; fullscreen"
       />
 
       <Script
         src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         onLoad={() => {
           // @ts-expect-error injected globally by the Jotform embed script
           window.jotformEmbedHandler?.(
