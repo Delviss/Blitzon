@@ -21,6 +21,7 @@ export default function EventRegistrationForm({ event }: { event: EventItem }) {
         title={`Anmeldung – ${event.title}`}
         src={`https://form.jotform.com/${JOTFORM_ID}`}
         className="min-h-[720px] w-full rounded-xl border-0 sm:min-h-[780px]"
+        loading="lazy"
         scrolling="no"
         allow="geolocation; microphone; camera; fullscreen"
       />
