@@ -76,7 +76,7 @@ export default function Training() {
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-5">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
               · Das Ökosystem
             </span>
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
@@ -98,7 +98,7 @@ export default function Training() {
             <div className="absolute left-[19px] top-0 hidden h-full w-px bg-white/15 md:block">
               <motion.div
                 style={{ height: lineHeight }}
-                className="absolute top-0 left-0 w-px bg-gradient-to-b from-ember via-coral to-electric"
+                className="absolute top-0 left-0 w-px bg-gradient-to-b from-gold via-gold-light to-gold-dark"
               />
             </div>
           )}
@@ -136,7 +136,7 @@ export default function Training() {
                   <p className="text-sm text-bone/75 md:text-base">{p.body}</p>
                 </div>
 
-                <div className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-ember via-coral to-transparent transition-transform duration-700 group-hover:scale-x-100" />
+                <div className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-gold via-gold-light to-transparent transition-transform duration-700 group-hover:scale-x-100" />
               </motion.li>
             ))}
           </ol>

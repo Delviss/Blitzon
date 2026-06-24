@@ -28,7 +28,7 @@ export default function TeamMarquee({
     <div className="relative w-full">
       <div className="mx-auto mb-14 flex max-w-3xl flex-col items-center px-page text-center md:mb-20">
         {eyebrow && (
-          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
             {eyebrow}
           </span>
         )}
@@ -57,7 +57,7 @@ export default function TeamMarquee({
                 />
                 <div className="absolute bottom-0 w-full rounded-b-2xl bg-ink-900/80 p-3 backdrop-blur-sm">
                   <h3 className="font-medium text-bone">{member.name}</h3>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ember/70">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold/70">
                     {member.role}
                   </p>
                 </div>

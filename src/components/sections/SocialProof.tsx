@@ -23,14 +23,14 @@ const partners = [
 ];
 
 const accentMap = {
-  ember: "text-ember",
+  ember: "text-gold",
   electric: "text-electric-400",
   coral: "text-coral",
   moss: "text-moss"
 } as const;
 
 const lineMap = {
-  ember: "bg-ember",
+  ember: "bg-gold",
   electric: "bg-electric-400",
   coral: "bg-coral",
   moss: "bg-moss"
@@ -67,7 +67,7 @@ export default function SocialProof() {
             <div key={k} className="flex items-center gap-16">
               {partners.map((p) => (
                 <span key={`${k}-${p}`} className="flex items-center gap-3">
-                  <span className="h-1 w-1 rounded-full bg-ember" />
+                  <span className="h-1 w-1 rounded-full bg-gold" />
                   {p}
                 </span>
               ))}

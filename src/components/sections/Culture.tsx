@@ -49,7 +49,7 @@ export default function Culture() {
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
               · Team und Kultur
             </span>
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
@@ -91,7 +91,7 @@ export default function Culture() {
                 <span className="truncate rounded-full bg-ink-900/80 px-2 py-1 backdrop-blur sm:px-3 sm:py-1.5">
                   {t.label}
                 </span>
-                <span className="hidden rounded-full border border-ember/40 bg-ink-900/70 px-2 py-1 font-mono text-[9px] tracking-[0.32em] text-ember md:inline">
+                <span className="hidden rounded-full border border-gold/40 bg-ink-900/70 px-2 py-1 font-mono text-[9px] tracking-[0.32em] text-gold md:inline">
                   Echt
                 </span>
               </figcaption>
