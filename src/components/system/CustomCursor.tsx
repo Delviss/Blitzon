@@ -15,6 +15,27 @@ export default function CustomCursor() {
     let ringX = mouseX;
     let ringY = mouseY;
     let frame = 0;
+    let running = false;
+
+    const tick = () => {
+      ringX += (mouseX - ringX) * 0.18;
+      ringY += (mouseY - ringY) * 0.18;
+      if (ringRef.current) {
+        ringRef.current.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+      }
+      if (Math.abs(mouseX - ringX) < 0.5 && Math.abs(mouseY - ringY) < 0.5) {
+        running = false;
+        return;
+      }
+      frame = requestAnimationFrame(tick);
+    };
+
+    const ensureRunning = () => {
+      if (!running) {
+        running = true;
+        frame = requestAnimationFrame(tick);
+      }
+    };
 
     const onMove = (e: MouseEvent) => {
       mouseX = e.clientX;
@@ -22,6 +43,7 @@ export default function CustomCursor() {
       if (dotRef.current) {
         dotRef.current.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
       }
+      ensureRunning();
     };
 
     const onOver = (e: MouseEvent) => {
@@ -30,18 +52,9 @@ export default function CustomCursor() {
       document.body.classList.toggle("cursor-hover", Boolean(interactive));
     };
 
-    const tick = () => {
-      ringX += (mouseX - ringX) * 0.18;
-      ringY += (mouseY - ringY) * 0.18;
-      if (ringRef.current) {
-        ringRef.current.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
-      }
-      frame = requestAnimationFrame(tick);
-    };
-
     window.addEventListener("mousemove", onMove, { passive: true });
     window.addEventListener("mouseover", onOver, { passive: true });
-    frame = requestAnimationFrame(tick);
+    ensureRunning();
 
     return () => {
       cancelAnimationFrame(frame);

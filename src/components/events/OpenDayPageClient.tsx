@@ -28,8 +28,8 @@ export default function OpenDayPageClient({ event }: { event: EventItem }) {
       <section className="relative overflow-hidden bg-ink-900 pb-24 pt-32 sm:pb-32 sm:pt-40">
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-grid-flame opacity-70" />
-          <div className="absolute -left-32 top-1/4 h-[460px] w-[460px] rounded-full bg-electric/25 blur-[150px]" />
-          <div className="absolute -right-24 top-0 h-[380px] w-[380px] rounded-full bg-gold/20 blur-[150px]" />
+          <div className="absolute -left-32 top-1/4 hidden h-[460px] w-[460px] rounded-full bg-electric/25 blur-[150px] md:block" />
+          <div className="absolute -right-24 top-0 hidden h-[380px] w-[380px] rounded-full bg-gold/20 blur-[150px] md:block" />
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
         </div>
 
@@ -171,8 +171,8 @@ export default function OpenDayPageClient({ event }: { event: EventItem }) {
       {/* Registration */}
       <section id="register" className="relative overflow-hidden bg-ink-900 py-20 sm:py-28">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute -left-32 top-1/3 h-[480px] w-[480px] rounded-full bg-gold/15 blur-[150px]" />
-          <div className="absolute -right-32 bottom-0 h-[420px] w-[420px] rounded-full bg-electric/20 blur-[150px]" />
+          <div className="absolute -left-32 top-1/3 hidden h-[480px] w-[480px] rounded-full bg-gold/15 blur-[150px] md:block" />
+          <div className="absolute -right-32 bottom-0 hidden h-[420px] w-[420px] rounded-full bg-electric/20 blur-[150px] md:block" />
         </div>
         <div className="mx-auto max-w-[1440px] px-page">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
