@@ -2,8 +2,11 @@
 
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { asset } from "@/lib/asset";
+
+const MotionLink = motion(Link);
 
 const links = [
   { href: "/#movement", label: "Bewegung" },
@@ -71,7 +74,7 @@ export default function Navbar() {
 
           <nav className="hidden items-center gap-6 lg:flex lg:gap-8">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className="group relative text-[11px] font-medium uppercase tracking-[0.24em] text-bone/80 transition hover:text-gold"
@@ -80,7 +83,7 @@ export default function Navbar() {
                   {l.label}
                   <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </span>
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -146,7 +149,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
       </div>
       <nav className="relative flex flex-1 flex-col justify-center gap-3 overflow-y-auto px-page py-6 sm:gap-4">
         {links.map((l, i) => (
-          <motion.a
+          <MotionLink
             key={l.href}
             href={l.href}
             onClick={onClose}
@@ -161,7 +164,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             <span className="font-mono text-xs text-bone/55 transition group-hover:text-gold">
               0{i + 1}
             </span>
-          </motion.a>
+          </MotionLink>
         ))}
       </nav>
       <div className="safe-pb relative px-page pb-6 sm:pb-10">
