@@ -1,11 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import type { EventItem } from "@/data/events";
+
+const MotionLink = motion(Link);
 
 export default function EventCard({ event, index = 0 }: { event: EventItem; index?: number }) {
   return (
-    <motion.a
+    <MotionLink
       href={`/events/${event.slug}/`}
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -39,6 +42,6 @@ export default function EventCard({ event, index = 0 }: { event: EventItem; inde
         {event.ctaLabel}
         <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
       </div>
-    </motion.a>
+    </MotionLink>
   );
 }
