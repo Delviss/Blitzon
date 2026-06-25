@@ -90,6 +90,9 @@ export default function OpenDayPageClient({ event }: { event: EventItem }) {
           <h2 className="font-display text-display-md uppercase tracking-tightest text-bone">
             Warum <span className="gold-text">teilnehmen?</span>
           </h2>
+          <p className="mt-4 max-w-2xl text-sm text-bone/75 sm:text-base">
+            Die einzige Chance, BlitzON von innen zu erleben, bevor Sie sich entscheiden.
+          </p>
 
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
             {aboutCards.map((c, i) => (
