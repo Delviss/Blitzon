@@ -54,7 +54,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-[1440px] px-page">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold">
               · Verwandlungen
             </span>
             <h2 className="mt-4 font-display text-display-md uppercase tracking-tightest text-bone">
@@ -73,7 +73,7 @@ export default function Testimonials() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="relative overflow-hidden rounded-2xl border border-white/10 bg-ink-800 p-6 sm:p-8 md:p-12"
             >
-              <span className="pointer-events-none absolute right-4 top-4 font-display text-[100px] leading-none text-ember/15 sm:right-8 sm:top-8 sm:text-[160px] md:text-[260px]">
+              <span className="pointer-events-none absolute right-4 top-4 font-display text-[100px] leading-none text-gold/15 sm:right-8 sm:top-8 sm:text-[160px] md:text-[260px]">
                 "
               </span>
               <div className="relative z-10 flex flex-col gap-6 sm:gap-8">
@@ -82,7 +82,7 @@ export default function Testimonials() {
                 </p>
                 <div className="flex flex-wrap items-center justify-between gap-4 sm:gap-6">
                   <div className="flex items-center gap-3 sm:gap-4">
-                    <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full ring-1 ring-ember/30 sm:h-14 sm:w-14">
+                    <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full ring-1 ring-gold/30 sm:h-14 sm:w-14">
                       <img
                         src={asset(story.avatar)}
                         alt={story.name}
@@ -102,8 +102,8 @@ export default function Testimonials() {
                       </div>
                     </div>
                   </div>
-                  <div className="rounded-xl border border-ember/40 bg-ember/15 px-4 py-2.5 sm:px-5 sm:py-3">
-                    <div className="font-display text-lg font-semibold text-ember-200 sm:text-xl md:text-2xl">
+                  <div className="rounded-xl border border-gold/40 bg-gold/15 px-4 py-2.5 sm:px-5 sm:py-3">
+                    <div className="font-display text-lg font-semibold text-gold-light sm:text-xl md:text-2xl">
                       {story.metric}
                     </div>
                     <div className="font-mono text-[9px] uppercase tracking-[0.24em] text-bone/80 sm:tracking-[0.28em]">
@@ -124,7 +124,7 @@ export default function Testimonials() {
                     onMouseEnter={() => setActive(i)}
                     className={`group flex w-full items-center justify-between gap-4 rounded-xl border px-4 py-4 text-left transition-all duration-500 ${
                       i === active
-                        ? "border-ember/60 bg-ink-800"
+                        ? "border-gold/60 bg-ink-800"
                         : "border-white/10 bg-ink-800/40 hover:border-white/25"
                     }`}
                   >
@@ -149,7 +149,7 @@ export default function Testimonials() {
                     </span>
                     <span
                       className={`font-mono text-[10px] tracking-[0.28em] transition ${
-                        i === active ? "text-ember" : "text-bone/45"
+                        i === active ? "text-gold" : "text-bone/45"
                       }`}
                     >
                       {`0${i + 1}`}

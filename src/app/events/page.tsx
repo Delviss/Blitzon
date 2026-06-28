@@ -21,8 +21,8 @@ export default function EventsPage() {
       <section className="relative overflow-hidden bg-ink-900 pb-20 pt-32 sm:pb-28 sm:pt-40">
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-grid-flame opacity-60" />
-          <div className="absolute -left-32 top-1/4 h-[420px] w-[420px] rounded-full bg-electric/25 blur-[140px]" />
-          <div className="absolute -right-24 top-0 h-[360px] w-[360px] rounded-full bg-gold/15 blur-[140px]" />
+          <div className="absolute -left-32 top-1/4 hidden h-[420px] w-[420px] rounded-full bg-electric/25 blur-[140px] md:block" />
+          <div className="absolute -right-24 top-0 hidden h-[360px] w-[360px] rounded-full bg-gold/15 blur-[140px] md:block" />
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
         </div>
 

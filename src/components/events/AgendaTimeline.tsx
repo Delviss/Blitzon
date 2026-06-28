@@ -17,8 +17,17 @@ export default function AgendaTimeline({ items }: { items: EventAgendaItem[] }) 
             transition={{ duration: 0.5, delay: i * 0.04, ease: [0.16, 1, 0.3, 1] }}
             className="group relative flex items-center gap-4 rounded-xl border border-white/10 bg-ink-800/50 px-4 py-4 backdrop-blur-xl transition-colors duration-300 hover:border-gold/40 sm:gap-6 sm:px-6"
           >
-            <span className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-ink-900 font-mono text-xs font-semibold text-gold sm:h-16 sm:w-16 sm:text-sm">
-              {item.time}
+            <span className="relative z-10 flex h-16 w-16 shrink-0 flex-col items-center justify-center gap-0.5 rounded-full border border-gold/40 bg-ink-900 px-1 font-mono font-semibold text-gold sm:h-20 sm:w-20">
+              {(() => {
+                const [prefix, ...rest] = item.time.split(" ");
+                const clock = rest.join(" ");
+                return (
+                  <>
+                    <span className="text-[9px] leading-none tracking-wide sm:text-[10px]">{prefix}</span>
+                    <span className="text-[11px] leading-none sm:text-xs">{clock}</span>
+                  </>
+                );
+              })()}
             </span>
             <span className="font-display text-base font-semibold text-bone sm:text-lg">
               {item.title}

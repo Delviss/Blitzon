@@ -2,15 +2,18 @@
 
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { asset } from "@/lib/asset";
 
+const MotionLink = motion(Link);
+
 const links = [
-  { href: "#movement", label: "Bewegung" },
-  { href: "#training", label: "Training" },
-  { href: "#career", label: "Karriere" },
-  { href: "#team", label: "Team" },
-  { href: "#jobs", label: "Jobs" },
+  { href: "/#movement", label: "Bewegung" },
+  { href: "/#training", label: "Training" },
+  { href: "/#career", label: "Karriere" },
+  { href: "/#team", label: "Team" },
+  { href: "/#jobs", label: "Jobs" },
   { href: "/events/", label: "Events" }
 ];
 
@@ -46,7 +49,7 @@ export default function Navbar() {
     <>
       <motion.div
         style={{ scaleX: scrollYProgress, opacity: progressOpacity }}
-        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-ember via-coral to-electric"
+        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-gold via-gold-light to-gold-dark"
       />
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
@@ -54,7 +57,7 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 px-page py-4 md:py-5">
-          <a href="#" className="group relative flex items-center gap-2 sm:gap-2.5">
+          <a href="/" className="group relative flex items-center gap-2 sm:gap-2.5">
             <span className="relative flex h-8 w-8 items-center justify-center sm:h-9 sm:w-9">
               <Image
                 src={asset("/logo/blitzon-mark-transparent.webp")}
@@ -66,12 +69,12 @@ export default function Navbar() {
               />
             </span>
             <span className="font-display text-base font-bold tracking-[0.16em] text-bone sm:text-lg sm:tracking-[0.18em]">BlitzON</span>
-            <span className="hidden font-mono text-[10px] tracking-[0.3em] text-ember/80 sm:inline">/ DE</span>
+            <span className="hidden font-mono text-[10px] tracking-[0.3em] text-gold/80 sm:inline">/ DE</span>
           </a>
 
           <nav className="hidden items-center gap-6 lg:flex lg:gap-8">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className="group relative text-[11px] font-medium uppercase tracking-[0.24em] text-bone/80 transition hover:text-gold"
@@ -80,13 +83,13 @@ export default function Navbar() {
                   {l.label}
                   <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </span>
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
             <a
-              href="#apply"
+              href="/#apply"
               className="group hidden h-10 items-center gap-2 rounded-full btn-gold px-4 text-[10px] font-semibold uppercase tracking-[0.2em] sm:inline-flex sm:h-11 sm:px-5 sm:text-[11px] sm:tracking-[0.22em]"
             >
               Bewerben
@@ -96,7 +99,7 @@ export default function Navbar() {
               type="button"
               aria-label="Menü öffnen"
               onClick={() => setOpen(true)}
-              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full border border-white/15 bg-ink-700/40 transition hover:border-ember sm:h-11 sm:w-11 lg:hidden"
+              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full border border-white/15 bg-ink-700/40 transition hover:border-gold sm:h-11 sm:w-11 lg:hidden"
             >
               <span className="block h-px w-5 bg-bone" />
               <span className="block h-px w-3 bg-bone" />
@@ -146,7 +149,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
       </div>
       <nav className="relative flex flex-1 flex-col justify-center gap-3 overflow-y-auto px-page py-6 sm:gap-4">
         {links.map((l, i) => (
-          <motion.a
+          <MotionLink
             key={l.href}
             href={l.href}
             onClick={onClose}
@@ -158,15 +161,15 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             <span className="font-display text-3xl font-semibold tracking-tightest text-bone sm:text-4xl md:text-5xl">
               {l.label}
             </span>
-            <span className="font-mono text-xs text-bone/55 transition group-hover:text-ember">
+            <span className="font-mono text-xs text-bone/55 transition group-hover:text-gold">
               0{i + 1}
             </span>
-          </motion.a>
+          </MotionLink>
         ))}
       </nav>
       <div className="safe-pb relative px-page pb-6 sm:pb-10">
         <a
-          href="#apply"
+          href="/#apply"
           onClick={onClose}
           className="flex w-full items-center justify-between rounded-full btn-gold px-5 py-4 text-xs font-semibold uppercase tracking-[0.2em] sm:px-6 sm:py-5 sm:text-sm"
         >
