@@ -20,6 +20,7 @@ export default function EventRegistrationForm({ event }: { event: EventItem }) {
         id="tpiframe"
         title={`Anmeldung – ${event.title}`}
         src={TICKETPAY_SHOP_URL}
+        loading="lazy"
         className="min-h-[720px] w-full rounded-xl border-0 sm:min-h-[780px]"
         scrolling="no"
         frameBorder={0}
@@ -33,7 +34,7 @@ export default function EventRegistrationForm({ event }: { event: EventItem }) {
         }}
       />
 
-      <Script id="ticketpay-resize-listener" strategy="afterInteractive">
+      <Script id="ticketpay-resize-listener" strategy="lazyOnload">
         {`
           function receiveMessage(e) {
             var parts = e.data.split(":");
