@@ -91,7 +91,7 @@ export default function OpenDayPageClient({ event }: { event: EventItem }) {
             Warum <span className="gold-text">teilnehmen?</span>
           </h2>
           <p className="mt-4 max-w-2xl text-sm text-bone/75 sm:text-base">
-            Die einzige Chance, BlitzON von innen zu erleben, bevor Sie sich entscheiden.
+            Die einzige Door-to-Door-Agentur Deutschlands, bei der du mehr Zeit am Flughafen als im Büro verbringst.
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
@@ -119,6 +119,9 @@ export default function OpenDayPageClient({ event }: { event: EventItem }) {
             <h2 className="text-center font-display text-display-md uppercase tracking-tightest text-bone">
               Das <span className="gold-text">Programm</span>
             </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-base text-bone/85 sm:text-lg">
+              Wir launchen das 3+1-Modell, das die Vertriebsbranche revolutionieren wird: drei Wochen Vollgas im Vertrieb, eine Woche die Welt erleben. Jeden Monat.
+            </p>
             <div className="mt-12">
               <AgendaTimeline items={event.agenda} />
             </div>
