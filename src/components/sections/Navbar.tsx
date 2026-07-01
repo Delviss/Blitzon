@@ -14,7 +14,8 @@ const links = [
   { href: "/#career", label: "Karriere" },
   { href: "/#team", label: "Team" },
   { href: "/#jobs", label: "Jobs" },
-  { href: "/events/", label: "Events" }
+  { href: "/events/", label: "Events" },
+  { href: "/login/", label: "Login" }
 ];
 
 export default function Navbar() {
