@@ -17,16 +17,32 @@ Backend API for BlitzON (authentication / login), built for Railway.
 
 ## Railway setup (api service)
 
-1. **Settings → Source**: connect this repo and set **Root Directory** to `apps/api`.
-2. **Variables**:
-   - `JWT_SECRET` — a long random string (required for production).
-   - `ADMIN_EMAIL` / `ADMIN_PASSWORD` — optional; seeds an admin account on boot.
-   - `CORS_ORIGIN` — optional comma-separated list of allowed origins
-     (e.g. `https://blitzonconsulting.de`). Empty = allow all.
-   - `DATABASE_URL` — add a Railway Postgres and reference it:
-     `${{Postgres.DATABASE_URL}}`. Without it, users live in memory only.
-3. Railway builds with `npm ci && npm run build` and starts with `npm start`
-   (see `railway.json`). The healthcheck path is `/health`.
+This repo is an npm **workspace** (`workspaces: ["apps/*"]` in the root
+`package.json`), and the api service builds from the **repo root** using
+workspace commands — no per-service Root Directory is needed:
+
+- **Build command**: `npm run build --workspace=@blitzon/api`
+- **Start command**: `npm run start --workspace=@blitzon/api`
+
+Railway's builder runs `npm ci` at the repo root first (installing every
+workspace's dependencies from the single root lockfile), then the build
+command compiles `apps/api` to `dist/main.js`; the start command runs
+`node dist/main` from `apps/api`.
+
+> The root `package.json` **must** keep its `workspaces` field — without it
+> `--workspace=@blitzon/api` can't be resolved, the build produces no
+> `dist/`, and the service crashes with `Cannot find module .../dist/main`.
+
+**Variables** (Settings → Variables on the api service):
+
+- `JWT_SECRET` — a long random string (required for production).
+- `ADMIN_EMAIL` / `ADMIN_PASSWORD` — optional; seeds an admin account on boot.
+- `CORS_ORIGIN` — optional comma-separated list of allowed origins
+  (e.g. `https://blitzonconsulting.de`). Empty = allow all.
+- `DATABASE_URL` — add a Railway Postgres and reference it:
+  `${{Postgres.DATABASE_URL}}`. Without it, users live in memory only.
+
+Healthcheck path: `/health`.
 
 ## Railway setup (web service)
 
@@ -37,9 +53,10 @@ service (the value is baked in at build time).
 
 ## Local development
 
+Run from the repo root (workspace-aware):
+
 ```bash
-cd apps/api
-npm install
-npm run build
-node dist/main            # http://localhost:3001
+npm install                              # installs all workspaces
+npm run build --workspace=@blitzon/api
+npm run start --workspace=@blitzon/api   # http://localhost:3001
 ```
